@@ -1,0 +1,22 @@
+.MathJax_Display {
+    overflow: visible !important; /* 禁止显示滚动条 */
+    width: 100% !important;       /* 强制公式宽度占满可用空间 */
+    max-width: none !important;
+}
+
+.math-block {
+    display: flex;
+    justify-content: center; /* 让公式居中显示 */
+    align-items: center;
+    margin-bottom: 1rem; /* 设置下边距，避免公式之间紧凑 */
+  }
+  
+  .math-block .equation {
+    flex-grow: 1; /* 让公式占满可用空间 */
+    text-align: center; /* 让公式文本居中 */
+  }
+  
+  .math-block .number {
+    padding-left: 10px;
+  }
+  
