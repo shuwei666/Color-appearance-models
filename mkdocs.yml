@@ -1,0 +1,56 @@
+site_name: 色貌模型
+# site_url: https://shuwei.com
+nav:
+  - Home: index.md
+  - 0. 前言: 0-前言.md
+  - 1. 人眼彩色视觉: 1-人眼彩色视觉.md
+  - 2. 心理物理学: 2-心理物理学.md
+  - 3. 色度学: 3-色度学.md
+  - 4. 色貌定义: 4-色貌定义.md
+  - 5. 色序系统: 5-色序系统.md
+  - 6. 色貌现象: 6-色貌现象.md
+  - 7. 观察条件: 7-观察条件.md
+  - 8. 色适应: 8-色适应.md
+  - 9. 色适应模型: 9-色适应模型.md
+  - 10. 色貌模型: 10-色貌模型.md
+  - 11. The Nayatani et al model: 11-The Nayatani et al model.md
+  - 12. The Hunt model: 12-The Hunt model.md
+  - 13. The RLAB model: 13-The RLAB model.md
+  - 14. Other models: 14-Other models.md
+  - 15. CIECAM97s: 15-CIECAM97s.md
+  - 16. CIECAM02: 16-CIECAM02.md
+  - 17. CAMs的测量: 17-CAMs的测量.md
+  - 18. 传统色度学应用: 18-传统色度学应用.md
+  - 19. 设备无关彩色成像: 19-设备无关彩色成像.md
+  - 20. 图像色貌模型和未来: 20-图像色貌模型和未来.md
+  - 21. HDR 色彩空间: 21-HDR 色彩空间.md
+  - 参考文献: Reference.md
+
+
+plugins:
+  - search
+  - img2figv2
+
+
+theme:
+  name: material
+  language: en # 默认语言
+  # palette:
+  #   primary: 'red'   # 可以设置为green, red, purple, teal, etc.
+  #   accent: 'orange'   # 自定义强调色
+  #   toggle:
+  #     icon: 'material/toggle-switch-off-outline'
+  #     name: 'Switch'
+
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - assets/css/custom.css
