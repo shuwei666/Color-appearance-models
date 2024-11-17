@@ -1,0 +1,28 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.7
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs
+          pip install mkdocs-material  # 如果使用 material 主题
+
+      - name: Build and Deploy
+        run: mkdocs gh-deploy --force
+
