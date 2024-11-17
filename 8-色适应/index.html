@@ -1339,9 +1339,25 @@
 </p>
 
 <h2 id="84">8.4 对应颜色数据</h2>
-<p>关于色适应的最广泛可用的视觉数据是<strong>对应颜色数据</strong>。<strong>对应颜色</strong>被定义为在不同观看条件下，颜色外观相匹配的两个刺激，如图8.10所示。</p>
-<p>例如，在一组观看条件下由三刺激值 <span class="arithmatex">\(X&lt;sub&gt;1&lt;/sub&gt;, Y&lt;sub&gt;1&lt;/sub&gt;, Z&lt;sub&gt;1&lt;/sub&gt;\)</span> 指定的刺激，可能看起来与在另一组观看条件下由三刺激值 <span class="arithmatex">\(X&lt;sub&gt;2&lt;/sub&gt;, Y&lt;sub&gt;2&lt;/sub&gt;, Z&lt;sub&gt;2&lt;/sub&gt;\)</span> 指定的第二个刺激相同。<span class="arithmatex">\(X&lt;sub&gt;1&lt;/sub&gt;, Y&lt;sub&gt;1&lt;/sub&gt;, Z&lt;sub&gt;1&lt;/sub&gt;\)</span> 和 <span class="arithmatex">\(X&lt;sub&gt;2&lt;/sub&gt;, Y&lt;sub&gt;2&lt;/sub&gt;, Z&lt;sub&gt;2&lt;/sub&gt;\)</span>，连同各自的观看条件说明，构成了一对对应颜色。然而，重要的是要注意，<span class="arithmatex">\(X&lt;sub&gt;1&lt;/sub&gt;, Y&lt;sub&gt;1&lt;/sub&gt;, Z&lt;sub&gt;1&lt;/sub&gt;\)</span> 和 <span class="arithmatex">\(X&lt;sub&gt;2&lt;/sub&gt;, Y&lt;sub&gt;2&lt;/sub&gt;, Z&lt;sub&gt;2&lt;/sub&gt;\)</span> 很少在数值上完全相同。</p>
-<p>对应颜色数据是通过多种实验技术获得的。Wright（1981a）提供了对色适应的历史性回顾，介绍了色适应是如何以及为何被研究的。这里简要描述了一些技术及相关研究。</p>
+<p>关于色适应的最广泛可用的视觉数据是<strong>对应颜色数据</strong>。<strong>对应颜色</strong>被定义为在不同观看条件下，颜色外观相匹配的两个刺激，如图8.10所示。
+关于色适应的最广泛可用的视觉数据是<strong>对应颜色数据</strong>。<strong>对应颜色</strong>是指在不同观看条件下，颜色外观相匹配的两个刺激。这种情况在图 8.10 中有形象展示。</p>
+<p>例如，假设在某组观看条件下，一个由三刺激值 <span class="arithmatex">\((X_1, Y_1, Z_1)\)</span> 表示的刺激，看起来与另一组观看条件下的另一个刺激（由三刺激值 <span class="arithmatex">\((X_2, Y_2, Z_2)\)</span> 表示）相同。两组刺激及其相应的观看条件构成一对对应颜色。然而，通常情况下，<span class="arithmatex">\((X_1, Y_1, Z_1)\)</span> 和 <span class="arithmatex">\((X_2, Y_2, Z_2)\)</span> 在数值上并不会完全相同。</p>
+<p>对应颜色数据的获取基于多种实验技术。Wright (1981a) 对色适应的历史性回顾详细介绍了这一领域为何及如何被研究的背景。以下是对部分技术及相关研究的简要数学描述:</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    (X_1, Y_1, Z_1) \xrightarrow{\text{Viewing Conditions 1}}
+    \text{Perceived Color} \approx 
+    $$
+
+    $$
+    (X_2, Y_2, Z_2) \xrightarrow{\text{Viewing Conditions 2}}
+    \text{Same Perceived Color}
+    $$
+  </div>
+</div>
+
+<p>其中，<span class="arithmatex">\((X_1, Y_1, Z_1)\)</span> 和 <span class="arithmatex">\((X_2, Y_2, Z_2)\)</span> 表示刺激的三刺激值，而不同的观看条件通过色适应机制引起对颜色的感知差异。</p>
 <h3 id="_15">不对称匹配</h3>
 <p>由于对应颜色数据的收集需要在不同的观察条件下进行视觉匹配，因此此类实验有时被称为不对称匹配实验。理想情况下，颜色匹配是通过直接并排比较两个刺激物来进行的。然而，在两种不同的观察条件下，这在技术上是不可能实现的，除非做出一些简化的假设。也许最令人着迷的例子是MacAdam（1961）报告的一个实验，使用了差异性视网膜适应。在这个实验中，视网膜的两个不同区域（左右两半）暴露于不同的适应刺激中，然后在视野的两半区域呈现测试和匹配刺激进行颜色匹配。这种技术假设视网膜两半的差异性适应与正常观察中的适应相似。然而，这一假设很可能是错误的，因此差异性视网膜适应技术仅具有历史意义。</p>
 <h3 id="_16">双眼匹配</h3>
@@ -1363,20 +1379,65 @@
 <p>这种测试也可以通过一种更简单的模型完成，称为<strong>色适应转换（Chromatic Adaptation Transform）</strong>（或色适应模型）。色适应模型不包括诸如亮度、彩度和色调等外观属性的对应关系。相反，色适应模型仅提供了从一种观察条件下的三刺激值到另一种观察条件下匹配的三刺激值的转换，或者转换为某个预定义的参考观察条件。</p>
 <hr />
 <h2 id="85">8.5 色适应模型</h2>
-<p>如8.4节所述，色适应模型允许预测对应颜色数据。色适应模型的通用形式可以如公式8.1至8.3所示。</p>
-<div class="arithmatex">\[
-L_a = f(L, M, S, L_{white}, M_{white}, S_{white}, \dots ) \tag{8.1} 
-$$
-$$
-M_a = f(L, M, S, L_{white}, M_{white}, S_{white}, \dots ) \tag{8.2}
-$$
-$$
-S_a = f(L, M, S, L_{white}, M_{white}, S_{white}, \dots ) \tag{8.3}
-\]</div>
-<p>通过将一种观察条件的正向模型与第二种观察条件的逆向模型结合，可以将色适应模型转换为色适应转换。通常这种转换以CIE三刺激值的形式表示，如公式8.4所示。</p>
-<div class="arithmatex">\[
-XYZ_2 = f(XYZ_1, XYZ_{white1}, XYZ_{white2}, \dots ) \tag{8.4}
-\]</div>
+<p>如8.4节所述，色适应模型可以用于预测对应颜色数据。这些模型的通用形式可以表示为一组方程，用以描述在色适应过程中的信号转换。以下是基本公式：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    L_a = f(L, M, S, L_{white}, M_{white}, S_{white}, \dots ) \tag{8.1}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    M_a = f(L, M, S, L_{white}, M_{white}, S_{white}, \dots ) \tag{8.2}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    S_a = f(L, M, S, L_{white}, M_{white}, S_{white}, \dots ) \tag{8.3}
+    $$
+  </div>
+</div>
+
+<p>其中：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(L\)</span>, <span class="arithmatex">\(M\)</span>, <span class="arithmatex">\(S\)</span> 表示原始刺激的长、中、短波长敏感信号；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L_{white}\)</span>, <span class="arithmatex">\(M_{white}\)</span>, <span class="arithmatex">\(S_{white}\)</span> 表示白点条件下的长、中、短波长敏感信号；</p>
+</li>
+<li>
+<p>函数 <span class="arithmatex">\(f\)</span> 则表示色适应过程的计算关系。</p>
+</li>
+</ul>
+<p><strong>色适应转换的实现</strong></p>
+<p>通过将一种观察条件下的正向模型与另一种观察条件下的逆向模型结合，可以实现色适应转换。这种转换通常以 CIE XYZ 三刺激值的形式表示。转换公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    XYZ_2 = f(XYZ_1, XYZ_{white1}, XYZ_{white2}, \dots ) \tag{8.4}
+    $$
+  </div>
+</div>
+
+<p>其中：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(XYZ_1\)</span> 和 <span class="arithmatex">\(XYZ_2\)</span> 分别是第一组和第二组观察条件下的三刺激值；</p>
+</li>
+<li>
+<p><span class="arithmatex">\(XYZ_{white1}\)</span> 和 <span class="arithmatex">\(XYZ_{white2}\)</span> 分别是两种观察条件下的白点三刺激值；</p>
+</li>
+<li>
+<p>函数 <span class="arithmatex">\(f\)</span> 用于描述两种观察条件之间的转换关系。</p>
+</li>
+</ul>
 <p>为了准确模拟色适应的生理机制，必须将刺激物以视锥细胞激发信号（LMS）来表示，而不是CIE三刺激值（XYZ）。幸运的是，视锥细胞激发信号（有时称为视锥基本值）可以通过CIE三刺激值的线性变换（3×3矩阵）进行近似。因此，通用的色适应转换可以如图8.12的流程图中所述。</p>
 <p>整个过程如下：</p>
 <ol>
