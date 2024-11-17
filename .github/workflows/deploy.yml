@@ -22,6 +22,7 @@ jobs:
         run: |
           pip install mkdocs
           pip install mkdocs-material  # 如果使用 material 主题
+          run: pip install -r requirements.txt
 
       - name: Build and Deploy
         run: mkdocs gh-deploy --force
