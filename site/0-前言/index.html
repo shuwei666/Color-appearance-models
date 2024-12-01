@@ -1,0 +1,1000 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../1-%E4%BA%BA%E7%9C%BC%E5%BD%A9%E8%89%B2%E8%A7%86%E8%A7%89/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>0. 前言 - 色貌模型</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="色貌模型" class="md-header__button md-logo" aria-label="色貌模型" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            色貌模型
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              0. 前言
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="色貌模型" class="md-nav__button md-logo" aria-label="色貌模型" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    色貌模型
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    0. 前言
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    0. 前言
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    推荐序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    自序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    引言
+  </a>
+  
+    <nav class="md-nav" aria-label="引言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    什么是色貌模型？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    颜色感知现象的例子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    基本色度学与色貌模型的区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    色度学与色貌模型的具体区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    色度学 vs. 色貌模型：摄影中的应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    总结：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-%E4%BA%BA%E7%9C%BC%E5%BD%A9%E8%89%B2%E8%A7%86%E8%A7%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 人眼彩色视觉
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-%E5%BF%83%E7%90%86%E7%89%A9%E7%90%86%E5%AD%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 心理物理学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-%E8%89%B2%E5%BA%A6%E5%AD%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 色度学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-%E8%89%B2%E8%B2%8C%E5%AE%9A%E4%B9%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 色貌定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-%E8%89%B2%E5%BA%8F%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 色序系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-%E8%89%B2%E8%B2%8C%E7%8E%B0%E8%B1%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 色貌现象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-%E8%A7%82%E5%AF%9F%E6%9D%A1%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 观察条件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8-%E8%89%B2%E9%80%82%E5%BA%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 色适应
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9-%E8%89%B2%E9%80%82%E5%BA%94%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 色适应模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-%E8%89%B2%E8%B2%8C%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 色貌模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-The Nayatani et al model.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. The Nayatani et al model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-The%20Hunt%20model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. The Hunt model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-The%20RLAB%20model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. The RLAB model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-Other%20models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Other models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-CIECAM97s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. CIECAM97s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-CIECAM02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. CIECAM02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-CAMs%E7%9A%84%E6%B5%8B%E9%87%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. CAMs的测量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-%E4%BC%A0%E7%BB%9F%E8%89%B2%E5%BA%A6%E5%AD%A6%E5%BA%94%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. 传统色度学应用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-%E8%AE%BE%E5%A4%87%E6%97%A0%E5%85%B3%E5%BD%A9%E8%89%B2%E6%88%90%E5%83%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. 设备无关彩色成像
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-%E5%9B%BE%E5%83%8F%E8%89%B2%E8%B2%8C%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%9C%AA%E6%9D%A5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. 图像色貌模型和未来
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-HDR%20%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. HDR 色彩空间
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    推荐序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    自序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    引言
+  </a>
+  
+    <nav class="md-nav" aria-label="引言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    什么是色貌模型？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    颜色感知现象的例子
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    基本色度学与色貌模型的区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    色度学与色貌模型的具体区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    色度学 vs. 色貌模型：摄影中的应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    总结：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>0. 前言</h1>
+
+<h2 id="_1">推荐序</h2>
+<p>颜色是一个吸引科学家、哲学家和大众关注了数千年的主题。几乎所有人都熟悉颜色的概念，并能流畅地用语义描述它。然而，使用数学模型对颜色进行数值描述和操作是少数科学家和工程师的领域。实际上，颜色在不到100年前才有了明确的数学基础。</p>
+<p><strong>色度学（Colorimetry）</strong> 是第一个对颜色进行全面数学描述的领域。但色度学的应用仅限于描述颜色在特定观察条件下是否匹配。比色法在纺织、油漆、印刷、摄影、电影、照明和显示设备等多个行业中，实现了颜色的精确控制。然而，色度学无法提供颜色外观的相对数值描述，也无法预测颜色在不同观察环境下的变化。这正是<strong>色貌模型（Color Appearance Models）</strong>的领域。</p>
+<p>科学界对色貌模型的兴趣始于发现颜色会随着背景、光照强度和光谱属性的不同而改变外观。我们经常遇到这样的情况：在展厅看起来完美的衣物或油漆，带回家后却感觉不同。1976年，CIE发布了<strong>CIELAB</strong>和<strong>CIELUV</strong>均匀颜色空间，首次实现了明度、色相和饱和度的数值表示。从那时起，色貌模型的研究迅速发展。</p>
+<p>在1980年代，R.W.G. Hunt 和 Y. Nayatani 等科学家开发了预测颜色感知属性的模型。随后，Mark Fairchild 提出了<strong>RLAB 色貌模型</strong>，在图像应用领域取得了重大进展。1997年，CIE发布了<strong>CIECAM97s</strong>，并于2002年推出了简化和改进版的<strong>CIECAM02</strong>，该模型已广泛应用于成像和印刷行业。理解这些模型对于相关领域的科学家和工程师至关重要。</p>
+<p>Mark Fairchild 的前两版《Color Appearance Models》已成为色彩科学领域的重要参考书籍。在本书的第三版中，作者扩展了对<strong>高动态范围（HDR）成像</strong>领域的应用，这也是当前成像科学和摄影领域的重要挑战。色貌模型为开发和改进HDR技术提供了必要的科学洞见。</p>
+<p>这本书将成为经典的色彩科学教材。我们很高兴能将这本杰出的作品带给从事与颜色相关领域的学生、科学家和工程师。</p>
+<p><strong>Geoffrey J. Woolfe</strong><br />
+Canon 信息系统研究澳大利亚<br />
+成像科学与技术学会（IS&amp;T）出版副总裁</p>
+<h2 id="_2">自序</h2>
+<p><strong>柏拉图</strong>曾说：“即使有人懂得颜色的比例法则，他也很难讲清其中的必要原因，更不可能给出合理的解释。”<br />
+尽管柏拉图的警告犹在耳边，本书正是要探讨颜色科学中的一个主要未解难题，并总结应对这一问题的技术。这个问题就是如何预测观察者在自然复杂环境中对颜色的感知。解决这个问题对多个行业都有深远的影响，如照明、材料和成像等领域。</p>
+<p>在照明行业，<strong>色貌模型（Color Appearance Models）</strong>可用于预测不同光源的色彩呈现，从而不仅仅关注效率，还能定义质量。在材料行业（如涂料、塑料、纺织品），这些模型可以在更广泛的观察条件下设定容差，并更准确地评估<strong>同色异谱（Metamerism）</strong>现象。</p>
+<p>成像领域对色貌模型的需求尤为迫切。随着色彩成像技术的快速发展，特别是桌面出版和数字摄影的兴起，<strong>色彩管理系统（Color Management Systems）</strong>应运而生。这些系统依赖色貌模型来确保在不同媒介和环境下图像的再现效果令人满意。然而，色貌模型的开发主要集中于学术论文和会议的讨论，尚未系统整理为完整的参考资料。</p>
+<p><strong>1931年</strong>，国际照明委员会（CIE）提出了基于三刺激值的CIE XYZ颜色匹配系统，这奠定了现代<strong>色度学（Colorimetry）</strong>的基础。然而，CIE系统的局限在于只能比较在相同时间和空间条件下的颜色刺激。CIE XYZ值用于描述两种刺激是否匹配，<strong>CIELAB</strong>值则描述单一观察条件下刺激之间的感知差异。</p>
+<p>色貌模型扩展了现有的CIE系统，可以预测颜色在多种观察条件下的外观。这些模型的应用为精准的色彩描述、控制和再现提供了无限可能。</p>
+<p>理解色貌现象并开发预测它们的模型，是过去二三十年来的重要研究主题。尽管CIE尚未推荐一个通用的最佳色貌模型，但许多工程项目已经需要应用这些模型。国际色彩联盟（ICC）开发的色彩管理系统，已被广泛集成于现代计算机操作系统中。这些系统要求应用色貌模型，但并未明确规定如何操作。</p>
+<p>本书的目标是提供关于色貌现象的全面信息，并详细介绍当前广泛使用的色貌模型。我们首先概述了色彩测量的基础知识和开发色貌模型的必要性，随后介绍了各种模型的构建和应用。这种结构非常适合大学课程、短期培训以及需要在有限时间内讲解完整内容的场合。</p>
+<p>本书的第1至3章概述了理解色貌模型开发与应用所需的基础知识，包括<strong>人类色觉</strong>、<strong>心理物理学（Psychophysics）</strong>和CIE色度学系统。第4至7章介绍了色貌的基本定义、描述和现象。这些内容回顾了推动现代色貌模型发展的历史文献。第8和9章重点讲解了色貌中的关键机制——<strong>色适应（Chromatic Adaptation）</strong>，第9章中描述的色适应模型构成了后续色貌模型的基础。</p>
+<p>第10章定义了色貌模型，并以CIELAB为例介绍了模型的构建。第11至13章详细描述了<strong>Nayatani</strong>模型、<strong>Hunt</strong>模型和<strong>RLAB</strong>模型，分析了各自的优缺点。第14章介绍了<strong>ATD</strong>和<strong>LLAB</strong>模型，这些模型在某些应用中越来越受关注。</p>
+<p>第15章讨论了CIE推荐的<strong>CIECAM97s</strong>模型，并介绍了其简化版<strong>ZLAB</strong>。第16章介绍了<strong>CIECAM02</strong>，这是目前最优的色貌模型。第17和18章则通过视觉实验和色度应用测试了不同的模型。</p>
+<p>第19章讨论了<strong>设备无关的彩色成像</strong>，这是推动色貌模型发展的重要技术应用。最后，第20和21章引入了图像外观建模的概念，并展示了iCAM模型作为一个图像外观模型的示例，同时探讨了不依赖色彩空间的外观预测新方法及其在<strong>高动态范围（HDR）</strong>环境中的应用。</p>
+<p>尽管色貌模型领域还很年轻，且未来仍会发展，但本书包含的大部分基础内容不会改变。第1至10章介绍的概念和技术将长期保持参考价值，而后续章节所述的模型和应用则会随着研究的进展不断演化。然而，这些章节提供了当前研究状态的快照，为读者跟踪未来发展提供了便利。</p>
+<p>为帮助读者，本书还提供了一个网站（<a href="http://www.cis.rit.edu/Fairchild/CAM.html">www.cis.rit.edu/Fairchild/CAM.html</a>），其中列出了相关的重要研究进展和出版物，并提供了示例计算的电子表格。</p>
+<h2 id="_3">引言</h2>
+<p><em>道德经, 公元前300–600年</em>：</p>
+<blockquote>
+<p>立于其前而无始，循之而无终；存在于此刻，应用于当下，遵循它的起源。  </p>
+</blockquote>
+<p>正如美在观察者的眼中，<strong>颜色（Color）</strong>也依赖于观察者的感知。自人类开始进行科学探索以来，颜色感知的本质就备受关注。即使科技发展迅速，但关于颜色感知的核心问题仍未完全解答。许多科学研究试图将颜色定义为光和物体的物理属性。然而，没有人类观察者的参与，颜色并不存在。就像有人问如果树倒在森林中而无人听见，它是否发出声音一样，我们也可以探讨：如果没有人观察，它的叶子是什么颜色？</p>
+<p><em>Yogi Berra</em>：</p>
+<blockquote>
+<p>你只需观察，就能发现很多东西。  </p>
+</blockquote>
+<hr />
+<h3 id="_4">什么是色貌模型？</h3>
+<p>通常我们会说某些光的波长或某些物体呈现某种颜色，这是一种将颜色归于纯粹物理领域的表述。然而，更准确的说法是：当在特定条件下观察时，这些刺激被感知为某种颜色。将颜色视为纯物理现象属于<strong>分光光度法（spectrophotometry）</strong>和<strong>分光辐射度法（spectroradiometry）</strong>的范畴。加入了人类感知的基础响应后，我们进入了<strong>色度学（colorimetry）</strong>的领域。而当我们考虑影响颜色感知的众多其他变量，并试图描述我们对刺激的感知时，我们就进入了本书所要探讨的<strong>色貌模型</strong>的领域。</p>
+<hr />
+<h3 id="_5">颜色感知现象的例子</h3>
+<ul>
+<li>汽车前灯在夜间令人刺目，但在白天却几乎不可察觉。</li>
+<li>光线变暗时，颜色逐渐消失，而物体轮廓仍然清晰。</li>
+<li>星星在白天消失，但夜晚显现。</li>
+<li>刚刷漆的房间看起来与选色样本不同。</li>
+<li>使用不同背景展示的艺术品，会展现截然不同的外观。</li>
+<li>打印出的图片与显示屏上的颜色不符。</li>
+<li>晴天时，场景显得更丰富、对比度更高，而阴天则不然。</li>
+<li>在昏暗的白炽灯下，蓝色和绿色的物体难以区分。</li>
+<li>清晨的微光下，很难分辨袜子的颜色。</li>
+<li>没有“灰色”或“棕色”的灯泡。</li>
+<li>没有“红绿”或“黄蓝”的颜色描述。</li>
+</ul>
+<p>上述现象无法仅通过材料或光照的物理测量解释，而是需要结合观察条件和人类视觉模型来预测。这正是<strong>色貌模型</strong>的任务所在。它不仅超越了基本的色度学（basic colorimetry），还能解释这些复杂的感知现象，并应用于数字色彩再现等技术问题。</p>
+<hr />
+<h3 id="_6">基本色度学与色貌模型的区别</h3>
+<p><strong>基本色度学（Basic Colorimetry）</strong>侧重于在标准观察条件下，通过测量刺激对平均观察者的感官影响，确定颜色是否匹配。它的应用范围局限于在相同条件下观察时，判断两种刺激是否具有一致的颜色。但<strong>色度学</strong>无法解释不同条件下的颜色外观变化。</p>
+<p><strong>色貌模型（Color Appearance Models）</strong>扩展了色度学的范围，不仅考虑了刺激物的光谱特性，还纳入了观察环境、背景、照明以及视觉系统的复杂反应，旨在预测各种观看条件下的颜色感知。色貌模型不仅能描述物体在不同照明下的外观变化，还能够量化这些变化，确保色彩一致性和跨媒体呈现。</p>
+<hr />
+<h3 id="_7">色度学与色貌模型的具体区别</h3>
+<ul>
+<li><strong>观察条件的限制：</strong> 色度学假设所有刺激都在完全一致的观察条件下进行测量，而色貌模型能够预测在<strong>不同观察条件</strong>（如不同光源、背景或环境）下的颜色外观。</li>
+<li><strong>感知现象的解释：</strong> 色度学只能判断两种颜色是否匹配，但色貌模型能够解释诸如<strong>光适应（light adaptation）</strong>和<strong>颜色恒常性（color constancy）</strong>等复杂现象。</li>
+<li><strong>应用领域：</strong> 色度学主要用于<strong>色彩匹配</strong>和<strong>色差分析</strong>，而色貌模型被广泛应用于<strong>数字成像、打印、照明设计</strong>等领域，以确保在不同介质和显示设备之间保持一致的色彩外观。</li>
+<li><strong>数学建模：</strong> 色度学基于简单的三刺激值（如CIE XYZ），而色貌模型则通过复杂的公式和参数，描述在不同观看条件下的颜色感知。</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>译者注：</strong><br />
+让我们通过摄影中的实际场景，更生动地比较色度学与色貌模型的差异：</p>
+<h3 id="vs">色度学 vs. 色貌模型：摄影中的应用</h3>
+<p><strong>色度学的应用：</strong><br />
+假设你用相机拍摄了一张蓝天照片，在相机屏幕上看起来非常鲜艳。如果只依赖<strong>色度学（Colorimetry）</strong>的测量，我们可以确保这张照片在设备校准一致的情况下，在手机、平板或电脑屏幕上呈现相同的蓝色。这种技术主要确保相同条件下的颜色匹配。但如果换了环境，比如在阳光明媚的户外查看和在昏暗的房间内查看，色度学就无法解释为什么同一张照片的蓝色会感知得不一样。</p>
+<p><strong>色貌模型的应用：</strong><br />
+现在假设你把这张照片分享到社交媒体，朋友们在不同的手机上观看：有人在阳光下看，有人在暗室中看，还有人使用开启了夜间模式的屏幕。你会发现，他们对蓝天的感知可能完全不同：有些人觉得蓝色鲜艳，有些人则觉得暗淡甚至发灰。  </p>
+<p>这时，<strong>色貌模型（Color Appearance Models）</strong>就派上用场了。色貌模型会考虑到这些不同的观看条件（如<strong>光适应</strong>、<strong>屏幕亮度</strong>、<strong>环境光源</strong>等），并预测在每种情境下，观察者如何感知照片中的蓝色。它还能解释为什么在暗环境下的颜色饱和度和对比度看起来比在阳光下差（即<strong>亨特效应</strong>和<strong>史蒂文斯效应</strong>）。</p>
+<h3 id="_8">总结：</h3>
+<ul>
+<li><strong>色度学</strong>：  </li>
+<li>保证在相同设备和标准条件下颜色一致。  </li>
+<li>
+<p>适用于屏幕校准，但无法处理不同观察条件下的颜色变化。</p>
+</li>
+<li>
+<p><strong>色貌模型</strong>：  </p>
+</li>
+<li>预测不同光源、环境下的颜色外观差异。  </li>
+<li>解释为什么颜色在不同设备和场景中感知不同。  </li>
+<li>应用于智能手机、相机和显示器的色彩管理系统中，确保照片无论在什么环境下都接近预期观感。</li>
+</ul>
+<p><strong>总结一句话：</strong> 色度学只保证设备间的颜色匹配，而色貌模型则预测不同环境下的色彩感知差异，确保颜色的跨环境一致性。这使色貌模型在摄影和影像处理领域变得不可或缺。</p>
+</blockquote>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>
