@@ -1,0 +1,2526 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../10-%E8%89%B2%E8%B2%8C%E6%A8%A1%E5%9E%8B/">
+      
+      
+        <link rel="next" href="../12-The%20Hunt%20model/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>11. The Nayatani model - 色貌模型</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#111" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="色貌模型" class="md-header__button md-logo" aria-label="色貌模型" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            色貌模型
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11. The Nayatani model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="色貌模型" class="md-nav__button md-logo" aria-label="色貌模型" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    色貌模型
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0-%E5%89%8D%E8%A8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. 前言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-%E4%BA%BA%E7%9C%BC%E5%BD%A9%E8%89%B2%E8%A7%86%E8%A7%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 人眼彩色视觉
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-%E5%BF%83%E7%90%86%E7%89%A9%E7%90%86%E5%AD%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 心理物理学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-%E8%89%B2%E5%BA%A6%E5%AD%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 色度学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-%E8%89%B2%E8%B2%8C%E5%AE%9A%E4%B9%89/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 色貌定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-%E8%89%B2%E5%BA%8F%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 色序系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-%E8%89%B2%E8%B2%8C%E7%8E%B0%E8%B1%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 色貌现象
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7-%E8%A7%82%E5%AF%9F%E6%9D%A1%E4%BB%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 观察条件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8-%E8%89%B2%E9%80%82%E5%BA%94/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 色适应
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9-%E8%89%B2%E9%80%82%E5%BA%94%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 色适应模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-%E8%89%B2%E8%B2%8C%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 色貌模型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    11. The Nayatani model
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    11. The Nayatani model
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    11.1 目标与方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    11.2 输入数据
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    11.3 适应模型
+  </a>
+  
+    <nav class="md-nav" aria-label="11.3 适应模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    适应场的锥体响应计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    非线性色彩适应的指数计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基于归一化亮度的附加指数计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    测试刺激物的锥体响应计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    缩放系数计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    11.4 对立色维度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.4 对立色维度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    无色响应计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    色彩通道计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    色相角计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    11.5 明亮度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.5 明亮度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    公式解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    理想白的明亮度计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    公式解析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    11.6 明度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.6 明度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l_p" class="md-nav__link">
+    无色明度 \( L_P^* \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l_n" class="md-nav__link">
+    归一化无色明度 \( L_N^* \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    两种明度量的区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helmholtz-kohlrausch" class="md-nav__link">
+    关于 Helmholtz-Kohlrausch 效应
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    11.7 色相
+  </a>
+  
+    <nav class="md-nav" aria-label="11.7 色相">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    色相角计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    色相四分位计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    色相组成计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    11.8 饱和度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.8 饱和度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-s_rg-s_yb" class="md-nav__link">
+    红-绿分量 \( S_{RG} \) 和黄-蓝分量 \( S_{YB} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e_stheta" class="md-nav__link">
+    色强度函数 \( E_s(\theta) \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    总饱和度 \( S \)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119" class="md-nav__link">
+    11.9 彩度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.9 彩度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-c_rg" class="md-nav__link">
+    红-绿彩度 \( C_{RG} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-c_yb" class="md-nav__link">
+    黄-蓝彩度 \( C_{YB} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    总彩度 \( C \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    公式解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    特性说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110" class="md-nav__link">
+    11.10 色彩鲜艳度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.10 色彩鲜艳度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-m_rg" class="md-nav__link">
+    红-绿色彩鲜艳度 \( M_{RG} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-m_yb" class="md-nav__link">
+    黄-蓝色彩鲜艳度 \( M_{YB} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    总色彩鲜艳度 \( M \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    公式解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    特性说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111" class="md-nav__link">
+    11.11 逆模型
+  </a>
+  
+    <nav class="md-nav" aria-label="11.11 逆模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    模型的实施与逆转步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    正向与逆向关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    实际应用中的优势
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1112" class="md-nav__link">
+    11.12 预测现象
+  </a>
+  
+    <nav class="md-nav" aria-label="11.12 预测现象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 预测的色貌现象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 模型的适用范围
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 不完全色彩适应的处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111_1" class="md-nav__link">
+    表格 11.1 示例计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    解释说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-nayatani" class="md-nav__link">
+    1.13 为什么不要只使用 Nayatani 模型？
+  </a>
+  
+    <nav class="md-nav" aria-label="1.13 为什么不要只使用 Nayatani 模型？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    模型的优势
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    模型的不足
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    未来的贡献与发展
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-The%20Hunt%20model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. The Hunt model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-The%20RLAB%20model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. The RLAB model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-Other%20models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Other models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-CIECAM97s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. CIECAM97s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-CIECAM02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. CIECAM02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-CAMs%E7%9A%84%E6%B5%8B%E9%87%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. CAMs的测量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-%E4%BC%A0%E7%BB%9F%E8%89%B2%E5%BA%A6%E5%AD%A6%E5%BA%94%E7%94%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. 传统色度学应用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-%E8%AE%BE%E5%A4%87%E6%97%A0%E5%85%B3%E5%BD%A9%E8%89%B2%E6%88%90%E5%83%8F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. 设备无关彩色成像
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-%E5%9B%BE%E5%83%8F%E8%89%B2%E8%B2%8C%E6%A8%A1%E5%9E%8B%E5%92%8C%E6%9C%AA%E6%9D%A5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. 图像色貌模型和未来
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-HDR%20%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21. HDR 色彩空间
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    11.1 目标与方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    11.2 输入数据
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    11.3 适应模型
+  </a>
+  
+    <nav class="md-nav" aria-label="11.3 适应模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    适应场的锥体响应计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    非线性色彩适应的指数计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    基于归一化亮度的附加指数计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    测试刺激物的锥体响应计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    缩放系数计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    11.4 对立色维度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.4 对立色维度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    无色响应计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    色彩通道计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    色相角计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    11.5 明亮度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.5 明亮度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    公式解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    理想白的明亮度计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    公式解析
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    11.6 明度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.6 明度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l_p" class="md-nav__link">
+    无色明度 \( L_P^* \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l_n" class="md-nav__link">
+    归一化无色明度 \( L_N^* \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    两种明度量的区别
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helmholtz-kohlrausch" class="md-nav__link">
+    关于 Helmholtz-Kohlrausch 效应
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    11.7 色相
+  </a>
+  
+    <nav class="md-nav" aria-label="11.7 色相">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    色相角计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    色相四分位计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    色相组成计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    11.8 饱和度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.8 饱和度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-s_rg-s_yb" class="md-nav__link">
+    红-绿分量 \( S_{RG} \) 和黄-蓝分量 \( S_{YB} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e_stheta" class="md-nav__link">
+    色强度函数 \( E_s(\theta) \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s" class="md-nav__link">
+    总饱和度 \( S \)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119" class="md-nav__link">
+    11.9 彩度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.9 彩度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-c_rg" class="md-nav__link">
+    红-绿彩度 \( C_{RG} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-c_yb" class="md-nav__link">
+    黄-蓝彩度 \( C_{YB} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    总彩度 \( C \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    公式解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    特性说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110" class="md-nav__link">
+    11.10 色彩鲜艳度
+  </a>
+  
+    <nav class="md-nav" aria-label="11.10 色彩鲜艳度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-m_rg" class="md-nav__link">
+    红-绿色彩鲜艳度 \( M_{RG} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-m_yb" class="md-nav__link">
+    黄-蓝色彩鲜艳度 \( M_{YB} \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m" class="md-nav__link">
+    总色彩鲜艳度 \( M \)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    公式解析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    特性说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111" class="md-nav__link">
+    11.11 逆模型
+  </a>
+  
+    <nav class="md-nav" aria-label="11.11 逆模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    模型的实施与逆转步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    正向与逆向关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    实际应用中的优势
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1112" class="md-nav__link">
+    11.12 预测现象
+  </a>
+  
+    <nav class="md-nav" aria-label="11.12 预测现象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 预测的色貌现象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 模型的适用范围
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 不完全色彩适应的处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111_1" class="md-nav__link">
+    表格 11.1 示例计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    解释说明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-nayatani" class="md-nav__link">
+    1.13 为什么不要只使用 Nayatani 模型？
+  </a>
+  
+    <nav class="md-nav" aria-label="1.13 为什么不要只使用 Nayatani 模型？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    模型的优势
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    模型的不足
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    未来的贡献与发展
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    总结
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>11. The Nayatani model</h1>
+
+<p><strong>背景与重要性</strong></p>
+<p>在接下来的几章中，将详细介绍历史上和目前被广泛研究和使用的色貌模型。本章重点讲述由 Nayatani 及其团队开发的色貌模型，这个模型是早期基于色度学的重要模型之一。和 Hunt 模型（详见第12章）一样，Nayatani 模型是一种完整的色貌模型，能够在多种观察条件下，预测第4章中提到的各种颜色外观参数。</p>
+<p><strong>模型特点</strong></p>
+<ol>
+<li>
+<p><strong>全面预测能力</strong><br />
+   Nayatani 模型能完整地描述颜色的外观，包括我们平时感知到的颜色明亮程度、色彩鲜艳程度以及颜色的整体对比效果。这个模型的基础是色度学理论，同时结合了人类视觉系统如何适应不同环境的特点。</p>
+</li>
+<li>
+<p><strong>早期色貌研究的重要进展</strong><br />
+   相较于其他早期的模型，Nayatani 模型在处理复杂的视觉环境下表现优异，为后续的色貌模型研究奠定了基础。</p>
+</li>
+<li>
+<p><strong>与 Hunt 模型的对比</strong><br />
+   虽然两者都是完整的色貌模型，但 Nayatani 模型更强调“色彩适应”——也就是颜色如何随着光线和环境的变化而改变——在观察条件变化时尤其有效。</p>
+</li>
+</ol>
+<p><strong>实际应用</strong></p>
+<ul>
+<li><strong>工业领域</strong>：Nayatani 模型在纺织、涂料、印刷等行业中非常实用，帮助精确评估颜色在不同光照条件下的变化。</li>
+<li><strong>图像技术</strong>：在数码摄影和色彩管理中，该模型用于解决不同设备和环境下色彩一致性的问题，确保显示和打印的颜色更接近人眼看到的效果。</li>
+</ul>
+<blockquote>
+<p>译者注：Nayatani 模型的重要性在于它结合了人眼视觉的生理特性和色度学的数学模型，填补了传统色度学在复杂实际场景中的不足。这使它成为早期色貌研究中不可忽视的一个里程碑。</p>
+</blockquote>
+<hr />
+<h2 id="111">11.1 目标与方法</h2>
+<p><strong>Nayatani 色貌模型的起源与发展</strong></p>
+<p>Nayatani 色貌模型是他们在第9章提到的“色彩适应模型”的自然延伸（Nayatani et al., 1981），并结合了 Hunt 在1982年和1985年首次提出的色貌模型概念（Hunt, 1982, 1985）。这个模型最初在1986年和1987年的研究中被描述，并在1995年进行了修订和总结（Nayatani et al., 1995）。本章主要描述1995版的模型。</p>
+<p><strong>研究背景与模型适用范围</strong></p>
+<p>该模型的研发背景是“照明工程”领域，主要用于分析和优化光源的“显色性”（即光源呈现颜色的能力）。这种应用的需求与图像再现领域有很大不同，因此：</p>
+<ul>
+<li>对于从事图像处理的人来说，Nayatani 模型可能并不完全适用；</li>
+<li>同样地，针对图像应用开发的模型（例如 CIECAM02）可能无法满足照明工程的需求。</li>
+</ul>
+<p>尽管如此，将模型应用于其设计之外的领域是非常有价值的探索——这可能带来两个结果：
+1. <strong>意外的适用性</strong>：如果模型表现良好，说明它的普适性很强；
+2. <strong>对比与改进</strong>：如果模型不适用，也能帮助我们了解不同应用场景的需求差异。</p>
+<p>因此，尽管 Nayatani 模型并非专为图像应用设计，它仍然值得在需要色貌模型的场景中进行评估。</p>
+<p><strong>模型的特点与适用范围</strong></p>
+<p>Nayatani 模型试图预测许多色貌现象，包括：</p>
+<ul>
+<li>
+<p><strong>Stevens 效应</strong>：随着光照强度增加，感知的对比度也增加；</p>
+</li>
+<li>
+<p><strong>Hunt 效应</strong>：随着光照强度增加，颜色的鲜艳度也增加；</p>
+</li>
+<li>
+<p><strong>Helson–Judd 效应</strong>：颜色感知在不同背景下的变化。</p>
+</li>
+</ul>
+<p>模型主要用于预测“简单色块”在“中性灰色背景”上的颜色外观。它的设计特点是：</p>
+<ul>
+<li>
+<p>适合分析简单的视觉刺激，而非复杂图像或动态背景的变化；</p>
+</li>
+<li>
+<p>输出值能够与主要的色貌属性（如明度、亮度、鲜艳度、色度和色相）相对应。</p>
+</li>
+</ul>
+<p><strong>与其他模型的比较</strong></p>
+<p>Nayatani 模型的设计初衷是服务于“照明与光源显色”领域，这使得它在以下方面与 Hunt 模型、RLAB 模型及 CIECAM02 等专为图像应用设计的模型有所不同。这些“看似的限制”其实在照明应用中并不是问题，而是模型的优势。</p>
+<hr />
+<h2 id="112">11.2 输入数据</h2>
+<p>Nayatani 色貌模型需要一组关键参数作为输入，用于描述刺激物、背景和观察条件的光学与色度特性。具体包括以下内容：</p>
+<ul>
+<li>背景亮度因子（<span class="arithmatex">\(Y_o\)</span>）</li>
+</ul>
+<p>表示中性灰背景的亮度因子，以百分比表示。其值必须不小于 18%（即 0.18）。</p>
+<ul>
+<li>光源颜色（<span class="arithmatex">\(x_o, y_o\)</span>）</li>
+</ul>
+<p>使用 CIE 1931 标准色度学观察者的色品坐标定义光源的颜色。</p>
+<ul>
+<li>测试刺激物</li>
+</ul>
+<p>用色品坐标（<span class="arithmatex">\(x, y\)</span>）和亮度因子（<span class="arithmatex">\(Y\)</span>）表示。</p>
+<ul>
+<li>绝对亮度（<span class="arithmatex">\(E_o\)</span>）</li>
+</ul>
+<p>定义测试颜色和适应场的绝对亮度，单位为勒克斯（lux）。</p>
+<ul>
+<li>归一化照度（<span class="arithmatex">\(E_{or}\)</span>）</li>
+</ul>
+<p>以勒克斯为单位，通常范围在 1000 至 3000 lux。</p>
+<ul>
+<li>噪声参数（<span class="arithmatex">\(n\)</span>）</li>
+</ul>
+<p>用于非线性色彩适应模型，通常取值为 1。</p>
+<hr />
+<p><strong>初步计算</strong></p>
+<p>模型在进行核心计算前，需要完成以下几项初步计算：</p>
+<p><strong>适应亮度（<span class="arithmatex">\(L_o\)</span>）和归一化亮度（<span class="arithmatex">\(L_{or}\)</span>）</strong></p>
+<p>背景为朗伯扩散体（Lambertian diffuser）时，适应亮度与归一化亮度的计算公式如下（单位为cd/m²）：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    L_o = \frac{E_o \cdot Y_o}{\pi \cdot 100} \tag{11.1}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    L_{or} = \frac{E_{or} \cdot Y_o}{\pi \cdot 100} \tag{11.2}
+    $$
+  </div>
+</div>
+
+<hr />
+<p><strong>从 CIE 三刺激值到锥体响应的转换</strong></p>
+<p>模型通过色品坐标计算适应场的中间值，用于表征锥体响应：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \xi = 0.48105x_o - 0.78841y_o + 0.08081y_o \tag{11.3}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    \eta = -0.27200x_o + 1.11962y_o + 0.04570y_o \tag{11.4}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    \zeta = 0.91822(1 - x_o - y_o) \tag{11.5}
+    $$
+  </div>
+</div>
+
+<hr />
+<h2 id="113">11.3 适应模型</h2>
+<p>与所有色貌模型一样，Nayatani 色貌模型的第一阶段是进行色彩适应（Chromatic Adaptation）的转换。该适应模型是第9章所述非线性色彩适应模型的精炼版本（CIE 1994；Nayatani et al., 1981）。在模型的构建过程中，色彩适应模型被嵌入到其他公式中。为便于理解，本节将遵循 Nayatani et al. (1995) 的处理方式，并在适当的公式中指出相关的色彩适应特性。</p>
+<hr />
+<h3 id="_1">适应场的锥体响应计算</h3>
+<p>适应场的锥体响应需要基于绝对亮度水平计算。这一计算依赖于之前的色品转换公式（公式 11.3 至 11.5）、光照水平 <span class="arithmatex">\( E_o \)</span> 和适应背景的亮度因子 <span class="arithmatex">\( Y_o \)</span>。计算公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \begin{aligned}
+    R_o &= \frac{E_o \cdot Y_o}{\pi} \cdot \xi \\
+    G_o &= \frac{E_o \cdot Y_o}{\pi} \cdot \eta \\
+    B_o &= \frac{E_o \cdot Y_o}{\pi} \cdot \zeta
+    \end{aligned} \tag{11.6}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="_2">非线性色彩适应的指数计算</h3>
+<p>基于适应场的锥体响应（公式 11.6），分别计算短波长（B）、中波长（G）和长波长（R）锥体的指数值。公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \beta_R = \frac{R_o^{0.4495} + 6.362}{6.469 + R_o^{0.4495}} \tag{11.7}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    \beta_G = \frac{G_o^{0.4495} + 6.362}{6.469 + G_o^{0.4495}} \tag{11.8}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    \beta_B = \frac{B_o^{0.5128} + 8.091}{8.414 + 0.7844 \cdot B_o^{0.5128}} \tag{11.9}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="_3">基于归一化亮度的附加指数计算</h3>
+<p>归一化亮度的附加指数使用与中波长和长波长锥体相同的形式，公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \beta_L = \frac{L_{or}^{0.4495} + 6.362}{6.469 + L_{or}^{0.4495}} \tag{11.10}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="_4">测试刺激物的锥体响应计算</h3>
+<p>测试刺激物的锥体响应通过传统的线性转换计算：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \begin{bmatrix}
+    R \\
+    G \\
+    B
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0.40024 & 0.70760 & -0.08081 \\
+    -0.22630 & 1.16532 & 0.04570 \\
+    0.00000 & 0.00000 & 0.91822
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+    X \\
+    Y \\
+    Z
+    \end{bmatrix} \tag{11.11}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="_5">缩放系数计算</h3>
+<p>最后，计算两组缩放系数 <span class="arithmatex">\( e(R) \)</span> 和 <span class="arithmatex">\( e(G) \)</span>，公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    e(R) =
+    \begin{cases} 
+    1.758 & \text{if } \xi \geq 20 \\
+    1.0 & \text{if } \xi < 20
+    \end{cases} \tag{11.12}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    e(G) =
+    \begin{cases} 
+    1.758 & \text{if } \eta \geq 20 \\
+    1.0 & \text{if } \eta < 20
+    \end{cases} \tag{11.13}
+    $$
+  </div>
+</div>
+
+<hr />
+<p>上述计算提供了在色貌模型中实现非线性色彩适应模型所需的所有中间数据。这些数据将在后续公式中被逐步使用，以完整预测颜色的外观特性。</p>
+<h2 id="114">11.4 对立色维度</h2>
+<p>在 Nayatani 色貌模型中，锥体响应被直接转换为表示经典视觉响应的对立色维度：一个无色通道和两个色彩通道。这些公式同时包含了非线性色彩适应模型的元素。</p>
+<hr />
+<h3 id="_6">无色响应计算</h3>
+<p>无色响应 <span class="arithmatex">\( Q \)</span> 的计算公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    Q = 41.69 \cdot \left( \frac{2}{3} \cdot \log\left(\frac{R_o + n}{e(R) \cdot R_{or}}\right) + 
+    \frac{1}{3} \cdot \log\left(\frac{G_o + n}{e(G) \cdot G_{or}}\right) \right) \tag{11.14}
+    $$
+  </div>
+</div>
+
+<p><strong>公式解析：</strong></p>
+<ul>
+<li>
+<p>无色响应是长波锥体响应 <span class="arithmatex">\( R \)</span> 和中波锥体响应 <span class="arithmatex">\( G \)</span> 的加权总和，权重为 <span class="arithmatex">\( \frac{2}{3} \)</span> 和 <span class="arithmatex">\( \frac{1}{3} \)</span>，对应人眼视网膜中两种锥体的相对分布比例。</p>
+</li>
+<li>
+<p>噪声项 <span class="arithmatex">\( n \)</span> 通常取值为 1.0。</p>
+</li>
+<li>
+<p>每个锥体响应先经过 von Kries 型变换归一化（以适应背景的锥体响应为基准）。</p>
+</li>
+<li>
+<p>对归一化结果取对数，模拟人类视觉系统中已知的非线性压缩。</p>
+</li>
+<li>
+<p><span class="arithmatex">\( e(R) \)</span> 和 <span class="arithmatex">\( e(G) \)</span> 是前面计算的缩放系数，<span class="arithmatex">\( \beta \)</span> 是色彩适应的指数调整因子。</p>
+</li>
+<li>
+<p>额外的常数 <span class="arithmatex">\( 41.69 \)</span> 用于缩放，完成公式计算。</p>
+</li>
+</ul>
+<hr />
+<h3 id="_7">色彩通道计算</h3>
+<p>红-绿通道响应 <span class="arithmatex">\( t \)</span> 和黄-蓝通道响应 <span class="arithmatex">\( p \)</span> 的计算公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    t = \log\left(\frac{R_o + n}{e(R) \cdot R_{or}}\right) - 
+    \log\left(\frac{G_o + n}{e(G) \cdot G_{or}}\right) + 
+    \beta_B \cdot \log\left(\frac{B_o + n}{B_{or}}\right) \tag{11.15}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    p = \log\left(\frac{R_o + n}{e(R) \cdot R_{or}}\right) + 
+    \log\left(\frac{G_o + n}{e(G) \cdot G_{or}}\right) - 
+    2 \cdot \beta_B \cdot \log\left(\frac{B_o + n}{B_{or}}\right) \tag{11.16}
+    $$
+  </div>
+</div>
+
+<p><strong>公式解析：</strong></p>
+<ul>
+<li>
+<p><strong>红-绿通道 <span class="arithmatex">\( t \)</span></strong><br />
+  计算中结合了三种锥体响应：
+  a. <span class="arithmatex">\( R_o - G_o \)</span> 的加权差值表示红绿对立；
+  b. 短波锥体 <span class="arithmatex">\( B_o \)</span> 的响应对长波（红）部分有轻微影响，用于解释光谱紫的感知和独特黄的预测。</p>
+</li>
+<li>
+<p><strong>黄-蓝通道 <span class="arithmatex">\( p \)</span></strong><br />
+  a. 通过 <span class="arithmatex">\( R_o + G_o \)</span> 的加权和产生黄色响应；
+  b. 减去 <span class="arithmatex">\( B_o \)</span> 的响应生成对立的蓝色。</p>
+</li>
+<li>
+<p>这些公式使用了 Hunt 模型中提出的加权因子，分别反映了视网膜锥体的分布特点。</p>
+</li>
+</ul>
+<hr />
+<h3 id="_8">色相角计算</h3>
+<p>色相角 <span class="arithmatex">\( \theta \)</span> 的计算公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \theta = \tan^{-1}\left(\frac{p}{t}\right) \tag{11.17}
+    $$
+  </div>
+</div>
+
+<p><strong>公式解析：</strong></p>
+<ul>
+<li>
+<p>色相角是从 <span class="arithmatex">\( t \)</span> 轴（红-绿）开始的正角度，范围为 0° 至 360°。</p>
+</li>
+<li>
+<p>这种定义方式与 CIELAB 色空间一致（CIE 1986）。</p>
+</li>
+<li>
+<p>色相角 <span class="arithmatex">\( \theta \)</span> 被用于进一步计算其他色貌属性，例如饱和度和鲜艳度中的色相依赖调整因子。</p>
+</li>
+</ul>
+<hr />
+<p>通过这些计算，模型得出了视觉系统的无色和色彩对立响应，用于后续的明度、亮度、饱和度、鲜艳度和色相等属性的预测。</p>
+<hr />
+<h2 id="115">11.5 明亮度</h2>
+<p>测试样品的明亮度 <span class="arithmatex">\( Br \)</span> 的计算公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    Br = 50 \cdot \left( \frac{2}{3} \cdot Q + \frac{1}{3} \cdot \beta_R + \frac{1}{3} \cdot \beta_G \right) \cdot \beta_L \tag{11.18}
+    $$
+  </div>
+</div>
+
+<h3 id="_9">公式解析</h3>
+<ul>
+<li>
+<p><span class="arithmatex">\( Q \)</span> 是无色响应，定义于公式 11.14，并在此基础上结合了适应指数 <span class="arithmatex">\( \beta_R \)</span>、<span class="arithmatex">\( \beta_G \)</span> 和 <span class="arithmatex">\( \beta_L \)</span>，用来引入绝对亮度对明亮度的影响。与“明度”不同，明亮度更强调整体亮度水平。</p>
+</li>
+<li>
+<p>系数 <span class="arithmatex">\( 50 \)</span> 是一个用于调整整体明亮度的常数。</p>
+</li>
+</ul>
+<hr />
+<h3 id="_10">理想白的明亮度计算</h3>
+<p>为了计算样品相对于理想白的明亮度，需要先计算理想白的明亮度 <span class="arithmatex">\( Br_w \)</span>，公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    Br_w = 50 \cdot \left( \frac{2}{3} \cdot \log\left(\frac{R_o + n}{e(R) \cdot R_{or}}\right) + 
+    \frac{1}{3} \cdot \log\left(\frac{G_o + n}{e(G) \cdot G_{or}}\right) \right) \cdot \beta_L \tag{11.19}
+    $$
+  </div>
+</div>
+
+<h3 id="_11">公式解析</h3>
+<ul>
+<li>
+<p>理想白的计算是基于公式 11.14，对完美反射体（即 <span class="arithmatex">\( Y = 100\% \)</span>）进行计算得到的。</p>
+</li>
+<li>
+<p>在计算中，<span class="arithmatex">\( R_o \)</span>、<span class="arithmatex">\( G_o \)</span> 和 <span class="arithmatex">\( \beta \)</span> 的值根据理想白的条件进行替换，确保明亮度的预测准确。</p>
+</li>
+<li>
+<p>公式中的 <span class="arithmatex">\( \xi \)</span> 和 <span class="arithmatex">\( \eta \)</span> 是色品坐标变换值，与先前定义一致。</p>
+</li>
+</ul>
+<hr />
+<p>通过这些公式，模型能够同时计算测试样品的明亮度 <span class="arithmatex">\( Br \)</span> 和理想白的明亮度 <span class="arithmatex">\( Br_w \)</span>。这些计算结果为进一步分析样品的颜色外观提供了基础。</p>
+<hr />
+<h2 id="116">11.6 明度</h2>
+<h3 id="l_p">无色明度 <span class="arithmatex">\( L_P^* \)</span></h3>
+<p>测试样品的无色明度 <span class="arithmatex">\( L_P^* \)</span> 可直接通过无色响应 <span class="arithmatex">\( Q \)</span> 计算，公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    L_P^* = Q + 50 \tag{11.20}
+    $$
+  </div>
+</div>
+
+<p><strong>公式解析：</strong></p>
+<ul>
+<li><span class="arithmatex">\( Q \)</span> 是无色响应，其值可以为正或负。</li>
+<li>中性灰的 <span class="arithmatex">\( Q = 0 \)</span> 对应明度 <span class="arithmatex">\( L_P^* = 50 \)</span>。</li>
+<li>明度的范围被限定为 0（黑）到 100（白）。</li>
+</ul>
+<hr />
+<h3 id="l_n">归一化无色明度 <span class="arithmatex">\( L_N^* \)</span></h3>
+<p>归一化无色明度 <span class="arithmatex">\( L_N^* \)</span> 根据 CIE 的定义计算，定义为样品亮度相对于理想白亮度的百分比。公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    L_N^* = \frac{B_r}{B_{rw}} \cdot 100 \tag{11.21}
+    $$
+  </div>
+</div>
+
+<p><strong>公式解析：</strong></p>
+<ul>
+<li><span class="arithmatex">\( B_r \)</span>：测试样品的亮度。</li>
+<li><span class="arithmatex">\( B_{rw} \)</span>：理想白的亮度。</li>
+</ul>
+<hr />
+<h3 id="_12">两种明度量的区别</h3>
+<ul>
+<li><span class="arithmatex">\( L_P^* \)</span> 和 <span class="arithmatex">\( L_N^* \)</span> 在大多数情况下差异很小，可以忽略不计。</li>
+<li>两种明度量均不包括 Helmholtz-Kohlrausch 效应，因此不能很好地描述有色物体的感知明度。</li>
+</ul>
+<hr />
+<h3 id="helmholtz-kohlrausch">关于 Helmholtz-Kohlrausch 效应</h3>
+<ul>
+<li><strong>Helmholtz-Kohlrausch 效应</strong>：色相和饱和度对感知明度和亮度的影响。</li>
+<li>需要额外的模型来考虑该效应，特别是在比较不同色相或色度的刺激物时。</li>
+</ul>
+<hr />
+<p>通过上述公式，Nayatani 色貌模型可以描述样品的无色明度，但在处理色彩感知复杂性的情况下，需要额外扩展模型以包括更多影响因素。</p>
+<hr />
+<h2 id="117">11.7 色相</h2>
+<h3 id="_13">色相角计算</h3>
+<p>色相角 <span class="arithmatex">\( \theta \)</span> 的计算方法已在公式 11.17 中给出，其计算方式与 CIELAB 色空间一致：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \theta = \tan^{-1}\left(\frac{p}{t}\right) \tag{11.17}
+    $$
+  </div>
+</div>
+
+<p><strong>公式解析：</strong></p>
+<ul>
+<li><span class="arithmatex">\( \theta \)</span> 表示色相角，范围为 0° 至 360°，从红-绿通道 <span class="arithmatex">\( t \)</span> 轴正方向开始测量。</li>
+<li>色相角为基础量，用于后续描述更详细的色相相关属性。</li>
+</ul>
+<hr />
+<h3 id="_14">色相四分位计算</h3>
+<p>色相四分位 <span class="arithmatex">\( H \)</span> 是一个 400 等分的色相标度，在此标度上，独特色（unique hues）的值定义为：</p>
+<ul>
+<li>红（red）：0  </li>
+<li>黄（yellow）：100  </li>
+<li>绿（green）：200  </li>
+<li>蓝（blue）：300  </li>
+</ul>
+<p>色相四分位通过线性插值得到，使用测试样品的色相角 <span class="arithmatex">\( \theta \)</span> 和独特色的预定义角度：</p>
+<ul>
+<li>红：20.14°  </li>
+<li>黄：90.00°  </li>
+<li>绿：164.25°  </li>
+<li>蓝：231.00°  </li>
+</ul>
+<hr />
+<h3 id="_15">色相组成计算</h3>
+<p>色相组成 <span class="arithmatex">\( HC \)</span> 描述了测试颜色在感知上由两种独特色组成的比例。例如，橙色可能被描述为 <span class="arithmatex">\( 50Y + 50R \)</span>，表示色相在独特红和独特黄之间均匀分布。</p>
+<p>计算过程如下：</p>
+<ol>
+<li>使用线性插值，将色相四分位转换为两个独特色的百分比分量。</li>
+<li>独特色的比例由测试色落在相邻独特色之间的位置决定。</li>
+</ol>
+<p><strong>示例：</strong></p>
+<ul>
+<li>假设一个颜色刺激的色相角 <span class="arithmatex">\( \theta = 43.19^\circ \)</span>：</li>
+<li>其色相四分位 <span class="arithmatex">\( H = 32.98 \)</span>（通过线性插值计算）。</li>
+<li>其色相组成 <span class="arithmatex">\( HC = 33Y + 67R \)</span>，表示色相在独特红和独特黄之间，接近独特红。</li>
+</ul>
+<hr />
+<p>通过上述计算，模型能够提供从基础色相角到色相四分位和色相组成的全面描述，从而更直观地表达颜色的感知特性。</p>
+<hr />
+<h2 id="118">11.8 饱和度</h2>
+<p>在 Nayatani 色貌模型中，饱和度是最直接的色彩属性，它是计算鲜艳度和色度的基础。饱和度包括两个分量：红-绿分量 <span class="arithmatex">\( S_{RG} \)</span> 和黄-蓝分量 <span class="arithmatex">\( S_{YB} \)</span>。</p>
+<hr />
+<h3 id="-s_rg-s_yb">红-绿分量 <span class="arithmatex">\( S_{RG} \)</span> 和黄-蓝分量 <span class="arithmatex">\( S_{YB} \)</span></h3>
+<p>红-绿分量和黄-蓝分量的计算公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    S_{RG} = \frac{t \cdot E_s(\theta)}{488.93 \cdot \beta_L} \tag{11.22}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    S_{YB} = \frac{p \cdot E_s(\theta)}{488.93 \cdot \beta_L} \tag{11.23}
+    $$
+  </div>
+</div>
+
+<p><strong>公式解析：</strong></p>
+<ul>
+<li><span class="arithmatex">\( t \)</span> 和 <span class="arithmatex">\( p \)</span>：分别表示红-绿通道和黄-蓝通道的响应。</li>
+<li><span class="arithmatex">\( E_s(\theta) \)</span>：色相角 <span class="arithmatex">\( \theta \)</span> 的色强度函数（后续通过公式 11.24 计算）。</li>
+<li><span class="arithmatex">\( \beta_L \)</span>：与亮度相关的指数调整因子，用于预测 Hunt 效应。</li>
+<li><span class="arithmatex">\( 488.93 \)</span>：用于调整比例的缩放因子。</li>
+</ul>
+<hr />
+<h3 id="e_stheta">色强度函数 <span class="arithmatex">\( E_s(\theta) \)</span></h3>
+<p>色强度函数 <span class="arithmatex">\( E_s(\theta) \)</span> 是一个经验公式，用于调整饱和度随色相角的变化，公式如下：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    E_s(\theta) =
+    0.9394 
+    - 0.2478 \sin(\theta) 
+    + 0.0743 \sin(2\theta) 
+    - 0.0666 \sin(3\theta) 
+    - 0.0186 \sin(4\theta)
+    $$
+
+    $$ 
+    - 0.0055 \cos(\theta) 
+    - 0.0521 \cos(2\theta) 
+    - 0.0573 \cos(3\theta) 
+    - 0.0061 \cos(4\theta) \tag{11.24}
+    $$
+  </div>
+</div>
+
+<p><strong>公式解析：</strong></p>
+<ul>
+<li><span class="arithmatex">\( E_s(\theta) \)</span> 由多个正弦和余弦项组成，通过拟合实验数据得出，用于修正不同色相角的饱和度感知。</li>
+</ul>
+<hr />
+<h3 id="s">总饱和度 <span class="arithmatex">\( S \)</span></h3>
+<p>最终的总饱和度 <span class="arithmatex">\( S \)</span> 是通过红-绿分量和黄-蓝分量的欧几里得距离计算得出：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    S = \sqrt{S_{RG}^2 + S_{YB}^2} \tag{11.25}
+    $$
+  </div>
+</div>
+
+<hr />
+<p>通过以上公式，模型能够计算饱和度的两个主要分量以及整体饱和度，为色貌的其他属性（例如鲜艳度和色度）的计算提供了基础。</p>
+<hr />
+<h2 id="119">11.9 彩度</h2>
+<p>彩度的计算基于饱和度的定义关系。正如第4章所述，饱和度可以表示为彩度除以明度。因此，彩度可以通过饱和度乘以明度得到。</p>
+<p>在 Nayatani 色貌模型中，彩度的计算形式与此定义基本一致。测试样品的红-绿彩度、黄-蓝彩度以及整体彩度的计算公式分别如下：</p>
+<hr />
+<h3 id="-c_rg">红-绿彩度 <span class="arithmatex">\( C_{RG} \)</span></h3>
+<div class="math-block">
+  <div class="equation">
+    $$
+    C_{RG} = S_{RG} \cdot \left(\frac{P_L^*}{50}\right)^{0.7} \tag{11.26}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="-c_yb">黄-蓝彩度 <span class="arithmatex">\( C_{YB} \)</span></h3>
+<div class="math-block">
+  <div class="equation">
+    $$
+    C_{YB} = S_{YB} \cdot \left(\frac{P_L^*}{50}\right)^{0.7} \tag{11.27}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="c">总彩度 <span class="arithmatex">\( C \)</span></h3>
+<div class="math-block">
+  <div class="equation">
+    $$
+    C = S \cdot \left(\frac{P_L^*}{50}\right)^{0.7} \tag{11.28}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="_16">公式解析</h3>
+<ul>
+<li><span class="arithmatex">\( S_{RG} \)</span>、<span class="arithmatex">\( S_{YB} \)</span>、<span class="arithmatex">\( S \)</span>：分别为红-绿饱和度、黄-蓝饱和度以及总饱和度（见公式 11.22 至 11.25）。</li>
+<li><span class="arithmatex">\( P_L^* \)</span>：测试样品的明度（公式 11.20）。</li>
+<li>常数 50 用于缩放明度的范围。</li>
+<li>指数 0.7 引入了一定的非线性，用于更好地拟合孟塞尔色卡（Munsell Book of Color）的恒定彩度曲线（Nayatani et al. 1995）。</li>
+</ul>
+<h3 id="_17">特性说明</h3>
+<p>与传统定义的彩度相比，这些公式通过引入非线性项（指数 0.7），更精确地描述了真实观察条件下彩度的感知变化，同时考虑了明度和饱和度的非线性关系。</p>
+<hr />
+<p>通过上述公式，模型能够提供更加细致的彩度预测，并支持进一步的色貌属性计算。</p>
+<hr />
+<h2 id="1110">11.10 色彩鲜艳度</h2>
+<p>在 Nayatani 色貌模型中，色彩鲜艳度的计算基于 CIE 对色貌属性的定义。彩度被定义为样品的色彩鲜艳度相对于理想白亮度的比值。因此，色彩鲜艳度可以通过样品的彩度乘以理想白的亮度来计算。</p>
+<p>测试样品的红-绿色彩鲜艳度、黄-蓝色彩鲜艳度以及总体色彩鲜艳度的计算公式分别如下：</p>
+<hr />
+<h3 id="-m_rg">红-绿色彩鲜艳度 <span class="arithmatex">\( M_{RG} \)</span></h3>
+<div class="math-block">
+  <div class="equation">
+    $$
+    M_{RG} = C_{RG} \cdot \frac{B_{rw}}{100} \tag{11.29}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="-m_yb">黄-蓝色彩鲜艳度 <span class="arithmatex">\( M_{YB} \)</span></h3>
+<div class="math-block">
+  <div class="equation">
+    $$
+    M_{YB} = C_{YB} \cdot \frac{B_{rw}}{100} \tag{11.30}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="m">总色彩鲜艳度 <span class="arithmatex">\( M \)</span></h3>
+<div class="math-block">
+  <div class="equation">
+    $$
+    M = C \cdot \frac{B_{rw}}{100} \tag{11.31}
+    $$
+  </div>
+</div>
+
+<hr />
+<h3 id="_18">公式解析</h3>
+<ul>
+<li><span class="arithmatex">\( C_{RG} \)</span>、<span class="arithmatex">\( C_{YB} \)</span>、<span class="arithmatex">\( C \)</span>：分别为红-绿彩度、黄-蓝彩度和整体彩度（公式 11.26 至 11.28）。</li>
+<li><span class="arithmatex">\( B_{rw} \)</span>：理想白的亮度（由公式 11.19 计算）。</li>
+<li>常数 100 是归一化值，源于在标准 D65 光源和归一化照度条件下，理想白亮度的定义。</li>
+</ul>
+<h3 id="_19">特性说明</h3>
+<p>色彩鲜艳度通过结合彩度和理想白亮度，能够更准确地描述在给定光源和背景条件下，颜色的整体感知强度。此归一化设计确保了不同测试条件下的计算结果具有一致性和可比性。</p>
+<hr />
+<p>通过以上公式，Nayatani 色貌模型可以有效预测颜色的色彩鲜艳度，为进一步的颜色外观分析提供了基础。</p>
+<hr />
+<h2 id="1111">11.11 逆模型</h2>
+<p>在许多应用中，特别是图像再现中，色貌模型需要能够双向使用，即同时支持正向（从物理数据到感知属性）和反向（从感知属性到物理数据）的计算。因此，公式能够解析地反转是非常重要或至少非常方便的。</p>
+<p>幸运的是，Nayatani 色貌模型可以解析地进行逆运算。Nayatani 等人在 1990 年的一篇论文中介绍了如何反转模型以匹配亮度–色彩鲜艳度或明度–彩度。这些方法虽然基于略早的模型版本，但基本过程仍适用。</p>
+<hr />
+<h3 id="_20">模型的实施与逆转步骤</h3>
+<p>模型的应用和逆转可以视为一个简单的逐步过程。以下是正向和逆向计算的关键步骤：</p>
+<ol>
+<li>
+<p><strong>获取物理数据</strong><br />
+   从测试样品和观察条件中获取必要的物理参数，例如亮度、色品坐标、背景光照等。</p>
+</li>
+<li>
+<p><strong>计算 <span class="arithmatex">\( Q \)</span>、<span class="arithmatex">\( t \)</span> 和 <span class="arithmatex">\( p \)</span></strong><br />
+   使用相关公式（如公式 11.14 和公式 11.15–11.16），计算无色响应 <span class="arithmatex">\( Q \)</span> 以及红-绿和黄-蓝通道的响应 <span class="arithmatex">\( t \)</span> 和 <span class="arithmatex">\( p \)</span>。</p>
+</li>
+<li>
+<p><strong>计算色相相关量</strong><br />
+   包括：</p>
+</li>
+<li>色相角 <span class="arithmatex">\( q \)</span>（公式 11.17）；</li>
+<li>色强度函数 <span class="arithmatex">\( E_s(q) \)</span>（公式 11.24）；</li>
+<li>
+<p>色相四分位 <span class="arithmatex">\( H \)</span> 和色相组成 <span class="arithmatex">\( HC \)</span>。</p>
+</li>
+<li>
+<p><strong>计算亮度、明度和饱和度</strong><br />
+   包括：</p>
+</li>
+<li>亮度 <span class="arithmatex">\( Br \)</span> 和理想白的亮度 <span class="arithmatex">\( Br_w \)</span>（公式 11.18–11.19）；</li>
+<li>明度 <span class="arithmatex">\( P_L^* \)</span> 和归一化明度 <span class="arithmatex">\( N_L^* \)</span>（公式 11.20–11.21）；</li>
+<li>
+<p>饱和度 <span class="arithmatex">\( S \)</span>（公式 11.25）。</p>
+</li>
+<li>
+<p><strong>计算彩度 <span class="arithmatex">\( C \)</span></strong><br />
+   根据公式 11.26–11.28，从饱和度和明度推导彩度。</p>
+</li>
+<li>
+<p><strong>计算色彩鲜艳度 <span class="arithmatex">\( M \)</span></strong><br />
+   根据公式 11.29–11.31，从彩度和理想白亮度推导色彩鲜艳度。</p>
+</li>
+</ol>
+<hr />
+<h3 id="_21">正向与逆向关系</h3>
+<p>在逆模型中，以上步骤可以按照相反的顺序逐步求解。例如，从感知属性（如色彩鲜艳度 <span class="arithmatex">\( M \)</span>、彩度 <span class="arithmatex">\( C \)</span>、明度 <span class="arithmatex">\( P_L^* \)</span>）开始，通过逆向推导，逐步计算出物理数据（如锥体响应、亮度等）。</p>
+<hr />
+<h3 id="_22">实际应用中的优势</h3>
+<ul>
+<li>
+<p><strong>解析反转的便捷性</strong>：<br />
+  由于 Nayatani 模型的公式多为解析形式，能够直接计算，无需迭代算法，这在图像处理和色彩再现中尤为实用。</p>
+</li>
+<li>
+<p><strong>灵活性</strong>：<br />
+  逆模型可以在不同条件下高效匹配感知结果与物理参数，为设计和优化复杂色彩系统提供支持。</p>
+</li>
+</ul>
+<hr />
+<p>通过这些步骤，Nayatani 模型实现了色貌属性与物理数据之间的双向转换，极大提高了其实用性。</p>
+<hr />
+<h2 id="1112">11.12 预测现象</h2>
+<p>Nayatani 色貌模型能够预测因色彩适应和亮度水平变化而引起的颜色外观变化，主要包括以下现象：</p>
+<h3 id="1">1. 预测的色貌现象</h3>
+<ul>
+<li>
+<p><strong>Stevens 效应</strong>：<br />
+  随着亮度增加，感知对比度增强的现象。</p>
+</li>
+<li>
+<p><strong>Hunt 效应</strong>：<br />
+  随着亮度增加，颜色鲜艳度和饱和度增强的现象。</p>
+</li>
+<li>
+<p><strong>Helson–Judd 效应</strong>：<br />
+  在不同背景亮度条件下颜色感知的变化。</p>
+</li>
+</ul>
+<h3 id="2">2. 模型的适用范围</h3>
+<ul>
+<li><strong>支持的条件</strong>：</li>
+<li>模型适用于背景亮度因子大于 18% 的情况。</li>
+<li>
+<p>模型在处理色彩适应和亮度变化时具有较高的准确性。</p>
+</li>
+<li>
+<p><strong>限制</strong>：</p>
+</li>
+<li>模型不适用于背景颜色变化（同时对比效应）或环境相对亮度变化（如 Bartleson–Breneman 方程）的预测。</li>
+<li>模型不包含对不完全色彩适应或认知光源补偿（discounting-the-illuminant）机制的预测能力。</li>
+</ul>
+<hr />
+<h3 id="3">3. 不完全色彩适应的处理</h3>
+<ul>
+<li>Nayatani（1997）提出了一种基于实验数据的方法，用于估计不完全色彩适应的水平。</li>
+<li>虽然此方法在视觉实验的结果预测中有用，但在实际应用中价值有限，尤其是在缺乏相关视觉实验数据的情况下。</li>
+</ul>
+<hr />
+<h3 id="111_1">表格 11.1 示例计算</h3>
+<p align="center">
+  表 11.1：Nayatani色貌模型计算示例
+</p>
+
+<p align="center">
+  <img src="../imgs/chapter11/table11-1.png" alt="Figure 10.1" width="60%">
+</p>
+
+<hr />
+<h3 id="_23">解释说明</h3>
+<ul>
+<li>表格中展示的 <span class="arithmatex">\( S \)</span>、<span class="arithmatex">\( C \)</span>、<span class="arithmatex">\( M \)</span> 分别对应饱和度、彩度和色彩鲜艳度的计算结果。</li>
+<li>色相角 <span class="arithmatex">\( \theta \)</span> 和色相四分位 <span class="arithmatex">\( H \)</span> 描述了颜色的感知色相。</li>
+<li>无色明度 <span class="arithmatex">\( P_L^* \)</span> 和归一化明度 <span class="arithmatex">\( L_N^* \)</span> 提供了对样品亮度的不同描述。</li>
+</ul>
+<hr />
+<p>通过表格中的结果可以看出，模型在处理不同输入条件下的色貌属性变化时具有良好的适应性和一致性。</p>
+<hr />
+<h2 id="113-nayatani">1.13 为什么不要只使用 Nayatani 模型？</h2>
+<h3 id="_24">模型的优势</h3>
+<p>Nayatani 色貌模型是一种完整的模型，能够预测所有重要的色貌属性。这些优点包括：</p>
+<ul>
+<li><strong>全面性</strong>：模型涵盖了色彩鲜艳度、彩度、明度、饱和度和色相等所有主要色貌属性。</li>
+<li><strong>解析可逆性</strong>：模型可以解析地反转，便于在需要正向和反向预测的应用中使用。</li>
+<li><strong>计算相对简单</strong>：尽管公式稍显复杂，但其整体逻辑较为直接。</li>
+</ul>
+<h3 id="_25">模型的不足</h3>
+<p>尽管 Nayatani 模型具有上述优点，但仍有以下不足，限制了其作为通用标准模型的可能性：</p>
+<ol>
+<li><strong>无法处理背景和环境因素</strong>：</li>
+<li>模型无法预测背景颜色的变化（例如同时对比效应）。</li>
+<li>
+<p>模型不支持环境相对亮度变化的预测，而这些因素在图像再现中尤为关键。</p>
+</li>
+<li>
+<p><strong>缺乏适应水平的预测</strong>：</p>
+</li>
+<li>
+<p>模型不能预测不同光源或介质之间的适应水平，而这一点对跨媒体色彩再现至关重要。</p>
+</li>
+<li>
+<p><strong>局限于简单视场</strong>：</p>
+</li>
+<li>
+<p>模型主要基于简单色块开发和测试，无法准确适用于更复杂的观察场景。</p>
+</li>
+<li>
+<p><strong>Helson–Judd 效应的过预测</strong>：</p>
+</li>
+<li>
+<p>模型在色彩不强的光源（例如光源 A）下对 Helson–Judd 效应的预测过强，而实际上这种效应在此条件下并不存在。</p>
+</li>
+<li>
+<p><strong>精度不足</strong>：</p>
+</li>
+<li>
+<p>在后续章节中描述的各种色貌模型测试中，Nayatani 模型的预测精度通常不够高。</p>
+</li>
+<li>
+<p><strong>未包含视觉杆细胞的贡献</strong>：</p>
+</li>
+<li>视觉杆细胞的影响（如 Hunt 模型中包含的）未被纳入，而这是颜色感知的重要部分。</li>
+</ol>
+<hr />
+<h3 id="_26">未来的贡献与发展</h3>
+<p>尽管 Nayatani 模型存在上述局限，但它在色貌模型的发展中具有重要意义。以下是其可能的贡献方向：</p>
+<ul>
+<li>
+<p><strong>对未来模型的影响</strong>：<br />
+  Nayatani 模型的一些核心思想已经被纳入后续模型中，如 CIECAM97s 和 CIECAM02，这些模型在一定程度上继承了其结构和公式。</p>
+</li>
+<li>
+<p><strong>理论空间的拓展</strong>：<br />
+  Nayatani 本人开发了 "Nayatani Theoretical" 色彩空间（2004），这一空间引入了一些非常有趣的概念，包括：</p>
+</li>
+<li><strong>Evans 的 "辉光"（brilliance）</strong>，也称为荧光；</li>
+<li><strong>NCS 色彩系统中的白度-黑度与色度（chromaticness）概念</strong>；</li>
+<li>
+<p><strong>Helmholtz-Kohlrausch 效应</strong>。</p>
+</li>
+<li>
+<p><strong>实际应用</strong>：<br />
+  Nayatani 的理论被应用于扩展色域显示的色彩增强（Heckaman 和 Fairchild, 2008, 2009, 2011），用于优化图像显示和提升视觉效果。</p>
+</li>
+</ul>
+<hr />
+<h3 id="_27">总结</h3>
+<p>尽管 Nayatani 模型未能成为通用色貌模型的最终选择，其对色貌模型的发展作出了重要贡献。它的核心思想和公式形式可能会继续影响未来色貌模型的设计与应用。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  </body>
+</html>

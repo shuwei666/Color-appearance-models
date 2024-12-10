@@ -384,6 +384,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#49-" class="md-nav__link">
+    4.9 亮度-色彩鲜艳度与明度-彩度的对比
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -512,11 +519,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../11-The Nayatani et al model.md" class="md-nav__link">
+      <a href="../11-The%20Nayatani%20model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    11. The Nayatani et al model
+    11. The Nayatani model
   </span>
   
 
@@ -814,6 +821,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#49-" class="md-nav__link">
+    4.9 亮度-色彩鲜艳度与明度-彩度的对比
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -860,7 +874,7 @@
 <p><strong>亮度（Brightness）</strong> 是指我们看到某个区域时，认为它反射或发出的光量是多少。换句话说，亮度是对光的整体感知。<strong>明度（Lightness）</strong> 则是亮度的一种相对衡量方式，它表示在同样照明条件下，某个区域相对于看起来白色的区域有多亮。举例来说，如果我们在办公室里看一本书的页面，这个页面可能显得比较亮，而且因为它可能是视野中最亮的物体，所以明度也较高。如果我们把书拿到阳光下，页面会显得更亮，亮度增加了，但它依然是最亮的物体，明度几乎不变。</p>
 <p><strong>图4.1</strong>展示了四个渲染的立方体，它们分别被两个不同强度的光源照亮。假设你正置身于这些立方体所在的照明环境中，不同面上的光照强度不同，因此它们看起来的亮度也不同。然而，如果你被要求判断这些立方体的明度，你可能会给出相同的答案，因为明度是相对于在相同照明条件下的白色物体的亮度来衡量的。</p>
 <blockquote>
-<p>译者注：Lightness就是相对值，对应CIELAB中的明度L，而L的计算，来自XYZ中的<span class="arithmatex">\(Y/Y_{n}\)</span>，具体就是：<span class="arithmatex">\(L^* = 116 (Y/Y_{n})^{1/3} - 16\)</span> 。所以这里可以看出，XYZ中的Y，就是可以看做是Brightness，而相对标准<span class="arithmatex">\(Y_{n}\)</span>的这&gt; 个L，就是Lightness</p>
+<p>译者注：Lightness就是相对值，对应CIELAB中的明度L，而L的计算，来自XYZ中的<span class="arithmatex">\(Y/Y_{n}\)</span>，具体就是：<span class="arithmatex">\(L^* = 116 (Y/Y_{n})^{1/3} - 16\)</span> 。所以这里可以看出，XYZ中的Y，就是可以看做是Brightness，而相对标准<span class="arithmatex">\(Y_{n}\)</span>的这个L，就是Lightness</p>
 </blockquote>
 <h2 id="45-colorfulness-and-chroma">4.5 Colorfulness and Chroma</h2>
 <p><strong>色彩鲜艳度（Colorfulness）</strong> 和 <strong>彩度（Chroma）</strong> 是颜色感知中的两个重要维度，分别描述颜色的绝对和相对强度。</p>
@@ -869,6 +883,13 @@
 <li><strong>彩度</strong> 则是颜色的相对强度，表示颜色相对于类似照明下白色物体的强度。彩度是相对的，不受光照的变化影响，但与颜色所处的亮度条件密切相关。</li>
 </ul>
 <p>在色彩感知中，<strong>色彩鲜艳度</strong> 和 <strong>彩度</strong> 的关系类似于 <strong>亮度</strong> 和 <strong>明度</strong> 的关系。色彩鲜艳度是绝对值，而彩度是相对值。色彩鲜艳度随着亮度增加而增加，而彩度则相对保持不变。</p>
+<p align="center">
+  <img src="../imgs/chapter4/4-1.png" alt="计算机图形渲染展示不同光源下的四个实心块" width="60%">
+</p>
+<p align="center">
+  图 4.1：计算机图形渲染的四个实心块，由两个强度和角度不同的光源照明，用于演示各种色貌属性。
+</p>
+
 <p>如 <strong>Figure 4.1</strong> 所示，立方体的不同面由于受到不同程度的光照，表现出不同的<strong>色彩鲜艳度</strong>。受到更多光照的面颜色显得更加鲜艳。然而，如果你要评估这些立方体的<strong>彩度</strong>，会发现各个面的彩度基本一致，因为彩度是相对于白色物体的亮度来衡量的。在此例中，尽管光照不同，彩度几乎不受影响。</p>
 <h2 id="46-saturation">4.6 Saturation</h2>
 <p><strong>饱和度（Saturation）</strong> 是指颜色的鲜艳度，相对于该颜色自身的亮度进行判断。它描述了颜色的纯净度或鲜艳程度。</p>
@@ -965,6 +986,79 @@
   </div>
   <div class="number">(4.6)</div>
 </div>
+
+<hr />
+<h2 id="49-">4.9 亮度-色彩鲜艳度与明度-彩度的对比</h2>
+<p>虽然颜色通常被认为是三维的（通过三个数值即可完全定义颜色匹配），但实际上，完整地描述颜色外观需要五个感知维度：</p>
+<ul>
+<li>亮度（Brightness）</li>
+<li>明度（Lightness）</li>
+<li>色彩鲜艳度（Colorfulness）</li>
+<li>饱和度（Saturation）</li>
+<li>色相（Hue）</li>
+</ul>
+<p>彩度（Chroma）是多余的属性，因为只要知道上述五个属性，彩度也就随之确定。然而，在许多实际应用中，不需要同时知道所有五个属性。通常只需要相对的外观属性，特别是明度、彩度和色相。</p>
+<hr />
+<p>Nayatani 等人（1990a）通过理论和实验表明，在大多数观察条件下，亮度-色彩鲜艳度的匹配和明度-彩度的匹配是不同的。</p>
+<p><strong>实例对比</strong></p>
+<ol>
+<li><strong>户外的黄色校车</strong>  </li>
+<li>
+<p>在阳光下的黄色校车具有以下典型的色貌属性：</p>
+<ul>
+<li>色相：黄色</li>
+<li>亮度：高</li>
+<li>明度：高</li>
+<li>色彩鲜艳度：高</li>
+<li>彩度：高</li>
+</ul>
+</li>
+<li>
+<p><strong>室内照片</strong>  </p>
+</li>
+<li>
+<p>在办公室或家中光线较暗的环境下观看校车的打印照片时：</p>
+<ul>
+<li>色相（黄色）、明度（高）、彩度（高）可能与原始物体匹配。</li>
+<li>但照片的亮度和色彩鲜艳度永远无法达到在阳光下观看原始校车的水平，因为打印照片的反射能量相对于原始物体要低得多。</li>
+</ul>
+</li>
+<li>
+<p><strong>相同光照下的照片</strong>  </p>
+</li>
+<li>如果将打印照片带到与校车相同的阳光条件下，照片的五个色貌属性（包括亮度和色彩鲜艳度）可能会匹配原始物体。</li>
+</ol>
+<hr />
+<p align="center">
+  <img src="../imgs/chapter4/4-2.png" alt="亮度-色彩鲜艳度与明度-彩度的对比（亮度低于再现）" width="60%">
+</p>
+<p align="center">
+  图 4.2：当原始图像的亮度低于再现图像时，亮度-色彩鲜艳度再现会导致图像非常暗，以补偿光照的提高。而明度-彩度再现则体现了更完整的视觉适应，因为它们是基于相对属性的。
+</p>
+
+<p align="center">
+  <img src="../imgs/chapter4/4-3.png" alt="亮度-色彩鲜艳度与明度-彩度的对比（亮度高于再现）" width="60%">
+</p>
+<p align="center">
+  图 4.3：当原始图像的亮度高于再现图像时，亮度-色彩鲜艳度再现会导致图像非常亮，以补偿光照的降低。而明度-彩度再现同样体现了更完整的视觉适应。
+</p>
+
+<hr />
+<p><strong>特殊应用场景中的例外</strong></p>
+<p>在某些特定应用中，亮度和色彩鲜艳度可能比明度和彩度更重要，例如：</p>
+<ul>
+<li><strong>光源显色性分析</strong>  </li>
+<li>
+<p>在光源的颜色呈现性能评估中，关注的是物体在特定光源下的亮度和色彩鲜艳度，而非仅明度和彩度。</p>
+</li>
+<li>
+<p><strong>图像质量判断</strong>  </p>
+</li>
+<li>在对投影仪图像质量进行比较时，观察者可能更关注图像的亮度和色彩鲜艳度，而非明度和彩度。例如，当投影仪亮度降低时，尽管图像的明度和彩度可能几乎保持不变，但直觉上图像质量会下降。</li>
+</ul>
+<hr />
+<p><strong>总结</strong></p>
+<p>亮度-色彩鲜艳度和明度-彩度的匹配各有适用场景。对于大多数颜色再现应用，明度-彩度的匹配更为重要和实际。然而，在特定场景（如光源显色性分析或图像质量判断）中，亮度-色彩鲜艳度的匹配可能更有意义。</p>
 
 
 
