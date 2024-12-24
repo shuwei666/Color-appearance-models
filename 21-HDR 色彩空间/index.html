@@ -705,6 +705,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#214-hdr-cielab" class="md-nav__link">
+    21.4 hdr-CIELAB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#215-hdr-ipt" class="md-nav__link">
+    21.5 hdr-IPT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#216-evans-g0" class="md-nav__link">
+    21.6 Evans 的 G0 和光辉度
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#217-nayatani" class="md-nav__link">
+    21.7 Nayatani 理论色彩空间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#218" class="md-nav__link">
+    21.8 一种新的色貌空间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#219" class="md-nav__link">
+    21.9 未来方向
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -810,6 +852,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#214-hdr-cielab" class="md-nav__link">
+    21.4 hdr-CIELAB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#215-hdr-ipt" class="md-nav__link">
+    21.5 hdr-IPT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#216-evans-g0" class="md-nav__link">
+    21.6 Evans 的 G0 和光辉度
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#217-nayatani" class="md-nav__link">
+    21.7 Nayatani 理论色彩空间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#218" class="md-nav__link">
+    21.8 一种新的色貌空间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#219" class="md-nav__link">
+    21.9 未来方向
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -825,11 +909,13 @@
                   
 
 
-<p>色彩科学主要研究材料的色彩外观，因此通常关注单一光照下材料反射的亮度范围。这种亮度动态范围一般在 20:1 到 90:1 之间。图像显示设备也有类似的限制。</p>
+  <h1>21. HDR 色彩空间</h1>
+
+<p>色彩科学主要研究材料的色貌模型，因此通常关注单一光照下材料反射的亮度范围。这种亮度动态范围一般在 20:1 到 90:1 之间。图像显示设备也有类似的限制。</p>
 <p>这种有限的动态范围影响了色彩空间的设计，比如 CIELAB 就是典型的低动态范围色彩空间，所以不适合用在高动态范围（HDR）场景中。</p>
 <p>动态范围指的是场景中最高亮度和最低亮度的比值。有时也用“位数”来表示，比如 8 位编码对应 255:1 的动态范围。但要注意，位数的意义取决于编码方式（线性或非线性）。另外，“挡位”（stops）也常用来描述动态范围，每增加一挡表示亮度加倍。</p>
 <p>在成像中，普通场景通常有 256 级亮度（255:1 动态范围）。为了捕捉更多细节，这些级别通常采用非线性编码，相当于大约 12 位或 4000:1 的动态范围。因此，动态范围超过 4000:1 的场景或显示设备就被称为高动态范围（HDR）。</p>
-<p>在自然界中，HDR 场景的亮度比往往远超 4000:1，因为存在高光、阴影和光源等因素。本章将探讨如何在 HDR 场景下进行色彩外观建模，以及其中遇到的挑战。</p>
+<p>在自然界中，HDR 场景的亮度比往往远超 4000:1，因为存在高光、阴影和光源等因素。本章将探讨如何在 HDR 场景下进行色貌模型建模，以及其中遇到的挑战。</p>
 <hr />
 <h2 id="211">21.1 亮度动态范围</h2>
 <p>自然和人造环境中的亮度范围可以跨越 14 个数量级，从星光下的物体到直视太阳。例如，星光下的物体亮度约为 0.01 cd/m²，而直视阳光的亮度可达 100,000 cd/m²。由于安全和物理限制，我们不会直接观察最高亮度（如太阳），而最低亮度（如星光下的阴影）也不会与最高亮度同时出现，因为光散射会影响观察效果。</p>
@@ -877,15 +963,15 @@
 <p><strong>相关研究</strong>：</p>
 <ul>
 <li>
-<p><strong>Kim 等人（2009）</strong>：探讨了高亮度条件下的色彩外观建模。  </p>
+<p><strong>Kim 等人（2009）</strong>：探讨了高亮度条件下的色貌模型建模。  </p>
 </li>
 <li>
 <p><strong>Reinhard 等人（2012）</strong>：提出了 HDR 图像外观建模的一些新概念。  </p>
 </li>
 </ul>
-<p>这些研究为 HDR 场景下色彩外观建模提供了新的思路，但仍有许多挑战需要解决。</p>
+<p>这些研究为 HDR 场景下色貌模型建模提供了新的思路，但仍有许多挑战需要解决。</p>
 <hr />
-<h1 id="212-hdr">21.2 HDR 摄影调研</h1>
+<h2 id="212-hdr">21.2 HDR 摄影调研</h2>
 <p>为了研究 HDR 场景和图像的测量、成像、外观和再现，需要一个可靠的数据集来测试各种算法和模型。<strong>HDR 摄影调研</strong>（Fairchild 2007, 2008）的目标就是创建这样一个数据集。该调研参考了早期美国西部的摄影调研，这些调研帮助建立了国家公园体系并保护了重要的自然环境。HDR 摄影调研生成了一套独特的图像、色度学场景数据、场景外观数据和校准数据。该数据集包含超过 100 张图像及相关数据，可通过以下网站免费获取：<a href="http://www.cis.rit.edu/fairchild/HDR.html">HDR 摄影调研数据集</a>。</p>
 <p><strong>数据收集过程</strong>：</p>
 <ul>
@@ -905,7 +991,7 @@
 <li><strong>多重曝光</strong>的目的是捕捉不同亮度水平下的细节。通过观察不同的曝光，可以看到场景中不同细节在不同曝光水平下的呈现。  </li>
 <li><strong>镜头眩光</strong>是 HDR 成像的限制因素之一，在高动态范围场景中尤其明显。</li>
 </ul>
-<h3 id="hdr">HDR 图像示例</h3>
+<h4 id="hdr">HDR 图像示例</h4>
 <p>图 21.3 展示了一个 HDR 图像的例子，是日落 30 分钟后的<strong>金门大桥</strong>及背景中的旧金山。图中包括两种渲染方式：</p>
 <ol>
 <li><strong>上图</strong>：线性渲染，将最亮的光源映射到 8 位成像系统的最大亮度级别，其余亮度按比例降低。这种方式导致大部分图像非常暗。  </li>
@@ -918,14 +1004,14 @@
   图 21.3：HDR 图像的两种渲染方式。上图是线性渲染，下图通过局部自适应技术渲染，模拟了人类视觉系统的响应，接近真实观察体验。
 </p>
 
-<h3 id="_1">相关研究</h3>
+<h4 id="_1">相关研究</h4>
 <ul>
 <li><strong>Fairchild（2007）</strong>：详细描述了 HDR 摄影调研的技术细节。  </li>
 <li><strong>Fairchild（2008）</strong>：出版了一本短书，介绍了部分图像背后的故事和渲染技术。</li>
 </ul>
-<p>HDR 摄影调研为 HDR 成像和色彩外观建模提供了重要的数据支持，广泛应用于计算机图形学、图像处理和视觉科学研究。</p>
+<p>HDR 摄影调研为 HDR 成像和色貌模型建模提供了重要的数据支持，广泛应用于计算机图形学、图像处理和视觉科学研究。</p>
 <hr />
-<h1 id="213">21.3 超越漫反射白的明度与亮度</h1>
+<h2 id="213">21.3 超越漫反射白的明度与亮度</h2>
 <p>在 HDR 研究中，除了获取场景数据，还需要探讨人类如何在适应白点（或漫反射白）之上的亮度水平下感知明度与亮度。<strong>Chen 等人（2010）</strong> 通过一系列实验，探索了两个关键问题：</p>
 <ol>
 <li><strong>观察者如何感知漫反射白以上的明度差异？</strong>  </li>
@@ -949,13 +1035,523 @@
   图 21.4：CIELAB L\* 函数扩展到输入亮度范围为漫反射白的四倍。
 </p>
 
-<h3 id="_2">结论</h3>
+<h4 id="_2">结论</h4>
 <ul>
 <li><strong>明度差异感知</strong>：漫反射白以上的明度差异可以用类似 CIE DE2000 的函数描述。  </li>
 <li><strong>明度尺度</strong>：CIELAB L* 函数在高达漫反射白 4 倍亮度范围内表现良好。</li>
 </ul>
-<p>这为 HDR 场景下的明度感知建模提供了科学依据，同时也为扩展现有色彩外观模型到高动态范围提供了支持。</p>
+<p>这为 HDR 场景下的明度感知建模提供了科学依据，同时也为扩展现有色貌模型模型到高动态范围提供了支持。</p>
 <hr />
+<h2 id="214-hdr-cielab">21.4 hdr-CIELAB</h2>
+<p><strong>背景概述：</strong>
+Fairchild 和 Chen 在 2011 年提出的 hdr-CIELAB 模型是 CIELAB 空间的延伸，专门用于适应高动态范围（HDR）的光照条件。他们通过用 Michaelis–Menton 函数代替 CIELAB 的三次根非线性函数，使得该模型在极低和极高亮度条件下表现更佳。</p>
+<p>该模型的主要特点是增强了暗部阴影和高光部分的表现能力。其关键公式包括光亮度的非线性压缩函数以及 HDR 空间的参数计算方法。</p>
+<hr />
+<p><strong>公式：</strong></p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \epsilon = \frac{0.58}{sf \cdot lf} \tag{21.2}
+    $$
+  </div>
+</div>
+
+<p>其中：</p>
+<ul>
+<li><span class="arithmatex">\(sf = 1.25 - 0.25 \cdot \left(\frac{Y_s}{0.184}\right)\)</span>, 当 <span class="arithmatex">\(0 &lt; Y_s \leq 1.0\)</span> (式 21.3)。</li>
+<li><span class="arithmatex">\(lf = \frac{\log(318)}{\log(Y_{ws})}\)</span> (式 21.4)。</li>
+</ul>
+<p><strong>解释：</strong></p>
+<ul>
+<li><strong><span class="arithmatex">\(\epsilon\)</span></strong> 表示在特定观看条件下的动态调整因子。</li>
+<li><strong><span class="arithmatex">\(sf\)</span></strong> 是围绕因子，表示环境对视觉效果的影响。</li>
+<li><strong><span class="arithmatex">\(lf\)</span></strong> 是亮度因子，考虑到了白点亮度 <span class="arithmatex">\(Y_{ws}\)</span> 的调整。</li>
+</ul>
+<hr />
+<p><strong>hdr-CIELAB 参数计算：</strong></p>
+<ol>
+<li>
+<p><strong>明度 <span class="arithmatex">\(L_{hdr}\)</span>:</strong>
+ <br />
+<div class="math-block">
+     <div class="equation">
+       $$
+       L_{hdr} = f \left(\frac{Y}{Y_n}\right) \tag{21.5}
+       $$
+     </div>
+   </div>
+</p>
+</li>
+<li>
+<p><strong>对手颜色维度 <span class="arithmatex">\(a_{hdr}\)</span> 和 <span class="arithmatex">\(b_{hdr}\)</span>:</strong>
+ <br />
+<div class="math-block">
+     <div class="equation">
+       $$
+       a_{hdr} = 5 \cdot \left[f\left(\frac{X}{X_n}\right) - f\left(\frac{Y}{Y_n}\right)\right] \tag{21.6}
+       $$
+       $$
+       b_{hdr} = 2 \cdot \left[f\left(\frac{Y}{Y_n}\right) - f\left(\frac{Z}{Z_n}\right)\right] \tag{21.7}
+       $$
+     </div>
+   </div>
+</p>
+</li>
+<li>
+<p><strong>饱和度 <span class="arithmatex">\(c_{hdr}\)</span> 和色调角 <span class="arithmatex">\(h_{hdr}\)</span>:</strong>
+ <br />
+<div class="math-block">
+     <div class="equation">
+       $$
+       c_{hdr} = \sqrt{a_{hdr}^2 + b_{hdr}^2} \tag{21.8}
+       $$
+       $$
+       h_{hdr} = \arctan\left(\frac{b_{hdr}}{a_{hdr}}\right) \tag{21.9}
+       $$
+     </div>
+   </div>
+</p>
+</li>
+</ol>
+<p><strong>应用场景：</strong>
+该模型被广泛应用于图像处理、HDR 显示技术等领域，特别是需要在高动态范围条件下保持色彩一致性和对比度的应用场景。</p>
+<hr />
+<p><strong>图示说明：</strong></p>
+<p align="center">
+  <img src="../imgs/chapter21/21-5.png" alt="hdr-CIELAB 的光亮度函数曲线" width="60%">
+</p>
+<p align="center">
+  图 21.5：hdr-CIELAB 空间的光亮度函数，输入范围为白点亮度的四倍。
+</p>
+
+<hr />
+<h2 id="215-hdr-ipt">21.5 hdr-IPT</h2>
+<p><strong>背景概述：</strong><br />
+Fairchild 等人在 2011 年基于 Chen 等（2010）的研究，将传统的 IPT 色彩空间拓展到高动态范围（HDR）条件下。通过用 Michaelis-Menton 函数代替 IPT 色彩空间中的幂函数非线性函数，该模型在极低和极高亮度水平下表现更加优秀。</p>
+<p>这种改进使得 hdr-IPT 色彩空间能够更好地处理阴影和高光部分，优化了色彩的表现能力。</p>
+<hr />
+<p><strong>动态因子调整：</strong>  </p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \epsilon = 0.59 \cdot sf \cdot lf \tag{21.11}
+    $$
+  </div>
+</div>
+
+<p>其中：</p>
+<ul>
+<li>
+<p><strong><span class="arithmatex">\(sf\)</span></strong> 表示围绕因子，用于模拟环境对视觉的影响：
+<br />
+<div class="math-block">
+    <div class="equation">
+      $$
+      sf = 1.25 - 0.25 \cdot \left(\frac{Y_s}{0.184}\right) \quad (0 \leq Y_s \leq 1.0) \tag{21.12}
+      $$
+    </div>
+  </div>
+</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(lf\)</span></strong> 是亮度因子：
+<br />
+<div class="math-block">
+    <div class="equation">
+      $$
+      lf = \frac{\log(318)}{\log(Y_{abs})} \tag{21.13}
+      $$
+    </div>
+  </div>
+</p>
+</li>
+</ul>
+<hr />
+<p><strong>IPT 转换矩阵：</strong>  </p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \begin{bmatrix}
+    L \\
+    M \\
+    S
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0.4002 & 0.7075 & -0.0807 \\
+    -0.2280 & 1.1500 & 0.0612 \\
+    0.0000 & 0.0000 & 0.9184
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+    X_{D65} \\
+    Y_{D65} \\
+    Z_{D65}
+    \end{bmatrix}
+    \tag{21.14}
+    $$
+  </div>
+</div>
+
+<hr />
+<p><strong>非线性压缩：</strong><br />
+根据输入的符号，分段计算：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    L' = f(L); \quad L \geq 0, \quad L' = -f(-L); \quad L < 0 \tag{21.15}
+    $$
+  </div>
+</div>
+
+<p>同理计算：</p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    M' = f(M); \quad M \geq 0, \quad M' = -f(-M); \quad M < 0 \tag{21.16}
+    $$
+    $$
+    S' = f(S); \quad S \geq 0, \quad S' = -f(-S); \quad S < 0 \tag{21.17}
+    $$
+  </div>
+</div>
+
+<hr />
+<p><strong>hdr-IPT 参数计算：</strong>  </p>
+<div class="math-block">
+  <div class="equation">
+    $$
+    \begin{bmatrix}
+    I_{hdr} \\
+    P_{hdr} \\
+    T_{hdr}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0.4000 & 0.4000 & 0.2000 \\
+    0.4550 & -4.8510 & 0.3960 \\
+    0.8056 & 0.3572 & -1.1628
+    \end{bmatrix}
+    \cdot
+    \begin{bmatrix}
+    L' \\
+    M' \\
+    S'
+    \end{bmatrix}
+    \tag{21.18}
+    $$
+  </div>
+</div>
+
+<hr />
+<p><strong>饱和度与色调角：</strong>  </p>
+<ul>
+<li>
+<p>饱和度：
+<br />
+<div class="math-block">
+    <div class="equation">
+      $$
+      c_{hdr-IPT} = \sqrt{P_{hdr}^2 + T_{hdr}^2} \tag{21.19}
+      $$
+    </div>
+  </div>
+</p>
+</li>
+<li>
+<p>色调角：
+<br />
+<div class="math-block">
+    <div class="equation">
+      $$
+      h_{hdr-IPT} = \arctan\left(\frac{T_{hdr}}{P_{hdr}}\right) \tag{21.20}
+      $$
+    </div>
+  </div>
+</p>
+</li>
+</ul>
+<hr />
+<p align="center">
+  <img src="../imgs/chapter21/21-6.png" alt="hdr-IPT 空间光亮度函数" width="60%">
+</p>
+<p align="center">
+  图 21.6：hdr-IPT 空间的光亮度函数，输入范围为白点亮度的四倍。
+</p>
+
+<hr />
+<p><strong>总结：</strong><br />
+hdr-IPT 通过非线性压缩函数优化了传统 IPT 空间，使其在高动态范围条件下的色彩表现更为自然。适用于 HDR 图像处理与显示技术，特别是在极端亮度条件下需要精准控制色彩的场景。</p>
+<hr />
+<h2 id="216-evans-g0">21.6 Evans 的 G0 和光辉度</h2>
+<p><strong>背景概述：</strong><br />
+Ralph Evans 是一位历史上具有影响力的柯达科学家，他在色貌模型和色彩再现方面进行了开创性研究。他的著作《The Perception of Color》（1974）引入了两个重要概念：<strong>G0（零灰值）</strong> 和 <strong>Brilliance（光辉度）</strong>。这些概念为色貌模型建模提供了新的思路。</p>
+<p>Evans 的 G0 概念不仅仅是一个理论描述，它在解释亮度、饱和度以及明度/亮度之间的关系上具有重要意义。以下是对 G0 和光辉度的核心内容和示例进行解析。</p>
+<hr />
+<p><strong>G0 的定义与示例：</strong><br />
+G0（零灰值）是指一个刺激从“物体外观”（具有灰色成分）到“光源外观”（无灰色成分）的转变时的亮度值。这一转变的亮度值取决于刺激的色度和周围的适应条件。</p>
+<ul>
+<li><strong>示例：</strong></li>
+<li>假设背景为白色，并有一个橙色光点，其亮度可以调节，同时不影响背景或橙色光点的色度。</li>
+<li>当光点的亮度接近零时，它看起来是黑色。</li>
+<li>随着亮度增加，光点从深棕色（暗橙）转变为橙色。</li>
+<li>当亮度进一步增加时，光点开始看起来像一个发光的橙色光源，而非反射的物体。</li>
+<li>最后，随着亮度继续增加，光点会显得像更亮的橙色光源。</li>
+</ul>
+<p><strong>关键点：</strong><br />
+  - 棕色到橙色的转变只是颜色名称的变化，暗橙通常被称为“棕色”。
+  - 从“橙色物体”到“橙色光源”的转变发生在特定的亮度值，这一亮度值即为 <strong>G0</strong>。</p>
+<hr />
+<p><strong>光辉度（Brilliance）：</strong>  </p>
+<p>Evans 定义了光辉度作为相对于 G0 的亮度位置。
+- 在 G0 的亮度值下，所有颜色具有相同的光辉度。
+- 光辉度较高的颜色表现为光源（亮度高于 G0），而光辉度较低的颜色表现为暗色物体（亮度远低于 G0）。</p>
+<hr />
+<p><strong>G0 的特性与重要性：</strong>  </p>
+<ol>
+<li><strong>色度和亮度的关系：</strong><br />
+   G0 的亮度值不仅取决于刺激的色度，还与环境条件相关。<br />
+   例如：</li>
+<li>高饱和度的颜色，其 G0 亮度值可能远低于白色亮度。</li>
+<li>
+<p>这意味着某些颜色在比白色亮度低得多的情况下也可能表现出“发光”的外观。</p>
+</li>
+<li>
+<p><strong>均等色彩亮度的定义：</strong><br />
+   在 G0 水平上，不同色度的刺激在感知上具有相等的亮度。这种均等亮度可以被视为一种“校正后的亮度”，自动调整了 Helmholtz–Kohlrausch 效应的影响。</p>
+</li>
+<li>
+<p><strong>当前挑战：</strong><br />
+   尽管 G0 是一个重要的概念，但目前尚无简单的数学模型来精确描述 G0。</p>
+</li>
+</ol>
+<hr />
+<p><strong>总结：</strong>  </p>
+<p>Evans 的 G0 和光辉度概念为亮度、饱和度与明度/亮度之间的关系提供了关键洞察。这可能是色貌模型模型中缺失的重要组成部分。未来的研究需要进一步探索 G0 的数学建模，并在色貌模型模型中整合这一概念。</p>
+<hr />
+<h2 id="217-nayatani">21.7 Nayatani 理论色彩空间</h2>
+<p><strong>背景概述：</strong><br />
+Nayatani 在其职业生涯晚期（2003 年、2004 年）发表了不同形式的色彩模型，被称为 Nayatani 理论色彩空间（NT 色彩空间）。虽然在某些方面，NT 空间可以被视为 Nayatani 等人（详见第 11 章）色貌模型模型的延伸，但它还融入了一些基于 NCS 系统和 Evans 的 G0/光辉度概念的新思路。</p>
+<hr />
+<p><strong>NT 色彩空间的特点：</strong>  </p>
+<p><strong>色域扩展技术：</strong><br />
+NT 色彩空间被用于一种色域映射技术，旨在扩展色彩以填充大色域（Heckaman 等，2008、2009、2011；Fairchild，2008a）。这一技术的核心思想是：</p>
+<ul>
+<li><strong>G0 边界内的颜色饱和度不应扩展。</strong></li>
+<li><strong>G0 边界外的颜色可以自由扩展以填充色域，形成更明亮的光源。</strong></li>
+<li>对于深色部分，也扩展了类似的概念。</li>
+</ul>
+<p><strong>中性灰的定义：</strong><br />
+NT 色彩空间将中性灰定义为其核心成分。</p>
+<ul>
+<li>对于中性色彩，定义了“白度-黑度”两个尺度，其中中性灰在这两个尺度上均为零。这在概念上类似于 NCS，但数值上有所不同。</li>
+</ul>
+<p><strong>三角形结构：</strong><br />
+对于每种特定的色调，NT 空间构建了一个类似于 NCS 色调平面的三角形：</p>
+<ul>
+<li>三角形的三个顶点分别为“白色”、“黑色”和“最大色度”。</li>
+<li>随着从三角形中心向更明亮的色度边界移动，灰度减少，颜色看起来更亮且更具色彩感，最终到达 <strong>G0 边界</strong>。</li>
+</ul>
+<p><strong>深色的 G0 边界：</strong><br />
+Nayatani 还定义了一个朝向更深、更暗色彩方向的灰度减少路径，并提出了一个暗部 G0 边界。尽管从 Evans 的理论来看，这一暗部边界可能更具争议，但 Nayatani 认为其在直观上是合理的。</p>
+<hr />
+<p><strong>总结：</strong><br />
+NT 色彩空间在保留 G0 和光辉度定义的同时，为色域扩展提供了指导。通过限制 G0 内部的饱和度扩展，并允许 G0 外部的色彩扩展以填充色域，它在色貌模型建模和色域映射领域展现了强大的适应性。同时，NT 色彩空间在灰度减少和 G0 边界的定义上提出了创新的思路，特别是在深色区域的扩展中进一步发展了 G0 理论。</p>
+<hr />
+<h2 id="218">21.8 一种新的色貌空间</h2>
+<p><strong>背景概述：</strong><br />
+Fairchild 和 Heckaman 在 2012 年提出了一种新的色貌模型建模方法，这种方法不再试图创建一个三维欧几里得色彩空间。他们假设，构建三维欧几里得空间的需求可能会限制精确刻画色貌模型量表（或精确的色差指标）的能力。</p>
+<p>实际上，色彩科学中有许多基于独立维度描述色彩感知的例子。例如：</p>
+<ul>
+<li>
+<p>曼塞尔系统（Munsell System），尽管常以三维色彩空间的形式呈现，但它本质上是基于独立的三个感知维度：色相（hue）、明度（value）和色度（chroma）建立的。</p>
+</li>
+<li>
+<p>Guth 的 ATD 视觉感知模型，也通常以独立维度的形式描述，尽管某些例子中会将这些维度合并在一起进行可视化。</p>
+</li>
+<li>
+<p>CIECAM02 色貌模型模型，通过预测六种感知维度（亮度、明度、色彩感、饱和度、色度和色相），为感知色彩提供了独立的刻画。然而，CIECAM02 的矩形坐标体系在某种程度上妥协了这种独立性。</p>
+</li>
+</ul>
+<hr />
+<p><strong>独立的一维感知空间假设：</strong><br />
+Fairchild 和 Heckaman 提出，或许色彩本质上是一维的感知空间集合，而非三维空间。</p>
+<ul>
+<li>
+<p>六个独立维度是必要的：对于相关色彩，包括明度（lightness）、饱和度（saturation）和色相（hue）。绝对亮度的信息可以从这些维度中推导出色彩感（colorfulness）和亮度（brightness），这些属性也极为重要和实用。</p>
+</li>
+<li>
+<p>色度（chroma）则可以从明度（lightness）和饱和度（saturation）推导，作为一种相对的色彩感度量。</p>
+</li>
+<li>
+<p>总而言之，色彩可以通过六个一维的感知空间完全描述，其中四个是基本的，两个是从基本维度派生的。</p>
+</li>
+</ul>
+<hr />
+<p><strong>模型框架和实现：</strong>  </p>
+<ul>
+<li>
+<p>首先，应用色适应模型（例如 CAT02）计算参考视条件下的对应色彩（例如 D65，315 cd/m²）。</p>
+</li>
+<li>
+<p>接着，使用 IPT 模型计算色相角度（h），并基于 NCS 独特色相计算色相成分（H）。对于每种色相，通过经典的激发纯度公式，在 u′v′ 色度图中沿恒定 h 的线计算饱和度（S）。</p>
+</li>
+<li>
+<p>以 Evans 的 G0 为参考定义零灰度亮度，用于计算明度（L）。这种计算基于一种偏移的幂函数模型。</p>
+</li>
+<li>
+<p>饱和度优先于色度，因为它与物理刺激有更直接的关系，其他色度维度可以轻松从中派生。</p>
+</li>
+<li>
+<p>从明度（L）和饱和度（S）以及绝对亮度信息，进一步推导出亮度（brightness, Q）和色彩感（colorfulness, M）。</p>
+</li>
+</ul>
+<hr />
+<p><strong>关键公式与图示：</strong></p>
+<ul>
+<li>饱和度计算公式：
+<br />
+<div class="math-block">
+    <div class="equation">
+      $$
+      S = \frac{\sqrt{(u' - u'_n)^2 + (v' - v'_n)^2}}{\sqrt{(u'_L - u'_n)^2 + (v'_L - v'_n)^2}} \tag{21.21}
+      $$
+    </div>
+  </div>
+</li>
+</ul>
+<p>其中：
+  - <span class="arithmatex">\( u', v' \)</span> 是刺激的色度坐标。
+  - <span class="arithmatex">\( u'_n, v'_n \)</span> 是 D65 白点的色度坐标。
+  - <span class="arithmatex">\( u'_L, v'_L \)</span> 是在同一色相角下光谱位置的色度坐标。</p>
+<ul>
+<li>明度计算公式：
+<br />
+<div class="math-block">
+    <div class="equation">
+      $$
+      L = 0.98 \cdot \left( \frac{Y}{Y_{G0}} \right)^{1/2.3} + 0.02 \tag{21.22}
+      $$
+    </div>
+  </div>
+</li>
+</ul>
+<p>其中 <span class="arithmatex">\( Y \)</span> 是刺激的亮度，<span class="arithmatex">\( Y_{G0} \)</span> 是 G0 时的亮度。</p>
+<ul>
+<li>亮度计算公式：
+<br />
+<div class="math-block">
+    <div class="equation">
+      $$
+      Q = Q_{tbl} \cdot L \tag{21.23}
+      $$
+    </div>
+  </div>
+</li>
+</ul>
+<p>其中 <span class="arithmatex">\( Q_{tbl} \)</span> 是基于 Stevens 和 Stevens 的终端亮度函数计算得出的：
+<br />
+<div class="math-block">
+    <div class="equation">
+      $$
+      Q_{tbl} = 0.60 \cdot \log_{10}\left(1 + 0.06 \cdot Y_W^{0.65}\right) \tag{21.24}
+      $$
+    </div>
+  </div>
+</p>
+<p><span class="arithmatex">\( Y_W \)</span> 是 D65 白点的亮度。</p>
+<hr />
+<p align="center">
+  <img src="../imgs/chapter21/21-7.png" alt="u′v′色度图中的饱和度计算示例" width="60%">
+</p>
+<p align="center">
+  图 21.7：在 u′v′ 色度图中基于 IPT 色相计算饱和度的示例。
+</p>
+
+<p align="center">
+  <img src="../imgs/chapter21/21-8.png" alt="线性比例的明度函数" width="60%">
+</p>
+<p align="center">
+  图 21.8：在线性比例下绘制的明度函数，范围为漫射白亮度的四倍。
+</p>
+
+<p align="center">
+  <img src="../imgs/chapter21/21-9.png" alt="对数比例的明度函数" width="60%">
+</p>
+<p align="center">
+  图 21.9：在对数比例下绘制的明度函数，范围为漫射白亮度的四倍。
+</p>
+
+<p align="center">
+  <img src="../imgs/chapter21/21-10.png" alt="终端亮度轨迹图" width="60%">
+</p>
+<p align="center">
+  图 21.10：终端亮度轨迹图，展示适应亮度的函数拟合结果。
+</p>
+
+<hr />
+<p><strong>总结：</strong><br />
+这种基于一维感知量表的建模方法可以在各种适应条件下，以及低动态范围或高动态范围场景中，精确描述光源和物体的色貌模型。通过避免几何假设，单独计算每个维度的差异，可以更加精确地描述色差并适应多样化的应用场景。</p>
+<hr />
+<h2 id="219">21.9 未来方向</h2>
+<p><strong>当前现状：</strong><br />
+探讨一个领域的未来方向，首先需要了解目前的现状。在色貌模型建模中，外观维度（如亮度、明度、色彩感、饱和度、色度和色相）的定义非常清晰且被广泛理解。然而，从物理测量中准确预测这些感知仍有许多问题需要解决，包括但不限于：</p>
+<ul>
+<li>精确的颜色匹配函数与观察者间的差异性。</li>
+<li>更加精确的色彩适应模型。</li>
+<li>外观量表模型及其实现的更加严格定义。</li>
+<li>对刺激的空间和时间属性及感知的理解。</li>
+<li>综合所有领域和尺度的知识以提供更全面的模型。</li>
+</ul>
+<p>尽管色貌模型建模已经取得了长足的进步，但仍有很长的路要走。</p>
+<hr />
+<p><strong>新的建模思路：</strong><br />
+多维色貌模型和色差表示往往存在明显的局限性。或许，我们需要将色貌模型的各个维度分开处理，将其视为独立的感知，而不是一个多维“色彩”感知的部分。这种方法不但不会带来负面影响，甚至可能带来新的突破。</p>
+<p>即便在 CIECAM02 中，也可以采用独立的一维方法进行建模。这种方法显示出了很大的潜力。然而，要使这种方法更加准确和广泛应用，还需要更多的实验数据。这些数据需要通过以下研究来支持：</p>
+<ul>
+<li>感知匹配研究。</li>
+<li>适应过程的深入探索。</li>
+<li>外观量表和阈值的扩展研究。</li>
+</ul>
+<p>当前工业研究的稀缺使得这一任务落在了大学和学生身上。然而，研究资金的不足可能限制了这一领域的发展。</p>
+<hr />
+<p><strong>实践建议：</strong>  </p>
+<p><strong>使用色貌模型模型的原则：</strong><br />
+- 色貌模型模型仅在<strong>绝对必要</strong>的情况下使用。如果通过调整观察条件就可以避免对外观进行转换，这是最优的选择。</p>
+<p><strong>推荐模型选择：</strong><br />
+- 如果需要完整的色貌模型模型，Hunt 模型是最佳选择。
+- 如果不需要复杂的预测，CIECAM02 是一个合适的选择。
+- 在某些情况下，CIELAB 甚至可能足够胜任。</p>
+<p><strong>模型选择建议（按复杂度递增排序）：</strong>  </p>
+<ul>
+<li>
+<p>如果可能，调整观察条件，使得简单的三刺激匹配也能满足外观匹配的要求。</p>
+</li>
+<li>
+<p>如果需要改变白点，可以首先尝试使用 CIELAB，它是一个合理的第一阶近似外观模型。</p>
+</li>
+<li>
+<p>如果发现 CIELAB 不足，可以通过对视锥响应的 von Kries 色适应转换（或基于 CIECAM02 的 MCAT02 矩阵转换）进行改进。</p>
+</li>
+<li>
+<p>如果需要更灵活的适应模型（例如，从硬拷贝到软拷贝的变化）或存在环境变化，可以使用 RLAB 模型，同时改进其适应转换。</p>
+</li>
+<li>
+<p>如果需要对观察条件和刺激进行严格控制，或者需要预测亮度和色彩感，可以选择 CIECAM02 模型。</p>
+</li>
+<li>
+<p>如果需要全面处理外观现象（包括非常高或低的亮度，视杆响应等），Hunt 模型是最佳选择。</p>
+</li>
+<li>
+<p>对于探索者，可以尝试本章提出的独立外观量表方法，收集更多数据并发表研究结果以改进现状。</p>
+</li>
+</ul>
+<hr />
+<p><strong>未来方向：</strong><br />
+未来的研究需要更多关于色彩感知和外观尺度的实验和数据，这将帮助改进和发展色貌模型建模。大学和研究机构需要承担起这项任务，同时也需要可靠的资金支持来推动这一领域的发展。</p>
+<hr />
+<p><strong>总结：</strong><br />
+Fairchild 和 Heckaman 提出的独立量表方法，结合色彩科学的最新发现，为色貌模型建模提供了新的视角。通过更加系统和精确地分离各个感知维度，可以更好地理解和预测色彩感知。这不仅是解决当前局限性的重要一步，也为未来的研究指明了方向。</p>
 
 
 
