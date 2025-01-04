@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#201" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -593,6 +598,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    20. 图像色貌模型和未来
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -602,6 +618,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    20.1 从色貌到图貌
+  </a>
+  
+    <nav class="md-nav" aria-label="20.1 从色貌到图貌">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-colorimetry" class="md-nav__link">
+    Image Colorimetry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-difference-equations" class="md-nav__link">
+    Color Difference Equations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-difference" class="md-nav__link">
+    Image Difference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-appearance" class="md-nav__link">
+    Color Appearance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-appearance-and-image-quality" class="md-nav__link">
+    Image Appearance and Image Quality
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -663,6 +744,62 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    20.1 从色貌到图貌
+  </a>
+  
+    <nav class="md-nav" aria-label="20.1 从色貌到图貌">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-colorimetry" class="md-nav__link">
+    Image Colorimetry
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-difference-equations" class="md-nav__link">
+    Color Difference Equations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-difference" class="md-nav__link">
+    Image Difference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-appearance" class="md-nav__link">
+    Color Appearance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-appearance-and-image-quality" class="md-nav__link">
+    Image Appearance and Image Quality
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -678,7 +815,50 @@
 
   <h1>20. 图像色貌模型和未来</h1>
 
-<p>TBD</p>
+<p><strong>图像外观建模的背景与发展</strong></p>
+<p>自本书初版以来，色彩外观建模领域取得了显著进展。本书介绍的模型主要采取一种方法：尽可能将色彩与视觉表现的其他维度分离。然而，这些模型可能已经达到了其理论发展的极限，若想进一步取得突破，可能需要采用不同类型的模型。</p>
+<p>Fairchild 和 Johnson（2002, 2003, 2004）提出了一种新的模型概念，被称为<strong>图像外观模型</strong>（Image Appearance Model）。这种模型将色彩外观模型扩展为包含空间和时间视觉特性的模型，能够预测复杂刺激中的外观表现，并用于测量图像差异（这是实现图像质量度量的第一步）。</p>
+<p>本章将回顾图像外观建模的概念，并详细介绍其中一种模型，即 <strong>iCAM</strong>（图像颜色外观模型）。本章的大部分内容基于 Fairchild 和 Johnson (2004) 的综述文章。同时，章节的最后还会对色彩外观建模和图像外观建模领域的未来发展进行一些展望。</p>
+<p>有关各类模型的最新进展以及在本书出版后出现的重要参考文献，请访问相关网站：<br />
+<a href="http://www.cis.rit.edu/fairchild/CAM.html">www.cis.rit.edu/fairchild/CAM.html</a>。<br />
+关于 iCAM 模型的更新及相关源代码，请访问：<a href="http://www.cis.rit.edu/mcsl/iCAM">www.cis.rit.edu/mcsl/iCAM</a>。</p>
+<blockquote>
+<p>译者注：这个看起来令人费解，为何会出来一个图貌模型？这里是我的理解，通俗化来说就是：</p>
+<ul>
+<li>
+<p>色貌模型关注单个颜色区域的感知，能够解释亮度、饱和度、色调之间的关系，但这些现象大多是在<strong>简单的、均匀的</strong>颜色区域中研究出来的。</p>
+</li>
+<li>
+<p>图貌模型扩展了色貌模型的能力，可以处理包含<strong>多种颜色、细节和动态变化</strong>的复杂场景，例如真实图像和视频。因此，图貌模型更适合用于视频播放、图像质量评价、HDR渲染等实际应用。
+因此，图貌模型才是成像领域最应该关注的。</p>
+</li>
+</ul>
+</blockquote>
+<hr />
+<h2 id="201"><strong>20.1 从色貌到图貌</strong></h2>
+<p>图像测量的发展历史为图貌模型的提出与应用奠定了基础。图貌模型是一种自然演化，结合了色貌模型、空间视觉模型和时间视觉模型，将这些领域作为一个整体来看待，而非孤立的研究领域。</p>
+<p>早期的成像系统要么未进行科学测量，要么采用专门测量成像系统变量的工具。例如，密度计最初用于测量摄影材料，以确定胶片中染料或银颗粒的含量。在印刷领域，类似的方法用于测量墨水以及半色调系统中的点覆盖面积。而在电子系统（如电视）中，系统信号电压则用于比色测量（Hunt 1995）。基于视觉的成像系统质量测量已有悠久历史，例如 Schade（1956）的开创性工作就是一个典型案例。然而，随着成像系统复杂性和开放性的提升，设备无关的图像测量需求变得愈加明显。</p>
+<h3 id="image-colorimetry">Image Colorimetry</h3>
+<p>电子成像系统（尤其是彩色电视的发展）促进了设备无关图像色彩测量的首次应用。事实上，Wright（1981b）指出，若没有比色学的支撑，彩色电视根本无法发明。CIE系统在彩色电视系统（包括近代数字电视系统）的设计与标准化中取得了卓越成就。随着数字成像系统的普及，以及计算机生成和校对面向不同媒体的内容，CIE比色技术在成像系统中的应用愈加广泛。</p>
+<p>CIE比色技术用于跨设备的图像色彩指定，有望解决开放式数字系统引发的新色彩再现问题。数字系统的灵活性使得对图像数据进行比色转换变得既可行又实际，从而在不同设备与媒体间实现色彩匹配。</p>
+<p>关于成像设备校准与特性化的研究涵盖了从基础色彩测量技术到多种设备（包括CRT显示器、LCD显示器、投影设备、扫描仪、数字相机以及各种胶片记录与打印介质）的特性化。Berns（1997）总结了这一领域的一些核心概念与研究成果。这些能力是色貌与图貌研究与开发的基础。</p>
+<p>设备特性化与校准的研究为解决设备无关色彩成像的核心问题提供了方法。例如，关于设备无关色彩成像设计与实现的概念研究（Fairchild 1994a）、色域映射算法（Braun 和 Fairchild 2000），该算法处理超出指定设备色域范围的目标色彩再现问题；以及用于计算机图形渲染的高质量光谱图像技术，这种技术显著提升了渲染场景中色彩准确性（Johnson 和 Fairchild 1999）。这类研究不仅建立在色貌模型的发展与测试基础上，还促进了跨媒体图像再现的研究进展。</p>
+<h3 id="color-difference-equations">Color Difference Equations</h3>
+<p><strong>色差研究与 CIEDE2000 色差公式</strong></p>
+<p>最近，色差研究的成果是<strong>CIEDE2000 色差公式</strong>的发布（Luo 等，2001）。在这些色差公式的核心部分，总是基于某种形式的<strong>均匀色彩空间</strong>（Uniform Color Space）。CIE 在 1976 年最初推荐了两种这样的色彩空间：<strong>CIELAB</strong> 和 <strong>CIELUV</strong>。这两个空间在最初都被描述为“临时色彩空间”，因为当时人们已经意识到它们还远未完善。</p>
+<p>在一个真正均匀的色彩空间中，色差可以简单地通过两种颜色在该空间中的<strong>距离</strong>来衡量，例如通过 <strong>CIE ∆E*ab</strong>（即 CIELAB 色差公式）。然而，由于 <strong>CIELAB 色彩空间的非均匀性</strong>，CIE 制定了更高级的色差公式，例如 <strong>CIE DE94</strong> 和 <strong>CIEDE2000</strong>，以更准确地预测感知到的色差。</p>
+<p>这些更复杂的公式在预测<strong>简单颜色块的感知色差</strong>方面表现非常出色。然而，尽管存在这些限制，Stokes 等（1992）成功地证明了一点：一个简单的色差公式也能预测<strong>整体颜色变化复杂的图像</strong>中的色差阈值。他们的研究结果表明，对于复杂图像而言，<strong>CIELAB 平均色差为 2.5 单位</strong>是一个合理的感知阈值。</p>
+<blockquote>
+<p>译者注：CIED2000色差公式罗明老师的代表作，也是华人在颜色科学领域里面最重要的贡献之一！</p>
+</blockquote>
+<hr />
+<h3 id="image-difference">Image Difference</h3>
+<p>CIE 色差公式是基于在受控观察条件下的简单色块开发的。因此，没有理由认为这些公式能够充分预测空间复杂的图像刺激的色差。<strong>S-CIELAB 模型</strong>（Zhang 和 Wandell，1996）被设计为标准 CIE 色差公式的<strong>空间预处理器</strong>，用以处理诸如半色调图案等复杂颜色刺激。空间预处理使用可分离卷积核来近似人类视觉系统的<strong>空间对比敏感函数（CSF）</strong>。CSF 的作用是去除视觉系统无法察觉的信息。例如，当在一定距离下观察半色调点时，这些点会模糊并融合成单一颜色。如果直接对连续图像与半色调图像进行逐像素的色差计算，将会产生非常大的误差，而实际感知到的差异可能非常小。空间预处理会对半色调图像进行模糊处理，使其更接近于连续色调图像。S-CIELAB 是基于 <strong>CIELAB 色彩空间</strong>与色差公式的第一个图像差异模型。</p>
+<p>最近，该模型已被进一步优化，并扩展为一种用于图像色差计算的模块化框架（Johnson 和 Fairchild，2001a,b，2003a,b）。这一框架在<strong>第 20.4 节</strong>中进行了讨论，其改进了 S-CIELAB 模型中的 CSF 公式，并添加了<strong>空间频率适应</strong>、<strong>空间定位</strong>以及<strong>局部与全局对比检测</strong>模块。</p>
+<h3 id="color-appearance">Color Appearance</h3>
+<p>遗憾的是，基本的 CIE 色度学并不能为图像规范提供完整的解决方案。由于数字系统生成或捕获的图像本质上会在截然不同的观察条件下被观看，例如：从最初捕获的场景，到昏暗房间中的计算机显示器，再到各种光源下的印刷媒介，甚至是在黑暗房间中的投影显示。因此，<strong>色貌模型</strong>被开发出来，以扩展 CIE 色度学，从而在不同媒体和观察条件下（而不仅仅是单一条件下）预测<strong>色貌</strong>（而不仅仅是颜色匹配）。</p>
+<p>20 世纪 90 年代，应用于数字成像系统的<strong>色貌建模研究</strong>非常活跃，最终于 1997 年推荐了 <strong>CIECAM97s 模型</strong>（第 15 章），并在 2002 年推出其修订版本 <strong>CIECAM02</strong>（第 16 章）。这些模型的开发得益于为测试已发布的色貌模型在实际图像再现情况中的表现而进行的视觉实验（Braun 和 Fairchild，1997）。在成像应用中的色貌建模研究自然凸显了一些问题，这些问题在空间复杂图像的外观和图像质量问题上尚未得到充分解决。</p>
+<h3 id="image-appearance-and-image-quality">Image Appearance and Image Quality</h3>
 
 
 
