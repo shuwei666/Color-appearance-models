@@ -1,22 +1,26 @@
-.MathJax_Display {
-    overflow: visible !important; /* 禁止显示滚动条 */
-    width: 100% !important;       /* 强制公式宽度占满可用空间 */
-    max-width: none !important;
+/* MathJax v3: the page loads mathjax@3 (tex-chtml.js), whose display container
+   is <mjx-container>, not the v2 .MathJax_Display. Keep display equations
+   centered, and give over-wide equations a horizontal scrollbar within the
+   content column instead of letting them overflow the page. */
+mjx-container[display="true"] {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .math-block {
     display: flex;
-    justify-content: center; /* 让公式居中显示 */
+    justify-content: center; /* center the equation */
     align-items: center;
-    margin-bottom: 1rem; /* 设置下边距，避免公式之间紧凑 */
-  }
-  
-  .math-block .equation {
-    flex-grow: 1; /* 让公式占满可用空间 */
-    text-align: center; /* 让公式文本居中 */
-  }
-  
-  .math-block .number {
+    margin-bottom: 1rem;     /* breathing room between equations */
+}
+
+.math-block .equation {
+    flex-grow: 1;
+    min-width: 0;            /* let the flex item shrink so overflow-x can engage */
+    text-align: center;
+}
+
+.math-block .number {
     padding-left: 10px;
-  }
-  
+}
