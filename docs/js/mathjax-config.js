@@ -1,14 +1,16 @@
-MathJax.Hub.Config({
-  tex2jax: {
+// MathJax v3 configuration (the loaded library is mathjax@3 tex-chtml.js).
+// Must be loaded BEFORE tex-chtml.js so window.MathJax is read at startup.
+// Enables $...$ / $$...$$ in addition to \(...\) / \[...\] so that math written
+// inside raw HTML blocks (e.g. <div class="math-block">, figure captions) and
+// space-padded inline math also render. MathJax scans the whole document body.
+window.MathJax = {
+  tex: {
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     displayMath: [['$$', '$$'], ['\\[', '\\]']],
-    processEscapes: true
+    processEscapes: true,
+    processEnvironments: true
   },
-  "HTML-CSS": {
-    linebreaks: { automatic: true }, // 自动换行
-    styles: { ".MathJax_Display": { margin: "0" } }, // 去掉显示公式的边距
-    showMathMenu: false // 关闭右键菜单
-  },
-  showProcessingMessages: false, // 关闭处理消息
-  messageStyle: "none"
-});
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
