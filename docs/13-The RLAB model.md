@@ -59,9 +59,11 @@ RLAB模型的输入数据包括测试刺激的相对三刺激值（XYZ）和白�
 <div class="math-block">
   <div class="equation">
     $$
-    L = 0.3897X + 0.6890Y + 0.0787Z \\
-    M = 0.2298X + 1.1834Y + 0.0464Z \\
-    S = 0.0X + 0.0Y + 1.0000Z \tag{13.2}
+    \begin{aligned}
+    L &= 0.3897X + 0.6890Y + 0.0787Z \\
+    M &= 0.2298X + 1.1834Y + 0.0464Z \\
+    S &= 0.0X + 0.0Y + 1.0000Z
+    \end{aligned} \tag{13.2}
     $$
   </div>
 </div>
