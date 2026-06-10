@@ -2321,7 +2321,7 @@
 <p>这种计算方法使得 Hunt 模型能够在广泛的亮度水平和不同环境条件下，准确地预测色彩饱和度的感知。</p>
 <hr />
 <h2 id="127">12.7 亮度</h2>
-<p>为了推导亮度和明度的相关值，需要进一步发展无色响应信号。Hunt 色貌模型设计用于在整个亮度范围内工作，因此需要考虑在低亮度水平下起作用的 <strong>视杆细胞</strong>（rod photoreceptors）的响应。视杆细胞响应会影响无色信号，从而间接影响色度和色彩丰富度的预测。</p>
+<p>为了推导亮度和明度的相关值，需要进一步发展无色响应信号。Hunt 色貌模型设计用于在整个亮度范围内工作，因此需要考虑在低亮度水平下起作用的 <strong>视杆细胞</strong>（rod photoreceptors）的响应。视杆细胞响应会影响无色信号，从而间接影响彩度和色彩丰富度的预测。</p>
 <h3 id="a_s">适应后的视杆细胞信号 <span class="arithmatex">\(A_S\)</span></h3>
 <p>适应后的视杆细胞响应信号 <span class="arithmatex">\(A_S\)</span> 如方程 (12.40) 所示：</p>
 <div class="math-block">
@@ -2516,7 +2516,7 @@
 <p>这种方法确保了 Hunt 模型能够在各种视觉环境下精确地预测明度感知，特别是在背景亮度变化引起的同时明度对比现象中。</p>
 <hr />
 <h2 id="129">12.9 色度</h2>
-<p>在 Hunt 色貌模型中，色度的相关值 <span class="arithmatex">\(C_{94}\)</span> 是通过饱和度 <span class="arithmatex">\(s\)</span> 和相对亮度（约等于明度）来确定的。这一定义遵循第 4 章中所述的一般定义，即色度可以表示为饱和度乘以明度。色度的精确计算公式如方程 (12.51) 所示：</p>
+<p>在 Hunt 色貌模型中，色度的相关值 <span class="arithmatex">\(C_{94}\)</span> 是通过饱和度 <span class="arithmatex">\(s\)</span> 和相对亮度（约等于明度）来确定的。这一定义遵循第 4 章中所述的一般定义，即彩度可以表示为饱和度乘以明度。彩度的精确计算公式如方程 (12.51) 所示：</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -2538,19 +2538,19 @@
 <ol>
 <li>
 <p><strong>色度与饱和度的关系</strong>：<br />
-   色度 <span class="arithmatex">\(C_{94}\)</span> 是饱和度 <span class="arithmatex">\(s\)</span> 与相对亮度 <span class="arithmatex">\(Q/Q_W\)</span> 的乘积。这表示色度不仅取决于色彩的纯度，还取决于刺激的亮度。</p>
+   色度 <span class="arithmatex">\(C_{94}\)</span> 是饱和度 <span class="arithmatex">\(s\)</span> 与相对亮度 <span class="arithmatex">\(Q/Q_W\)</span> 的乘积。这表示彩度不仅取决于色彩的纯度，还取决于刺激的亮度。</p>
 </li>
 <li>
 <p><strong>背景亮度的影响</strong>：<br />
-   方程 (12.51) 中的 <span class="arithmatex">\(\left(\frac{Y_b}{Y_W}\right)^{0.69}\)</span> 和 <span class="arithmatex">\(\left(\frac{Y_b}{Y_W}\right)^{0.29}\)</span> 反映了背景亮度对色度的影响。当背景亮度增加时，色度的感知会发生变化。</p>
+   方程 (12.51) 中的 <span class="arithmatex">\(\left(\frac{Y_b}{Y_W}\right)^{0.69}\)</span> 和 <span class="arithmatex">\(\left(\frac{Y_b}{Y_W}\right)^{0.29}\)</span> 反映了背景亮度对彩度的影响。当背景亮度增加时，彩度的感知会发生变化。</p>
 </li>
 <li>
 <p><strong>相对亮度的非线性效应</strong>：<br />
-<span class="arithmatex">\(\left(\frac{Q}{Q_W}\right)^{2.44}\)</span> 和 <span class="arithmatex">\(1.64 \left(\frac{Y_b}{Y_W}\right)^{0.29}\)</span> 是经验确定的非线性项，用于更准确地建模亮度和背景亮度对色度的影响。</p>
+<span class="arithmatex">\(\left(\frac{Q}{Q_W}\right)^{2.44}\)</span> 和 <span class="arithmatex">\(1.64 \left(\frac{Y_b}{Y_W}\right)^{0.29}\)</span> 是经验确定的非线性项，用于更准确地建模亮度和背景亮度对彩度的影响。</p>
 </li>
 </ol>
 <h3 id="_13">经验基础</h3>
-<p>方程 (12.51) 是基于一系列色貌缩放实验的结果导出的（Hunt, 1994；Hunt 和 Luo, 1994）。这些实验验证了色度不仅依赖于饱和度，还受到亮度和背景亮度的显著影响。</p>
+<p>方程 (12.51) 是基于一系列色貌缩放实验的结果导出的（Hunt, 1994；Hunt 和 Luo, 1994）。这些实验验证了彩度不仅依赖于饱和度，还受到亮度和背景亮度的显著影响。</p>
 <h3 id="_14">计算步骤总结</h3>
 <ol>
 <li>
@@ -2584,14 +2584,14 @@
 <h3 id="_15">参数说明</h3>
 <ul>
 <li><strong><span class="arithmatex">\(M_{94}\)</span></strong>：色彩丰富度的相关值。  </li>
-<li><strong><span class="arithmatex">\(C_{94}\)</span></strong>：色度的相关值，由方程 (12.51) 计算。  </li>
+<li><strong><span class="arithmatex">\(C_{94}\)</span></strong>：彩度的相关值，由方程 (12.51) 计算。  </li>
 <li><strong><span class="arithmatex">\(F_L\)</span></strong>：亮度水平适应因子，由方程 (12.9) 计算。</li>
 </ul>
 <h3 id="_16">解释</h3>
 <ol>
 <li>
 <p><strong>色度 <span class="arithmatex">\(C_{94}\)</span></strong>：<br />
-   色度反映了颜色的纯度和强度，已经考虑了饱和度和相对亮度。</p>
+   彩度反映了颜色的纯度和强度，已经考虑了饱和度和相对亮度。</p>
 </li>
 <li>
 <p><strong>亮度适应因子 <span class="arithmatex">\(F_L\)</span></strong>：<br />
@@ -2603,12 +2603,12 @@
 </li>
 </ol>
 <h3 id="_17">经验基础</h3>
-<p>方程 (12.52) 是通过对视觉缩放实验数据的分析得出的（Hunt, 1994）。实验结果表明，色彩丰富度不仅依赖于色度，还受到亮度水平的显著影响。</p>
+<p>方程 (12.52) 是通过对视觉缩放实验数据的分析得出的（Hunt, 1994）。实验结果表明，色彩丰富度不仅依赖于彩度，还受到亮度水平的显著影响。</p>
 <h3 id="_18">计算步骤总结</h3>
 <ol>
 <li>
 <p><strong>计算色度 <span class="arithmatex">\(C_{94}\)</span></strong>：<br />
-   使用方程 (12.51) 计算色度的相关值。</p>
+   使用方程 (12.51) 计算彩度的相关值。</p>
 </li>
 <li>
 <p><strong>计算亮度适应因子 <span class="arithmatex">\(F_L\)</span></strong>：<br />
@@ -2620,10 +2620,10 @@
 </li>
 </ol>
 <h3 id="_19">结论</h3>
-<p>色彩丰富度 <span class="arithmatex">\(M_{94}\)</span> 是一个综合指标，结合了色度和亮度水平，能够准确反映颜色的视觉冲击力。Hunt 模型通过这种方法有效地模拟了在不同亮度水平下色貌的变化，为颜色感知提供了全面的预测工具。</p>
+<p>色彩丰富度 <span class="arithmatex">\(M_{94}\)</span> 是一个综合指标，结合了彩度和亮度水平，能够准确反映颜色的视觉冲击力。Hunt 模型通过这种方法有效地模拟了在不同亮度水平下色貌的变化，为颜色感知提供了全面的预测工具。</p>
 <hr />
 <h2 id="1211">12.11 逆向模型</h2>
-<p>由于 Hunt 色貌模型的复杂性，它无法进行<strong>解析反转</strong>（analytical inversion）。在许多实际应用中，尤其是图像复制领域，需要色貌模型能够在正向和逆向两个方向上使用。因此，无法解析反转给 Hunt 模型的应用带来了困难，尤其是在只有明度、色度和色相的情况下，这种困难尤为明显。</p>
+<p>由于 Hunt 色貌模型的复杂性，它无法进行<strong>解析反转</strong>（analytical inversion）。在许多实际应用中，尤其是图像复制领域，需要色貌模型能够在正向和逆向两个方向上使用。因此，无法解析反转给 Hunt 模型的应用带来了困难，尤其是在只有明度、彩度和色相的情况下，这种困难尤为明显。</p>
 <h3 id="hunt-1995">Hunt (1995) 提出的解决方法</h3>
 <p>Hunt (1995) 提出了一些应对这一难题的建议：</p>
 <ol>
