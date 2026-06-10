@@ -625,7 +625,7 @@
       
         <li class="md-nav__item">
   <a href="#169-colorfulness" class="md-nav__link">
-    16.9 色彩鲜艳度 (Colorfulness)
+    16.9 鲜艳度 (Colorfulness)
   </a>
   
 </li>
@@ -906,7 +906,7 @@
       
         <li class="md-nav__item">
   <a href="#169-colorfulness" class="md-nav__link">
-    16.9 色彩鲜艳度 (Colorfulness)
+    16.9 鲜艳度 (Colorfulness)
   </a>
   
 </li>
@@ -1364,7 +1364,7 @@
 </div>
 
 <h2 id="168-chroma">16.8 彩度 (Chroma)</h2>
-<p>一个临时的量 <span class="arithmatex">\(t\)</span>，它与饱和度相关，并且包含了周围和背景的色度诱导因子（<span class="arithmatex">\(N_c\)</span> 和 <span class="arithmatex">\(N_{cb}\)</span>），以及偏心调整因子 <span class="arithmatex">\(e_t\)</span>，它作为彩度、色彩鲜艳度和饱和度相关量的基础进行计算。公式 16.26 给出了 <span class="arithmatex">\(t\)</span> 的计算公式。</p>
+<p>一个临时的量 <span class="arithmatex">\(t\)</span>，它与饱和度相关，并且包含了周围和背景的色度诱导因子（<span class="arithmatex">\(N_c\)</span> 和 <span class="arithmatex">\(N_{cb}\)</span>），以及偏心调整因子 <span class="arithmatex">\(e_t\)</span>，它作为彩度、鲜艳度和饱和度相关量的基础进行计算。公式 16.26 给出了 <span class="arithmatex">\(t\)</span> 的计算公式。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1384,8 +1384,8 @@
   </div>
 </div>
 
-<h2 id="169-colorfulness">16.9 色彩鲜艳度 (Colorfulness)</h2>
-<p>CIECAM02 中的色彩鲜艳度相关量 <span class="arithmatex">\(M\)</span> 是通过对彩度预测量 <span class="arithmatex">\(C\)</span> 进行亮度级适应因子 <span class="arithmatex">\(F_L\)</span> 的四次方进行缩放来计算的，如公式 16.28 所示。</p>
+<h2 id="169-colorfulness">16.9 鲜艳度 (Colorfulness)</h2>
+<p>CIECAM02 中的鲜艳度相关量 <span class="arithmatex">\(M\)</span> 是通过对彩度预测量 <span class="arithmatex">\(C\)</span> 进行亮度级适应因子 <span class="arithmatex">\(F_L\)</span> 的四次方进行缩放来计算的，如公式 16.28 所示。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1397,7 +1397,7 @@
 
 <hr />
 <h2 id="1610-saturation">16.10 饱和度 (Saturation)</h2>
-<p>最后，CIECAM02 中定义的饱和度预测因子 <span class="arithmatex">\(s\)</span> 被定义为色彩鲜艳度与亮度的平方根，如公式 16.29 所示。这与 CIE 对刺激相对于亮度的色彩鲜艳度定义是相似的。</p>
+<p>最后，CIECAM02 中定义的饱和度预测因子 <span class="arithmatex">\(s\)</span> 被定义为鲜艳度与亮度的平方根，如公式 16.29 所示。这与 CIE 对刺激相对于亮度的鲜艳度定义是相似的。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1408,7 +1408,7 @@
 </div>
 
 <h2 id="1611-cartesian-coordinates">16.11 笛卡尔坐标 (Cartesian Coordinates)</h2>
-<p>与色貌模型相关的颜色空间通常以圆柱坐标的形式表示明度、彩度和色相（<span class="arithmatex">\(JCh\)</span>）或亮度、色彩鲜艳度和色相（<span class="arithmatex">\(QMh\)</span>）。然而，在某些应用中，使用等效的笛卡尔坐标是有用的。虽然这只是一个简单的坐标变换，但它在 CIECAM97s 中从未明确定义。因此，CIECAM02 中的彩度、色彩鲜艳度和饱和度维度的笛卡尔坐标如公式 16.30 到 16.35 所示。</p>
+<p>与色貌模型相关的颜色空间通常以圆柱坐标的形式表示明度、彩度和色相（<span class="arithmatex">\(JCh\)</span>）或亮度、鲜艳度和色相（<span class="arithmatex">\(QMh\)</span>）。然而，在某些应用中，使用等效的笛卡尔坐标是有用的。虽然这只是一个简单的坐标变换，但它在 CIECAM97s 中从未明确定义。因此，CIECAM02 中的彩度、鲜艳度和饱和度维度的笛卡尔坐标如公式 16.30 到 16.35 所示。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1727,8 +1727,8 @@
 <p>还需要注意的是，通过修改增强传感器响应，而不是回退到视锥细胞响应（Vazquez-Corral等人 2012），可以在色貌预测方面取得一些进展，比如色相命名和取消效应。</p>
 <hr />
 <h2 id="1616-cam02-ucs">16.16 CAM02-UCS</h2>
-<p>在将色貌模型的色貌尺度与CIE DE2000方程等公式所典型的均匀色差预测结合起来的过程中，取得了一个有趣的成果。这是一个困难的任务，因为通常认为色貌尺度（属性的大间隔变化）与感知阈值变化附近和略高于阈值的较小间隔变化之间没有线性关系。这类努力的一个结果就是CAM02-UCS (Luo et al. 2006)。本质上，这一概念是通过调整色空间的色貌维度（在这里是CIECAM02），使其包括通常在色差方程中需要的加权函数。公式16.36和16.37显示了CIECAM02彩度和色彩感知度的修改形式。公式16.38和16.39是简单的坐标变换，目的是将空间转换为矩形坐标以便简化色差计算，如公式16.40所示。这就是CAM02-UCS的核心内容。</p>
-<p>CIE TC1-75（由Luo主持）正在审议提出一个同时包含色貌和色差的CIE模型的可能性。由于该项工作的进展仍然较早，尚无法预测结果。CAM02-UCS无疑是一种有用的方法，并且已在一些应用场合中使用。然而，它在色彩鲜艳度上使用的是彩度属性，而非色差实验中通常使用的彩度属性（这也许是一个简单的修改），需要注意的是，调整色貌尺度以适应色差会导致色貌预测的准确性降低。因此，虽然CAM02-UCS方法将两者融合在一个模型中，但并没有使用统一的尺度。</p>
+<p>在将色貌模型的色貌尺度与CIE DE2000方程等公式所典型的均匀色差预测结合起来的过程中，取得了一个有趣的成果。这是一个困难的任务，因为通常认为色貌尺度（属性的大间隔变化）与感知阈值变化附近和略高于阈值的较小间隔变化之间没有线性关系。这类努力的一个结果就是CAM02-UCS (Luo et al. 2006)。本质上，这一概念是通过调整色空间的色貌维度（在这里是CIECAM02），使其包括通常在色差方程中需要的加权函数。公式16.36和16.37显示了CIECAM02彩度和鲜艳度的修改形式。公式16.38和16.39是简单的坐标变换，目的是将空间转换为矩形坐标以便简化色差计算，如公式16.40所示。这就是CAM02-UCS的核心内容。</p>
+<p>CIE TC1-75（由Luo主持）正在审议提出一个同时包含色貌和色差的CIE模型的可能性。由于该项工作的进展仍然较早，尚无法预测结果。CAM02-UCS无疑是一种有用的方法，并且已在一些应用场合中使用。然而，它在鲜艳度上使用的是彩度属性，而非色差实验中通常使用的彩度属性（这也许是一个简单的修改），需要注意的是，调整色貌尺度以适应色差会导致色貌预测的准确性降低。因此，虽然CAM02-UCS方法将两者融合在一个模型中，但并没有使用统一的尺度。</p>
 <hr />
 <p><strong>数学公式解析</strong>:</p>
 <div class="math-block">

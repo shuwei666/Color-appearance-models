@@ -750,29 +750,29 @@
       
         <li class="md-nav__item">
   <a href="#1110" class="md-nav__link">
-    11.10 色彩鲜艳度
+    11.10 鲜艳度
   </a>
   
-    <nav class="md-nav" aria-label="11.10 色彩鲜艳度">
+    <nav class="md-nav" aria-label="11.10 鲜艳度">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#-m_rg" class="md-nav__link">
-    红-绿色彩鲜艳度 \( M_{RG} \)
+    红-绿鲜艳度 \( M_{RG} \)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#-m_yb" class="md-nav__link">
-    黄-蓝色彩鲜艳度 \( M_{YB} \)
+    黄-蓝鲜艳度 \( M_{YB} \)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#m" class="md-nav__link">
-    总色彩鲜艳度 \( M \)
+    总鲜艳度 \( M \)
   </a>
   
 </li>
@@ -1449,29 +1449,29 @@
       
         <li class="md-nav__item">
   <a href="#1110" class="md-nav__link">
-    11.10 色彩鲜艳度
+    11.10 鲜艳度
   </a>
   
-    <nav class="md-nav" aria-label="11.10 色彩鲜艳度">
+    <nav class="md-nav" aria-label="11.10 鲜艳度">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#-m_rg" class="md-nav__link">
-    红-绿色彩鲜艳度 \( M_{RG} \)
+    红-绿鲜艳度 \( M_{RG} \)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#-m_yb" class="md-nav__link">
-    黄-蓝色彩鲜艳度 \( M_{YB} \)
+    黄-蓝鲜艳度 \( M_{YB} \)
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#m" class="md-nav__link">
-    总色彩鲜艳度 \( M \)
+    总鲜艳度 \( M \)
   </a>
   
 </li>
@@ -2244,11 +2244,11 @@
 <hr />
 <p>通过上述公式，模型能够提供更加细致的彩度预测，并支持进一步的色貌属性计算。</p>
 <hr />
-<h2 id="1110">11.10 色彩鲜艳度</h2>
-<p>在 Nayatani 色貌模型中，色彩鲜艳度的计算基于 CIE 对色貌属性的定义。彩度被定义为样品的色彩鲜艳度相对于理想白亮度的比值。因此，色彩鲜艳度可以通过样品的彩度乘以理想白的亮度来计算。</p>
-<p>测试样品的红-绿色彩鲜艳度、黄-蓝色彩鲜艳度以及总体色彩鲜艳度的计算公式分别如下：</p>
+<h2 id="1110">11.10 鲜艳度</h2>
+<p>在 Nayatani 色貌模型中，鲜艳度的计算基于 CIE 对色貌属性的定义。彩度被定义为样品的鲜艳度相对于理想白亮度的比值。因此，鲜艳度可以通过样品的彩度乘以理想白的亮度来计算。</p>
+<p>测试样品的红-绿鲜艳度、黄-蓝鲜艳度以及总体鲜艳度的计算公式分别如下：</p>
 <hr />
-<h3 id="-m_rg">红-绿色彩鲜艳度 <span class="arithmatex">\( M_{RG} \)</span></h3>
+<h3 id="-m_rg">红-绿鲜艳度 <span class="arithmatex">\( M_{RG} \)</span></h3>
 <div class="math-block">
   <div class="equation">
     $$
@@ -2258,7 +2258,7 @@
 </div>
 
 <hr />
-<h3 id="-m_yb">黄-蓝色彩鲜艳度 <span class="arithmatex">\( M_{YB} \)</span></h3>
+<h3 id="-m_yb">黄-蓝鲜艳度 <span class="arithmatex">\( M_{YB} \)</span></h3>
 <div class="math-block">
   <div class="equation">
     $$
@@ -2268,7 +2268,7 @@
 </div>
 
 <hr />
-<h3 id="m">总色彩鲜艳度 <span class="arithmatex">\( M \)</span></h3>
+<h3 id="m">总鲜艳度 <span class="arithmatex">\( M \)</span></h3>
 <div class="math-block">
   <div class="equation">
     $$
@@ -2285,13 +2285,13 @@
 <li>常数 100 是归一化值，源于在标准 D65 光源和归一化照度条件下，理想白亮度的定义。</li>
 </ul>
 <h3 id="_19">特性说明</h3>
-<p>色彩鲜艳度通过结合彩度和理想白亮度，能够更准确地描述在给定光源和背景条件下，颜色的整体感知强度。此归一化设计确保了不同测试条件下的计算结果具有一致性和可比性。</p>
+<p>鲜艳度通过结合彩度和理想白亮度，能够更准确地描述在给定光源和背景条件下，颜色的整体感知强度。此归一化设计确保了不同测试条件下的计算结果具有一致性和可比性。</p>
 <hr />
-<p>通过以上公式，Nayatani 色貌模型可以有效预测颜色的色彩鲜艳度，为进一步的色貌分析提供了基础。</p>
+<p>通过以上公式，Nayatani 色貌模型可以有效预测颜色的鲜艳度，为进一步的色貌分析提供了基础。</p>
 <hr />
 <h2 id="1111">11.11 逆模型</h2>
 <p>在许多应用中，特别是图像再现中，色貌模型需要能够双向使用，即同时支持正向（从物理数据到感知属性）和反向（从感知属性到物理数据）的计算。因此，公式能够解析地反转是非常重要或至少非常方便的。</p>
-<p>幸运的是，Nayatani 色貌模型可以解析地进行逆运算。Nayatani 等人在 1990 年的一篇论文中介绍了如何反转模型以匹配亮度–色彩鲜艳度或明度–彩度。这些方法虽然基于略早的模型版本，但基本过程仍适用。</p>
+<p>幸运的是，Nayatani 色貌模型可以解析地进行逆运算。Nayatani 等人在 1990 年的一篇论文中介绍了如何反转模型以匹配亮度–鲜艳度或明度–彩度。这些方法虽然基于略早的模型版本，但基本过程仍适用。</p>
 <hr />
 <h3 id="_20">模型的实施与逆转步骤</h3>
 <p>模型的应用和逆转可以视为一个简单的逐步过程。以下是正向和逆向计算的关键步骤：</p>
@@ -2327,11 +2327,11 @@
 </ul>
 <p>e <strong>计算彩度 <span class="arithmatex">\( C \)</span></strong><br />
    根据公式 11.26–11.28，从饱和度和明度推导彩度。</p>
-<p>f <strong>计算色彩鲜艳度 <span class="arithmatex">\( M \)</span></strong><br />
-   根据公式 11.29–11.31，从彩度和理想白亮度推导色彩鲜艳度。</p>
+<p>f <strong>计算鲜艳度 <span class="arithmatex">\( M \)</span></strong><br />
+   根据公式 11.29–11.31，从彩度和理想白亮度推导鲜艳度。</p>
 <hr />
 <h3 id="_21">正向与逆向关系</h3>
-<p>在逆模型中，以上步骤可以按照相反的顺序逐步求解。例如，从感知属性（如色彩鲜艳度 <span class="arithmatex">\( M \)</span>、彩度 <span class="arithmatex">\( C \)</span>、明度 <span class="arithmatex">\( P_L^* \)</span>）开始，通过逆向推导，逐步计算出物理数据（如视锥细胞响应、亮度等）。</p>
+<p>在逆模型中，以上步骤可以按照相反的顺序逐步求解。例如，从感知属性（如鲜艳度 <span class="arithmatex">\( M \)</span>、彩度 <span class="arithmatex">\( C \)</span>、明度 <span class="arithmatex">\( P_L^* \)</span>）开始，通过逆向推导，逐步计算出物理数据（如视锥细胞响应、亮度等）。</p>
 <hr />
 <h3 id="_22">实际应用中的优势</h3>
 <ul>
@@ -2357,7 +2357,7 @@
 </li>
 <li>
 <p><strong>Hunt 效应</strong>：<br />
-  随着亮度增加，颜色鲜艳度和饱和度增强的现象。</p>
+  随着亮度增加，鲜艳度和饱和度增强的现象。</p>
 </li>
 <li>
 <p><strong>Helson–Judd 效应</strong>：<br />
@@ -2406,7 +2406,7 @@
 <hr />
 <h3 id="_23">解释说明</h3>
 <ul>
-<li>表格中展示的 <span class="arithmatex">\( S \)</span>、<span class="arithmatex">\( C \)</span>、<span class="arithmatex">\( M \)</span> 分别对应饱和度、彩度和色彩鲜艳度的计算结果。</li>
+<li>表格中展示的 <span class="arithmatex">\( S \)</span>、<span class="arithmatex">\( C \)</span>、<span class="arithmatex">\( M \)</span> 分别对应饱和度、彩度和鲜艳度的计算结果。</li>
 <li>色相角 <span class="arithmatex">\( \theta \)</span> 和色相四分位 <span class="arithmatex">\( H \)</span> 描述了颜色的感知色相。</li>
 <li>无色明度 <span class="arithmatex">\( P_L^* \)</span> 和归一化明度 <span class="arithmatex">\( L_N^* \)</span> 提供了对样品亮度的不同描述。</li>
 </ul>
@@ -2417,7 +2417,7 @@
 <h3 id="_24">模型的优势</h3>
 <p>Nayatani 色貌模型是一种完整的模型，能够预测所有重要的色貌属性。这些优点包括：</p>
 <ul>
-<li><strong>全面性</strong>：模型涵盖了色彩鲜艳度、彩度、明度、饱和度和色相等所有主要色貌属性。</li>
+<li><strong>全面性</strong>：模型涵盖了鲜艳度、彩度、明度、饱和度和色相等所有主要色貌属性。</li>
 <li><strong>解析可逆性</strong>：模型可以解析地反转，便于在需要正向和反向预测的应用中使用。</li>
 <li><strong>计算相对简单</strong>：尽管公式稍显复杂，但其整体逻辑较为直接。</li>
 </ul>

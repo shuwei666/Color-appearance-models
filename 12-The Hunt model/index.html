@@ -2315,13 +2315,13 @@
 </li>
 <li>
 <p><strong>饱和度 <span class="arithmatex">\(s\)</span></strong>：<br />
-   饱和度定义为刺激色彩丰富程度相对于其自身亮度的比值。总体色彩响应 <span class="arithmatex">\(M\)</span> 近似表示色彩丰富程度，而适应后视锥细胞信号的和近似表示刺激的亮度。</p>
+   饱和度定义为刺激鲜艳度相对于其自身亮度的比值。总体色彩响应 <span class="arithmatex">\(M\)</span> 近似表示鲜艳度，而适应后视锥细胞信号的和近似表示刺激的亮度。</p>
 </li>
 </ol>
 <p>这种计算方法使得 Hunt 模型能够在广泛的亮度水平和不同环境条件下，准确地预测色彩饱和度的感知。</p>
 <hr />
 <h2 id="127">12.7 亮度</h2>
-<p>为了推导亮度和明度的相关值，需要进一步发展无色响应信号。Hunt 色貌模型设计用于在整个亮度范围内工作，因此需要考虑在低亮度水平下起作用的 <strong>视杆细胞</strong>（rod photoreceptors）的响应。视杆细胞响应会影响无色信号，从而间接影响彩度和色彩丰富度的预测。</p>
+<p>为了推导亮度和明度的相关值，需要进一步发展无色响应信号。Hunt 色貌模型设计用于在整个亮度范围内工作，因此需要考虑在低亮度水平下起作用的 <strong>视杆细胞</strong>（rod photoreceptors）的响应。视杆细胞响应会影响无色信号，从而间接影响彩度和鲜艳度的预测。</p>
 <h3 id="a_s">适应后的视杆细胞信号 <span class="arithmatex">\(A_S\)</span></h3>
 <p>适应后的视杆细胞响应信号 <span class="arithmatex">\(A_S\)</span> 如方程 (12.40) 所示：</p>
 <div class="math-block">
@@ -2572,7 +2572,7 @@
 </ol>
 <hr />
 <h2 id="1210">12.10 彩度</h2>
-<p>在 Hunt 色貌模型中，色彩丰富度的相关值 <span class="arithmatex">\(M_{94}\)</span> 是通过彩度 <span class="arithmatex">\(C_{94}\)</span> 和亮度水平（或者说光度水平）来确定的。色彩丰富度表示颜色的强度和视觉冲击力，受到亮度水平的影响。具体计算方法如方程 (12.52) 所示：</p>
+<p>在 Hunt 色貌模型中，鲜艳度的相关值 <span class="arithmatex">\(M_{94}\)</span> 是通过彩度 <span class="arithmatex">\(C_{94}\)</span> 和亮度水平（或者说光度水平）来确定的。鲜艳度表示颜色的强度和视觉冲击力，受到亮度水平的影响。具体计算方法如方程 (12.52) 所示：</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -2583,7 +2583,7 @@
 
 <h3 id="_15">参数说明</h3>
 <ul>
-<li><strong><span class="arithmatex">\(M_{94}\)</span></strong>：色彩丰富度的相关值。  </li>
+<li><strong><span class="arithmatex">\(M_{94}\)</span></strong>：鲜艳度的相关值。  </li>
 <li><strong><span class="arithmatex">\(C_{94}\)</span></strong>：彩度的相关值，由方程 (12.51) 计算。  </li>
 <li><strong><span class="arithmatex">\(F_L\)</span></strong>：亮度水平适应因子，由方程 (12.9) 计算。</li>
 </ul>
@@ -2595,15 +2595,15 @@
 </li>
 <li>
 <p><strong>亮度适应因子 <span class="arithmatex">\(F_L\)</span></strong>：<br />
-   亮度适应因子 <span class="arithmatex">\(F_L\)</span> 描述了视觉系统对不同亮度水平的适应行为。将 <span class="arithmatex">\(F_L\)</span> 提到 0.15 次方，可以适当调整亮度对色彩丰富度的影响。</p>
+   亮度适应因子 <span class="arithmatex">\(F_L\)</span> 描述了视觉系统对不同亮度水平的适应行为。将 <span class="arithmatex">\(F_L\)</span> 提到 0.15 次方，可以适当调整亮度对鲜艳度的影响。</p>
 </li>
 <li>
-<p><strong>色彩丰富度 <span class="arithmatex">\(M_{94}\)</span></strong>：<br />
-   色彩丰富度 <span class="arithmatex">\(M_{94}\)</span> 是彩度 <span class="arithmatex">\(C_{94}\)</span> 和亮度适应因子 <span class="arithmatex">\(F_L^{0.15}\)</span> 的乘积，反映了在不同亮度水平下颜色的感知强度。随着亮度水平的增加，色彩丰富度会相应增加。</p>
+<p><strong>鲜艳度 <span class="arithmatex">\(M_{94}\)</span></strong>：<br />
+   鲜艳度 <span class="arithmatex">\(M_{94}\)</span> 是彩度 <span class="arithmatex">\(C_{94}\)</span> 和亮度适应因子 <span class="arithmatex">\(F_L^{0.15}\)</span> 的乘积，反映了在不同亮度水平下颜色的感知强度。随着亮度水平的增加，鲜艳度会相应增加。</p>
 </li>
 </ol>
 <h3 id="_17">经验基础</h3>
-<p>方程 (12.52) 是通过对视觉缩放实验数据的分析得出的（Hunt, 1994）。实验结果表明，色彩丰富度不仅依赖于彩度，还受到亮度水平的显著影响。</p>
+<p>方程 (12.52) 是通过对视觉缩放实验数据的分析得出的（Hunt, 1994）。实验结果表明，鲜艳度不仅依赖于彩度，还受到亮度水平的显著影响。</p>
 <h3 id="_18">计算步骤总结</h3>
 <ol>
 <li>
@@ -2616,11 +2616,11 @@
 </li>
 <li>
 <p><strong>代入方程 (12.52)</strong>：<br />
-   将 <span class="arithmatex">\(C_{94}\)</span> 和 <span class="arithmatex">\(F_L^{0.15}\)</span> 代入方程 (12.52)，得到色彩丰富度 <span class="arithmatex">\(M_{94}\)</span>。</p>
+   将 <span class="arithmatex">\(C_{94}\)</span> 和 <span class="arithmatex">\(F_L^{0.15}\)</span> 代入方程 (12.52)，得到鲜艳度 <span class="arithmatex">\(M_{94}\)</span>。</p>
 </li>
 </ol>
 <h3 id="_19">结论</h3>
-<p>色彩丰富度 <span class="arithmatex">\(M_{94}\)</span> 是一个综合指标，结合了彩度和亮度水平，能够准确反映颜色的视觉冲击力。Hunt 模型通过这种方法有效地模拟了在不同亮度水平下色貌的变化，为颜色感知提供了全面的预测工具。</p>
+<p>鲜艳度 <span class="arithmatex">\(M_{94}\)</span> 是一个综合指标，结合了彩度和亮度水平，能够准确反映颜色的视觉冲击力。Hunt 模型通过这种方法有效地模拟了在不同亮度水平下色貌的变化，为颜色感知提供了全面的预测工具。</p>
 <hr />
 <h2 id="1211">12.11 逆向模型</h2>
 <p>由于 Hunt 色貌模型的复杂性，它无法进行<strong>解析反转</strong>（analytical inversion）。在许多实际应用中，尤其是图像复制领域，需要色貌模型能够在正向和逆向两个方向上使用。因此，无法解析反转给 Hunt 模型的应用带来了困难，尤其是在只有明度、彩度和色相的情况下，这种困难尤为明显。</p>
@@ -2674,7 +2674,7 @@
 <li><strong>计算亮度</strong> <span class="arithmatex">\(Q\)</span>。  </li>
 <li><strong>计算明度</strong> <span class="arithmatex">\(J\)</span>。  </li>
 <li><strong>计算彩度</strong> <span class="arithmatex">\(C_{94}\)</span>。  </li>
-<li><strong>计算色彩丰富度</strong> <span class="arithmatex">\(M_{94}\)</span>。  </li>
+<li><strong>计算鲜艳度</strong> <span class="arithmatex">\(M_{94}\)</span>。  </li>
 <li><strong>计算白度-黑度</strong> <span class="arithmatex">\(Q_{WB}\)</span>。</li>
 </ol>
 <h3 id="_21">提高计算效率的技术</h3>
