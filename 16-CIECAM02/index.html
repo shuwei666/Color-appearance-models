@@ -597,7 +597,7 @@
       
         <li class="md-nav__item">
   <a href="#165-hue" class="md-nav__link">
-    16.5 色调 (Hue)
+    16.5 色相 (Hue)
   </a>
   
 </li>
@@ -878,7 +878,7 @@
       
         <li class="md-nav__item">
   <a href="#165-hue" class="md-nav__link">
-    16.5 色调 (Hue)
+    16.5 色相 (Hue)
   </a>
   
 </li>
@@ -996,7 +996,7 @@
 <p>CIECAM97s 发布后，受到的严格审查导致了对其改进的建议，并且在某些情况下，还对某些元素提出了简单的修正建议。随着 CIE 第八分会——影像技术分会的成立，成立了其第一个技术委员会，即 CIE TC8-01（色貌建模与色彩管理系统），该委员会由 Nathan Moroney 主席领导，负责提出对 CIECAM97s 的修订建议，甚至可能提出一个新的 CIE 模型。TC8-01 的工作最终形成并发布了修订版色貌模型——CIECAM02（CIE 2004a，Moroney 等 2002）。需要注意的是，CIECAM02 的名称末尾没有 "s" 字母。这是因为并没有意图创建一个全面版本（尤其是因为 CIECAM97c 从未创建），即使创建了，也可以在其名称末尾加上 "c"。</p>
 <p>针对 CIECAM97s 提出的若干潜在改进建议被汇总为 TC8-01 名义下的单一出版物，由 Fairchild（2001）编写。考虑并最终以某种形式纳入 CIECAM02 的调整包括：</p>
 <ul>
-<li>色度适应变换的线性化，以简化模型并促进解析逆转（Finlayson 和 Drew 1999，Finlayson 和 Süsstrunk 2000，Li 等 2000a,b）</li>
+<li>色适应变换的线性化，以简化模型并促进解析逆转（Finlayson 和 Drew 1999，Finlayson 和 Süsstrunk 2000，Li 等 2000a,b）</li>
 <li>异常的环境补偿的修正（Li 等 1999，2000a，Moroney 1998）</li>
 <li>完美黑色刺激的明度刻度修正（Li 等 1999，2000a，Moroney 1998）</li>
 <li>低色度颜色的色度刻度扩展修正（Newman 和 Pirrotta 2000，Wyble 和 Fairchild 2000）</li>
@@ -1014,7 +1014,7 @@
   图 16.1：用于计算 CIECAM02 中间连续变量 surround 设置的 surround 参数之间的线性关系。
 </p>
 
-<p>通常假设物体颜色刺激（如打印件）会考虑光源抑制，而发光显示器（如 CRT）则不考虑光源抑制。当光源抑制发生时，色度适应模型中的 D 因子设置为 1.0。否则，根据 16.3 节中的描述计算 D 因子。一旦确定了周围环境的相对亮度，就可以使用表 16.1 来设置 <span class="arithmatex">\(c\)</span>、指数非线性、<span class="arithmatex">\(N_c\)</span>（色度诱导因子）和 <span class="arithmatex">\(F\)</span>（适应最大程度）的值。在 CIECAM02 中，这些参数允许使用中间值。如果需要中间值，正确的做法是选择 <span class="arithmatex">\(c\)</span> 的中间值，然后通过线性插值计算对应的 <span class="arithmatex">\(N_c\)</span> 和 <span class="arithmatex">\(F\)</span> 中间值，如图 16.1 中的关系所示。这些值已经稍微修正，并且条件数量已经减少为更有意义且更简单的一组。</p>
+<p>通常假设物体颜色刺激（如打印件）会考虑光源抑制，而发光显示器（如 CRT）则不考虑光源抑制。当光源抑制发生时，色适应模型中的 D 因子设置为 1.0。否则，根据 16.3 节中的描述计算 D 因子。一旦确定了周围环境的相对亮度，就可以使用表 16.1 来设置 <span class="arithmatex">\(c\)</span>、指数非线性、<span class="arithmatex">\(N_c\)</span>（色度诱导因子）和 <span class="arithmatex">\(F\)</span>（适应最大程度）的值。在 CIECAM02 中，这些参数允许使用中间值。如果需要中间值，正确的做法是选择 <span class="arithmatex">\(c\)</span> 的中间值，然后通过线性插值计算对应的 <span class="arithmatex">\(N_c\)</span> 和 <span class="arithmatex">\(F\)</span> 中间值，如图 16.1 中的关系所示。这些值已经稍微修正，并且条件数量已经减少为更有意义且更简单的一组。</p>
 <hr />
 <p><strong>表 16.1 CIECAM02 模型的输入参数</strong></p>
 <table>
@@ -1049,7 +1049,7 @@
 </table>
 <hr />
 <h2 id="163">16.3 适应模型</h2>
-<p>CIECAM02 的一个重要变化是使用了线性冯·克里斯（von Kries）类型的色度适应变换（详细描述见第9章）。这使得模型变得更简单，且性能相当（Calabria 和 Fairchild 2001），并且允许对 CIECAM02 进行简单的解析逆转（这是相较于 CIECAM97s 的另一个重大改进）。首先，需要将 CIE 三刺激值（大约在 0 到 100 之间缩放，而不是 0 到 1.0）转换为基于优化变换矩阵 <span class="arithmatex">\(M_{CAT02}\)</span> 的 RGB 响应，如公式 16.1 和 16.2 所示。所有 CIE 三刺激值通常是使用 CIE 1931 标准色度观察者（2°）计算的。此外，必须对适应刺激的三刺激值进行相同的转换。</p>
+<p>CIECAM02 的一个重要变化是使用了线性冯·克里斯（von Kries）类型的色适应变换（详细描述见第9章）。这使得模型变得更简单，且性能相当（Calabria 和 Fairchild 2001），并且允许对 CIECAM02 进行简单的解析逆转（这是相较于 CIECAM97s 的另一个重大改进）。首先，需要将 CIE 三刺激值（大约在 0 到 100 之间缩放，而不是 0 到 1.0）转换为基于优化变换矩阵 <span class="arithmatex">\(M_{CAT02}\)</span> 的 RGB 响应，如公式 16.1 和 16.2 所示。所有 CIE 三刺激值通常是使用 CIE 1931 标准色度观察者（2°）计算的。此外，必须对适应刺激的三刺激值进行相同的转换。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1080,7 +1080,7 @@
   </div>
 </div>
 
-<p>色度适应的 D 因子是根据适应亮度 <span class="arithmatex">\(L_A\)</span> 和周围环境 <span class="arithmatex">\(F\)</span> 计算的，如公式 16.3 所示。如果假设光源抑制（discounting-the-illuminant），则 D 值设置为 1.0。理论上，D 的范围是从 1.0（完全适应）到 0.0（不适应）。作为实际限制，它很少低于 0.6。</p>
+<p>色适应的 D 因子是根据适应亮度 <span class="arithmatex">\(L_A\)</span> 和周围环境 <span class="arithmatex">\(F\)</span> 计算的，如公式 16.3 所示。如果假设光源抑制（discounting-the-illuminant），则 D 值设置为 1.0。理论上，D 的范围是从 1.0（完全适应）到 0.0（不适应）。作为实际限制，它很少低于 0.6。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1119,8 +1119,8 @@
 </div>
 
 <hr />
-<p><strong>关于 CIECAM02 色度适应变换的说明</strong></p>
-<p>公式 16.4 至 16.6 表示了 CIECAM02 色度适应变换的最一般形式，即作为简单的冯·克里斯变换，将其转换为隐式等能量参考条件并考虑不完全适应。这个变换可以独立于 CIECAM02 模型的其余部分一致使用。无论初始三刺激值的缩放（如 CIECAM02 中常见的 0 到约 100，或有时使用的 0 到约 1.0）如何，它也可以应用于所有情况。为了最大化通用性并减少适应变换功能的混乱，建议在所有 CIECAM02 的应用中使用公式 16.4 到 16.6。然而，CIE（2004a）关于 CIECAM02 的技术报告提供了略有不同的默认公式，如公式 16.4a 到 16.6a 所示。</p>
+<p><strong>关于 CIECAM02 色适应变换的说明</strong></p>
+<p>公式 16.4 至 16.6 表示了 CIECAM02 色适应变换的最一般形式，即作为简单的冯·克里斯变换，将其转换为隐式等能量参考条件并考虑不完全适应。这个变换可以独立于 CIECAM02 模型的其余部分一致使用。无论初始三刺激值的缩放（如 CIECAM02 中常见的 0 到约 100，或有时使用的 0 到约 1.0）如何，它也可以应用于所有情况。为了最大化通用性并减少适应变换功能的混乱，建议在所有 CIECAM02 的应用中使用公式 16.4 到 16.6。然而，CIE（2004a）关于 CIECAM02 的技术报告提供了略有不同的默认公式，如公式 16.4a 到 16.6a 所示。</p>
 <p>由于 <span class="arithmatex">\(Y_W\)</span>，即白色的 Y 三刺激值，通常为 100，因此两组公式通常是不可区分的。然而，在某些情况下，使用不同于 100 的 <span class="arithmatex">\(Y_W\)</span> 值，比如当考虑纸张而非 PRD 作为打印应用中的白色时。尽管看起来公式 16.4a 到 16.6a 中的 <span class="arithmatex">\(Y_W\)</span> 因子似乎能够解释所采用白色的变化，但它实际上并不具备这种作用。这种归一化已经内嵌在公式中，其中包括 <span class="arithmatex">\(R_W\)</span>、<span class="arithmatex">\(G_W\)</span> 和 <span class="arithmatex">\(B_W\)</span>。<span class="arithmatex">\(Y_W\)</span> 项并没有实质性的作用，且它是早期模型公式中的遗留问题（类似于 CIECAM97s 中的公式），在 CIE 技术报告发布之前并没有得到纠正。</p>
 <p>这些方程式的差异对最终计算的色貌相关性影响不大，因为在后续公式中（如 CIECAM02 中的明度 <span class="arithmatex">\(J\)</span> 计算），色貌与白点的相对缩放已经完成。然而，公式 16.4a 到 16.6a 中的变换不能在没有其余 CIECAM02 模型的情况下使用。这样做会产生不一致的结果（例如，一个观察条件下的白色可能无法在第二个观察条件下映射到白色）。如果需要将适应变换从 CIECAM02 模型中单独使用，则必须使用公式 16.4 至 16.6 中的形式来确保一致的预测。此外，应该注意的是，公式 16.4a 到 16.6a 中的 <span class="arithmatex">\(Y_W\)</span> 因子并没有规范化三刺激值的缩放（实际上它会产生相反的效果），因此应该使用从 0 到大约 100 进行缩放的值作为 CIECAM02 的输入。</p>
 <hr />
@@ -1199,12 +1199,12 @@
   </div>
 </div>
 
-<p>为了应用适应后的非线性压缩，适应后的 RGB 响应首先必须从 <span class="arithmatex">\(M_{CAT02}\)</span> 规范转换到 Hunt–Pointer–Estevez 基本响应，这些基本响应更接近锥体响应。此变换由公式 16.12 到 16.14 表示，可以视为从 CAT02 RGB 系统转换回 CIE 三刺激值，再到锥体响应。这些相对光谱响应性如图 16.2 所示。</p>
+<p>为了应用适应后的非线性压缩，适应后的 RGB 响应首先必须从 <span class="arithmatex">\(M_{CAT02}\)</span> 规范转换到 Hunt–Pointer–Estevez 基本响应，这些基本响应更接近视锥细胞响应。此变换由公式 16.12 到 16.14 表示，可以视为从 CAT02 RGB 系统转换回 CIE 三刺激值，再到视锥细胞响应。这些相对光谱响应性如图 16.2 所示。</p>
 <p align="center">
   <img src="../imgs/chapter16/16-2.png" alt="相对光谱响应性" width="60%">
 </p>
 <p align="center">
-  图 16.2：MCAT02 原色（细虚线）和 Hunt–Pointer–Estevez 锥体基本响应（粗实线）的相对光谱响应性。
+  图 16.2：MCAT02 原色（细虚线）和 Hunt–Pointer–Estevez 视锥细胞基本响应（粗实线）的相对光谱响应性。
 </p>
 
 <div class="math-block">
@@ -1300,8 +1300,8 @@
   </div>
 </div>
 
-<h2 id="165-hue">16.5 色调 (Hue)</h2>
-<p>色调角度 <span class="arithmatex">\(h\)</span> 在 CIECAM02 空间中使用与 CIELAB 相同的程序计算，如公式 16.20 所示。与 CIELAB 一样，<span class="arithmatex">\(h\)</span> 表示为从 0 到 360 度，计算方式是从正 <span class="arithmatex">\(a\)</span> 轴开始测量。</p>
+<h2 id="165-hue">16.5 色相 (Hue)</h2>
+<p>色相角度 <span class="arithmatex">\(h\)</span> 在 CIECAM02 空间中使用与 CIELAB 相同的程序计算，如公式 16.20 所示。与 CIELAB 一样，<span class="arithmatex">\(h\)</span> 表示为从 0 到 360 度，计算方式是从正 <span class="arithmatex">\(a\)</span> 轴开始测量。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1321,7 +1321,7 @@
   </div>
 </div>
 
-<p>色调四分法和色调组成可以通过线性插值法从表 16.2 中给定的数据来确定，如公式 16.22 所示。</p>
+<p>色相四分法和色相组成可以通过线性插值法从表 16.2 中给定的数据来确定，如公式 16.22 所示。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1332,7 +1332,7 @@
 </div>
 
 <h2 id="166-lightness">16.6 明度 (Lightness)</h2>
-<p>初始的无色响应是通过加权求和的非线性适应锥体响应并修正亮度诱导因子计算的，如公式 16.23 所示。类似的数量也必须针对白色进行计算，以便进行明度和亮度的计算。</p>
+<p>初始的无色响应是通过加权求和的非线性适应视锥细胞响应并修正亮度诱导因子计算的，如公式 16.23 所示。类似的数量也必须针对白色进行计算，以便进行明度和亮度的计算。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1408,7 +1408,7 @@
 </div>
 
 <h2 id="1611-cartesian-coordinates">16.11 笛卡尔坐标 (Cartesian Coordinates)</h2>
-<p>与色貌模型相关的颜色空间通常以圆柱坐标的形式表示明度、色度和色调（<span class="arithmatex">\(JCh\)</span>）或亮度、色彩鲜艳度和色调（<span class="arithmatex">\(QMh\)</span>）。然而，在某些应用中，使用等效的笛卡尔坐标是有用的。虽然这只是一个简单的坐标变换，但它在 CIECAM97s 中从未明确定义。因此，CIECAM02 中的色度、色彩鲜艳度和饱和度维度的笛卡尔坐标如公式 16.30 到 16.35 所示。</p>
+<p>与色貌模型相关的颜色空间通常以圆柱坐标的形式表示明度、色度和色相（<span class="arithmatex">\(JCh\)</span>）或亮度、色彩鲜艳度和色相（<span class="arithmatex">\(QMh\)</span>）。然而，在某些应用中，使用等效的笛卡尔坐标是有用的。虽然这只是一个简单的坐标变换，但它在 CIECAM97s 中从未明确定义。因此，CIECAM02 中的色度、色彩鲜艳度和饱和度维度的笛卡尔坐标如公式 16.30 到 16.35 所示。</p>
 <div class="math-block">
   <div class="equation">
     $$
@@ -1464,7 +1464,7 @@
 </div>
 
 <h2 id="1612-inverse-model">16.12 反向模型 (Inverse Model)</h2>
-<p>特别是对于颜色重现应用，反向色貌模型具有实际意义。CIECAM02 相较于 CIECAM97s 在反向计算的简便性上有了显著改进。这主要得益于采用了简单的线性色度适应变换。此外，CIECAM02 的技术报告包含了关于模型反转的详细解释和工作实例（CIE 2004a）。以下是实施 CIECAM02 反向计算的逐步过程（从 <span class="arithmatex">\(JCh\)</span> 开始）。</p>
+<p>特别是对于颜色重现应用，反向色貌模型具有实际意义。CIECAM02 相较于 CIECAM97s 在反向计算的简便性上有了显著改进。这主要得益于采用了简单的线性色适应变换。此外，CIECAM02 的技术报告包含了关于模型反转的详细解释和工作实例（CIE 2004a）。以下是实施 CIECAM02 反向计算的逐步过程（从 <span class="arithmatex">\(JCh\)</span> 开始）。</p>
 <ol>
 <li>从 <span class="arithmatex">\(C\)</span> 和 <span class="arithmatex">\(J\)</span> 计算 <span class="arithmatex">\(t\)</span>。</li>
 <li>从 <span class="arithmatex">\(h\)</span> 计算 <span class="arithmatex">\(e_t\)</span>。</li>
@@ -1473,7 +1473,7 @@
 <li>从 <span class="arithmatex">\(A\)</span>、<span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 计算 <span class="arithmatex">\(a'_R\)</span>、<span class="arithmatex">\(a'_G\)</span> 和 <span class="arithmatex">\(a'_B\)</span>。</li>
 <li>使用反向非线性计算 <span class="arithmatex">\(R'\)</span>、<span class="arithmatex">\(G'\)</span> 和 <span class="arithmatex">\(B'\)</span>。</li>
 <li>通过线性变换转换为 <span class="arithmatex">\(R_c\)</span>、<span class="arithmatex">\(G_c\)</span> 和 <span class="arithmatex">\(B_c\)</span>。</li>
-<li>反转色度适应变换，计算 <span class="arithmatex">\(R\)</span>、<span class="arithmatex">\(G\)</span> 和 <span class="arithmatex">\(B\)</span>，然后计算 <span class="arithmatex">\(X\)</span>、<span class="arithmatex">\(Y\)</span> 和 <span class="arithmatex">\(Z\)</span>。</li>
+<li>反转色适应变换，计算 <span class="arithmatex">\(R\)</span>、<span class="arithmatex">\(G\)</span> 和 <span class="arithmatex">\(B\)</span>，然后计算 <span class="arithmatex">\(X\)</span>、<span class="arithmatex">\(Y\)</span> 和 <span class="arithmatex">\(Z\)</span>。</li>
 </ol>
 <h2 id="1613-implementation-guidelines">16.13 实施指南 (Implementation Guidelines)</h2>
 <p>CIECAM02 技术报告（CIE 2004a）的另一个改进特性是提供了更详细的模型实施指南。报告中提供了多个工作实例以及参数设置的示例。这些信息对于那些希望实施模型正向和反向计算的人来说非常有价值，而不仅仅是理解其公式的概念。</p>
@@ -1521,7 +1521,7 @@
 </table>
 <hr />
 <h2 id="1614">16.14 预测的现象</h2>
-<p>CIECAM02可以预测CIECAM97s所能预测的所有现象。它包括所有典型外观属性（相对的和绝对的）的相关性，并且可以应用于各种亮度水平和色度适应状态下。像CIECAM97s一样，CIECAM02不适用于存在显著杆状视觉贡献的情况，或者在极高亮度下可能发生视网膜色素漂白的情况。可以认为CIECAM02是一个比CIECAM97s更简洁和更好的版本。</p>
+<p>CIECAM02可以预测CIECAM97s所能预测的所有现象。它包括所有典型外观属性（相对的和绝对的）的相关性，并且可以应用于各种亮度水平和色适应状态下。像CIECAM97s一样，CIECAM02不适用于存在显著视杆细胞贡献的情况，或者在极高亮度下可能发生视网膜色素漂白的情况。可以认为CIECAM02是一个比CIECAM97s更简洁和更好的版本。</p>
 <p>CIECAM02的示例计算如表16.4所示。</p>
 <table>
 <thead>
@@ -1720,11 +1720,11 @@
 </table>
 <hr />
 <h2 id="1615">16.15 计算问题</h2>
-<p>在某些应用和不寻常的观察条件或刺激下，CIECAM02模型存在一些计算难题。这些应用包括计算颜色管理系统的颜色轮廓，这通常需要计算跨越所有物理可实现颜色范围的颜色外观，甚至超出该范围包括物理不可能的刺激（即具有负的CIE三刺激值的刺激）。在其他情况下，计算问题可能仅出现在选择非常饱和的适应光源或物理上非常接近光谱位置的真实刺激时，这些情况在典型情况下不常见。</p>
-<p>最近，Hunt（2009）和Luo（2012）对这些挑战进行了总结，尽管模型的各个方面存在各种复杂性，最终的焦点集中在使用两个矩阵，一个用于适应变换，另一个用于颜色空间构建，以及其响应非线性函数接近0时的形式。对于那些对不同色度适应变换和模型的其他方面产生问题感兴趣的读者，已有大量文献（Brill 2006，Brill和Mahy 2013，Brill和Süsstrunk 2008，Li和Luo 2005，Li等人 2009，2012a-d，2013）可供参考。</p>
+<p>在某些应用和不寻常的观察条件或刺激下，CIECAM02模型存在一些计算难题。这些应用包括计算颜色管理系统的颜色轮廓，这通常需要计算跨越所有物理可实现颜色范围的色貌，甚至超出该范围包括物理不可能的刺激（即具有负的CIE三刺激值的刺激）。在其他情况下，计算问题可能仅出现在选择非常饱和的适应光源或物理上非常接近光谱位置的真实刺激时，这些情况在典型情况下不常见。</p>
+<p>最近，Hunt（2009）和Luo（2012）对这些挑战进行了总结，尽管模型的各个方面存在各种复杂性，最终的焦点集中在使用两个矩阵，一个用于适应变换，另一个用于颜色空间构建，以及其响应非线性函数接近0时的形式。对于那些对不同色适应变换和模型的其他方面产生问题感兴趣的读者，已有大量文献（Brill 2006，Brill和Mahy 2013，Brill和Süsstrunk 2008，Li和Luo 2005，Li等人 2009，2012a-d，2013）可供参考。</p>
 <p>最大的问题出现在CAT02矩阵上，经过其增强响应后，可以产生负的RGB值，这些值在通过适应变换和模型的其余部分时会引发问题。当发生此类负值时，还可能出现模型反转、除以0和非线性压缩函数通过零时出现无限斜率等问题（这虽然是一个计算问题，但在真实刺激下不应发生）。</p>
 <p>这个问题已经由CIE TC8-11委员会（由Li主持）进行了研究，委员会尚未发布最终解决方案，但它可能会建议对CIECAM02进行修改，提供一个计算上更稳健的模型，尽管其准确性可能略低。这种修改模型很可能会作为CIECAM02的替代方案提出，而不是作为其替代品。该委员会的目标是拟合一个矩阵，能够同时替代CAT02适应矩阵和Hunt–Pointer–Estevez颜色空间（适应后矩阵），并且涵盖光谱位置，从而消除大多数问题，同时最大限度地提高准确性。简单地使用Hunt–Pointer–Estevez矩阵来适应以及用于颜色空间则不如准确。计划中的优化将是准确性与数学简便性之间的折衷。虽然这将消除大多数关于非线性函数在0点附近的无限斜率的问题，但它并没有完全消除该问题，因为一些用户需要处理非真实的刺激值来填充三维查找表。剩下的问题可以，也很可能会，通过在0附近的函数加上线性段来解决。</p>
-<p>还需要注意的是，通过修改增强传感器响应，而不是回退到锥形响应（Vazquez-Corral等人 2012），可以在色貌预测方面取得一些进展，比如色调命名和取消效应。</p>
+<p>还需要注意的是，通过修改增强传感器响应，而不是回退到视锥细胞响应（Vazquez-Corral等人 2012），可以在色貌预测方面取得一些进展，比如色相命名和取消效应。</p>
 <hr />
 <h2 id="1616-cam02-ucs">16.16 CAM02-UCS</h2>
 <p>在将色貌模型的色貌尺度与CIE DE2000方程等公式所典型的均匀色差预测结合起来的过程中，取得了一个有趣的成果。这是一个困难的任务，因为通常认为色貌尺度（属性的大间隔变化）与感知阈值变化附近和略高于阈值的较小间隔变化之间没有线性关系。这类努力的一个结果就是CAM02-UCS (Luo et al. 2006)。本质上，这一概念是通过调整色空间的色貌维度（在这里是CIECAM02），使其包括通常在色差方程中需要的加权函数。公式16.36和16.37显示了CIECAM02色度和色彩感知度的修改形式。公式16.38和16.39是简单的坐标变换，目的是将空间转换为矩形坐标以便简化色差计算，如公式16.40所示。这就是CAM02-UCS的核心内容。</p>
@@ -1759,7 +1759,7 @@
   </div>
 </div>
 
-<p>此公式表示修正后的红绿分量（<span class="arithmatex">\(a'_M\)</span>），它是修正色度（M'）与色调角度（h）余弦值的乘积。</p>
+<p>此公式表示修正后的红绿分量（<span class="arithmatex">\(a'_M\)</span>），它是修正色度（M'）与色相角度（h）余弦值的乘积。</p>
 <hr />
 <div class="math-block">
   <div class="equation">
@@ -1769,7 +1769,7 @@
   </div>
 </div>
 
-<p>此公式表示修正后的黄蓝分量（<span class="arithmatex">\(b'_M\)</span>），它是修正色度（M'）与色调角度（h）正弦值的乘积。</p>
+<p>此公式表示修正后的黄蓝分量（<span class="arithmatex">\(b'_M\)</span>），它是修正色度（M'）与色相角度（h）正弦值的乘积。</p>
 <hr />
 <div class="math-block">
   <div class="equation">
@@ -1786,7 +1786,7 @@
 <hr />
 <h2 id="1617-ciecam02">16.17 为什么不只使用CIECAM02？</h2>
 <p>如果一个人正在寻找一个国际公认的色貌模型，并且这个模型具有相对简单的公式，同时在2004年之前的任何类似模型中表现得一样好或更好，那么CIECAM02就是答案。没有科学理由偏好CIECAM97s于CIECAM02，并且CIECAM02在实际应用中更易于实现和使用。</p>
-<p>在某些情况下，可能无法获得充分的观看条件知识和控制，以便充分利用CIECAM02。在这种情况下，简单的模型可能就足够了。通常，色貌模型的逻辑进程是从简单地使用CIELAB开始。如果发现CIELAB对于应用不足，则下一步逻辑是将CIELAB与更好的色度适应模型（如CAT02线性色度适应变换）结合使用。如果需要更多灵活性，可以选择稍微复杂一些的模型，如RLAB，或者将适应变换替换为CAT02变换的RLAB模型。然后，如果需要更复杂的模型，CIECAM02将是最佳选择。最后，如果CIECAM02不适用于给定的情况（例如需要预测杆状细胞贡献），则Hunt模型将是最全面的选择。</p>
+<p>在某些情况下，可能无法获得充分的观看条件知识和控制，以便充分利用CIECAM02。在这种情况下，简单的模型可能就足够了。通常，色貌模型的逻辑进程是从简单地使用CIELAB开始。如果发现CIELAB对于应用不足，则下一步逻辑是将CIELAB与更好的色适应模型（如CAT02线性色适应变换）结合使用。如果需要更多灵活性，可以选择稍微复杂一些的模型，如RLAB，或者将适应变换替换为CAT02变换的RLAB模型。然后，如果需要更复杂的模型，CIECAM02将是最佳选择。最后，如果CIECAM02不适用于给定的情况（例如需要预测视杆细胞贡献），则Hunt模型将是最全面的选择。</p>
 <hr />
 <h2 id="1618">16.18 展望</h2>
 <p>CIECAM02代表了色貌模型的重大进步，尤其是在它的发布和CIECAM97s初步制定之间的六年中。CIECAM97s发布后，立即就注意到了其局限性，提出了改进的建议，并且成立了一个新的CIE委员会来建议改进。目前，没有类似的情况出现以替代CIECAM02。</p>
