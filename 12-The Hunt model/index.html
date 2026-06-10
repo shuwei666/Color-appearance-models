@@ -348,7 +348,7 @@
         
   
   <span class="md-ellipsis">
-    7. 观察条件
+    7. 观测条件
   </span>
   
 
@@ -1753,7 +1753,7 @@
 
 <h1 id="hunt">Hunt 模型</h1>
 <p>这一章继续回顾一些广泛讨论和应用的色貌模型，重点介绍了由 Robert William Gainer Hunt 开发的模型。这个模型是迄今为止开发的最为广泛、完整和复杂的色貌模型。其理论根基可以追溯到 Hunt 在 1952 年的早期色适应研究（Hunt 1952），并在 1980 年代和 1990 年代得到了严格的发展（Hunt 1982, 1987, 1991b, 1994, 1995, Hunt 和 Pointer 1985）。该模型对 CIECAM02 的发展和设计产生了深远影响。</p>
-<p>Hunt 色貌模型并不简单，但它被设计用于预测一系列视觉现象。正如 Hunt 本人所言，人的视觉系统也并非简单。因此，尽管在某些应用中，后续章节中描述的简单模型已足够，但拥有一个完整的模型，能够适应更广泛的观察条件，对于更明确或不寻常的情况来说无疑具有很大的价值。Hunt 模型恰好满足了这一需求，并且本书中讨论的大多数其他色貌模型，都能追溯到 Hunt 模型中最初提出的许多理念。</p>
+<p>Hunt 色貌模型并不简单，但它被设计用于预测一系列视觉现象。正如 Hunt 本人所言，人的视觉系统也并非简单。因此，尽管在某些应用中，后续章节中描述的简单模型已足够，但拥有一个完整的模型，能够适应更广泛的观测条件，对于更明确或不寻常的情况来说无疑具有很大的价值。Hunt 模型恰好满足了这一需求，并且本书中讨论的大多数其他色貌模型，都能追溯到 Hunt 模型中最初提出的许多理念。</p>
 <hr />
 <h2 id="121">12.1 目标与方法</h2>
 <p>Hunt 在柯达研究实验室度过了他职业生涯中的 36 年。因此，Hunt 模型是在色彩图像再现的需求背景下开发的。这与第 11 章中讨论的 Nayatani 等人模型的照明工程领域的视角有显著不同。通过检查 Hunt 模型的输入参数，可以轻易看出成像科学对该模型的影响。例如，环境相对亮度是一个在 Nayatani 等人模型中不存在的重要因素。其他例子可以在为“在暗室投影的透明片”、“在昏暗环境中的电视显示”或“正常场景”设定特定值的参数中找到。这些特性清晰地表明，Hunt 模型是为了应用于成像情境而设计的。</p>
@@ -2003,7 +2003,7 @@
 <li><span class="arithmatex">\(F_\rho\)</span>、<span class="arithmatex">\(F_\gamma\)</span> 和 <span class="arithmatex">\(F_\beta\)</span> 是色适应因子。</li>
 <li><span class="arithmatex">\(f_n\)</span> 是 Hunt 模型中用于模拟视觉非线性响应的双曲函数。</li>
 </ul>
-<p>在典型的观察条件下，Helson-Judd 效应并不显著（Helson 1938）。在这种情况下，修正项 <span class="arithmatex">\(\rho_D\)</span>、<span class="arithmatex">\(\gamma_D\)</span> 和 <span class="arithmatex">\(\beta_D\)</span> 可以设置为 0.0。此外，当发生 <strong>完全色适应</strong>（discounting-the-illuminant）时，色适应因子 <span class="arithmatex">\(F_\rho\)</span>、<span class="arithmatex">\(F_\gamma\)</span> 和 <span class="arithmatex">\(F_\beta\)</span> 会被设置为 1.0，Helson-Judd 效应也不会出现，修正项 <span class="arithmatex">\(\rho_D\)</span>、<span class="arithmatex">\(\gamma_D\)</span> 和 <span class="arithmatex">\(\beta_D\)</span> 也会被强制为 0.0。</p>
+<p>在典型的观测条件下，Helson-Judd 效应并不显著（Helson 1938）。在这种情况下，修正项 <span class="arithmatex">\(\rho_D\)</span>、<span class="arithmatex">\(\gamma_D\)</span> 和 <span class="arithmatex">\(\beta_D\)</span> 可以设置为 0.0。此外，当发生 <strong>完全色适应</strong>（discounting-the-illuminant）时，色适应因子 <span class="arithmatex">\(F_\rho\)</span>、<span class="arithmatex">\(F_\gamma\)</span> 和 <span class="arithmatex">\(F_\beta\)</span> 会被设置为 1.0，Helson-Judd 效应也不会出现，修正项 <span class="arithmatex">\(\rho_D\)</span>、<span class="arithmatex">\(\gamma_D\)</span> 和 <span class="arithmatex">\(\beta_D\)</span> 也会被强制为 0.0。</p>
 <h3 id="_1">视锥细胞漂白因子</h3>
 <p>当光照水平达到非常高的亮度时，视锥细胞会发生漂白（photopigment bleaching），导致视觉系统的输出降低。Hunt 模型引入了漂白因子 <span class="arithmatex">\(B_\rho\)</span>、<span class="arithmatex">\(B_\gamma\)</span> 和 <span class="arithmatex">\(B_\beta\)</span> 来模拟这种现象。这些漂白因子随着适应亮度 <span class="arithmatex">\(L_A\)</span> 的增加而逐渐减小，如方程 (12.20) 到 (12.22) 所示。</p>
 <div class="math-block">
@@ -2649,7 +2649,7 @@
 <li>对于大数据集（如图像数据），逐次逼近法可能非常耗时。  </li>
 <li>可以通过<strong>正向和逆向模型</strong>来构建三维查找表（lookup tables）。  </li>
 <li>一旦生成了查找表，就可以使用插值技术快速转换图像数据。  </li>
-<li>缺点：如果需要更改观看条件，需要重新计算查找表，这可能会导致显著的延迟。</li>
+<li>缺点：如果需要更改观测条件，需要重新计算查找表，这可能会导致显著的延迟。</li>
 </ol>
 <h3 id="_20">模型实现步骤</h3>
 <p>在实施 Hunt 色貌模型时，可以将其分解为以下步骤。这些步骤同样适用于模型的正向和逆向实现：</p>
@@ -2680,7 +2680,7 @@
 <h3 id="_21">提高计算效率的技术</h3>
 <ol>
 <li><strong>预计算常数</strong>：  </li>
-<li>在预计算步骤中，首先计算所有与特定观看条件相关的常数，例如适应因子和参考白的相关值。  </li>
+<li>在预计算步骤中，首先计算所有与特定观测条件相关的常数，例如适应因子和参考白的相关值。  </li>
 <li>
 <p>这些预计算的数据可以在后续的计算中重复使用，而无需每次重新计算。</p>
 </li>
@@ -2720,7 +2720,7 @@
 </li>
 <li>
 <p><strong>光和色适应的影响</strong>：<br />
-   该模型能够预测光适应和色适应引起的色貌变化，包括<strong>认知消除照明影响</strong>（discounting-the-illuminant）。</p>
+   该模型能够预测光适应和色适应引起的色貌变化，包括<strong>消光</strong>（discounting-the-illuminant）。</p>
 </li>
 <li>
 <p><strong>视杆细胞的贡献</strong>：<br />
@@ -2885,7 +2885,7 @@
 <ul>
 <li>
 <p><strong>极高的灵活性</strong>：<br />
-  Hunt 模型可以适应多种视觉实验和观看条件，具有很强的灵活性。该模型能够对各种色貌现象做出准确预测（如第 15 章将进一步探讨）。</p>
+  Hunt 模型可以适应多种视觉实验和观测条件，具有很强的灵活性。该模型能够对各种色貌现象做出准确预测（如第 15 章将进一步探讨）。</p>
 </li>
 <li>
 <p><strong>广泛的预测能力</strong>：<br />

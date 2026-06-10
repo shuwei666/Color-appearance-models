@@ -610,7 +610,7 @@
         
   
   <span class="md-ellipsis">
-    7. 观察条件
+    7. 观测条件
   </span>
   
 
@@ -1185,13 +1185,13 @@
 <li><strong>颜色感知的生理基础</strong>：包括视锥细胞、视杆细胞及对立颜色机制。</li>
 <li><strong>色觉缺陷及其对视觉的影响</strong>：了解不同类型的色盲及其生理机制。</li>
 <li><strong>空间和时间特性在颜色感知中的作用</strong>：探索视觉系统如何在不同场景中适应变化。</li>
-<li><strong>认知机制的影响</strong>：如记忆颜色和光源折扣在不同观察条件下如何维持颜色一致性。</li>
+<li><strong>认知机制的影响</strong>：如记忆颜色和消光在不同观测条件下如何维持颜色一致性。</li>
 <li><strong>颜色建模的基础</strong>：理解人眼的视觉特性如何应用于色貌模型，用于<strong>图像重现</strong>、<strong>色彩管理</strong>和<strong>成像系统设计</strong>。</li>
 </ul>
 <p>通过学习本章，你不仅会深入理解人眼的颜色感知机制，还将看到这些知识如何与<strong>现代图像科学和成像系统</strong>紧密结合，为真实感色彩重现和色彩校准提供理论支持。</p>
 <hr />
 <h3 id="1">1 色貌模型的目标与基础</h3>
-<p><strong>色貌模型（Color Appearance Models）</strong>旨在扩展<strong>基本色度学（basic colorimetry）</strong>，能够在多种观察条件下，准确描述我们对颜色的感知。为了更好地理解这些模型的构建、实现和应用，我们需要掌握一些<strong>颜色科学（color science）</strong>的基础知识，这些内容在本书的前几章中会详细介绍。</p>
+<p><strong>色貌模型（Color Appearance Models）</strong>旨在扩展<strong>基本色度学（basic colorimetry）</strong>，能够在多种观测条件下，准确描述我们对颜色的感知。为了更好地理解这些模型的构建、实现和应用，我们需要掌握一些<strong>颜色科学（color science）</strong>的基础知识，这些内容在本书的前几章中会详细介绍。</p>
 <p>由于色貌模型反映了人类视觉体验的多个维度，任何用于预测这些感知体验的系统，都必须基于一定程度的<strong>人类视觉系统的结构和功能</strong>。本书中所涉及的色貌模型大多以<strong>视觉功能</strong>为基础，并且在某些情况下，将视觉系统视作一个<strong>黑箱模型（black box model）</strong>进行经验建模。如果我们对视觉系统的基本结构、生理机制和性能有足够了解，就能更容易理解各种色貌模型的数学构建和预测原理。因此，本书的第一部分从介绍<strong>人类视觉系统</strong>开始。</p>
 <hr />
 <h3 id="_3">视觉科学的复杂性与推荐阅读</h3>
@@ -1660,7 +1660,7 @@ V1 是大脑皮层中第一个处理视觉信号的区域。它的主要任务�
 <p><strong>译者注</strong>：色适应不仅在视锥细胞层面发生，还可能出现在对立色彩通道或更高层次的颜色机制中。这一机制在色貌模型中非常重要，并将在第8章详细讨论。</p>
 </blockquote>
 <h4 id="142">1.4.2 视觉机制对色貌的影响</h4>
-<p><strong>色貌</strong>受多种认知视觉机制的影响。这些机制将在第6-8章中进一步详细描述，包括<strong>记忆颜色</strong>、<strong>颜色恒常性</strong>、<strong>光源折扣（discounting-the-illuminant）</strong>以及<strong>物体识别</strong>。</p>
+<p><strong>色貌</strong>受多种认知视觉机制的影响。这些机制将在第6-8章中进一步详细描述，包括<strong>记忆颜色</strong>、<strong>颜色恒常性</strong>、<strong>消光（discounting-the-illuminant）</strong>以及<strong>物体识别</strong>。</p>
 <hr />
 <p><strong>记忆颜色（Memory Color）</strong><br />
 记忆颜色指的是人们对某些可识别物体的<strong>原型颜色</strong>有特定记忆。例如，大多数人会记得<strong>绿色草地</strong>或<strong>蓝色天空</strong>的典型颜色，并能在实验中重现这种颜色。然而，令人惊讶的是，记忆中的颜色往往比实际颜色<strong>更加饱和</strong>。</p>
@@ -1678,7 +1678,7 @@ V1 是大脑皮层中第一个处理视觉信号的区域。它的主要任务�
 </blockquote>
 <hr />
 <p><strong>物体识别（Object Recognition）</strong><br />
-物体识别主要依赖于<strong>空间、时间和明暗特征</strong>，而非颜色特征（Davidoff，1991）。一旦物体被识别，视觉系统会利用<strong>记忆颜色</strong>和<strong>光源折扣</strong>的机制来补充适当的颜色。</p>
+物体识别主要依赖于<strong>空间、时间和明暗特征</strong>，而非颜色特征（Davidoff，1991）。一旦物体被识别，视觉系统会利用<strong>记忆颜色</strong>和<strong>消光</strong>的机制来补充适当的颜色。</p>
 <hr />
 <blockquote>
 <p><strong>译者注</strong>：这些机制表明，颜色感知不仅依赖于物理光谱刺激，还涉及复杂的认知处理。例如，我们的视觉系统会利用物体的原型颜色和光照信息的推断，使颜色在不同环境中保持一致感。这些机制在跨媒体的颜色比较中尤为重要。</p>

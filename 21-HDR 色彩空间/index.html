@@ -348,7 +348,7 @@
         
   
   <span class="md-ellipsis">
-    7. 观察条件
+    7. 观测条件
   </span>
   
 
@@ -1044,7 +1044,7 @@
 <hr />
 <h2 id="214-hdr-cielab">21.4 hdr-CIELAB</h2>
 <p><strong>背景概述：</strong>
-Fairchild 和 Chen 在 2011 年提出的 hdr-CIELAB 模型是 CIELAB 空间的延伸，专门用于适应高动态范围（HDR）的光照条件。他们通过用 Michaelis–Menton 函数代替 CIELAB 的三次根非线性函数，使得该模型在极低和极高亮度条件下表现更佳。</p>
+Fairchild 和 Chen 在 2011 年提出的 hdr-CIELAB 模型是 CIELAB 空间的延伸，专门用于适应高动态范围（HDR）的光照条件。他们通过用 Michaelis–Menten 函数代替 CIELAB 的三次根非线性函数，使得该模型在极低和极高亮度条件下表现更佳。</p>
 <p>该模型的主要特点是增强了暗部阴影和高光部分的表现能力。其关键公式包括光亮度的非线性压缩函数以及 HDR 空间的参数计算方法。</p>
 <hr />
 <p><strong>公式：</strong></p>
@@ -1063,7 +1063,7 @@ Fairchild 和 Chen 在 2011 年提出的 hdr-CIELAB 模型是 CIELAB 空间的�
 </ul>
 <p><strong>解释：</strong></p>
 <ul>
-<li><strong><span class="arithmatex">\(\epsilon\)</span></strong> 表示在特定观看条件下的动态调整因子。</li>
+<li><strong><span class="arithmatex">\(\epsilon\)</span></strong> 表示在特定观测条件下的动态调整因子。</li>
 <li><strong><span class="arithmatex">\(sf\)</span></strong> 是围绕因子，表示环境对视觉效果的影响。</li>
 <li><strong><span class="arithmatex">\(lf\)</span></strong> 是亮度因子，考虑到了白点亮度 <span class="arithmatex">\(Y_{ws}\)</span> 的调整。</li>
 </ul>
@@ -1127,7 +1127,7 @@ Fairchild 和 Chen 在 2011 年提出的 hdr-CIELAB 模型是 CIELAB 空间的�
 <hr />
 <h2 id="215-hdr-ipt">21.5 hdr-IPT</h2>
 <p><strong>背景概述：</strong><br />
-Fairchild 等人在 2011 年基于 Chen 等（2010）的研究，将传统的 IPT 色彩空间拓展到高动态范围（HDR）条件下。通过用 Michaelis-Menton 函数代替 IPT 色彩空间中的幂函数非线性函数，该模型在极低和极高亮度水平下表现更加优秀。</p>
+Fairchild 等人在 2011 年基于 Chen 等（2010）的研究，将传统的 IPT 色彩空间拓展到高动态范围（HDR）条件下。通过用 Michaelis-Menten 函数代替 IPT 色彩空间中的幂函数非线性函数，该模型在极低和极高亮度水平下表现更加优秀。</p>
 <p>这种改进使得 hdr-IPT 色彩空间能够更好地处理阴影和高光部分，优化了色彩的表现能力。</p>
 <hr />
 <p><strong>动态因子调整：</strong>  </p>
@@ -1527,7 +1527,7 @@ Fairchild 和 Heckaman 提出，或许色彩本质上是一维的感知空间集
 <hr />
 <p><strong>实践建议：</strong>  </p>
 <p><strong>使用色貌模型的原则：</strong><br />
-- 色貌模型仅在<strong>绝对必要</strong>的情况下使用。如果通过调整观察条件就可以避免对外观进行转换，这是最优的选择。</p>
+- 色貌模型仅在<strong>绝对必要</strong>的情况下使用。如果通过调整观测条件就可以避免对外观进行转换，这是最优的选择。</p>
 <p><strong>推荐模型选择：</strong><br />
 - 如果需要完整的色貌模型，Hunt 模型是最佳选择。
 - 如果不需要复杂的预测，CIECAM02 是一个合适的选择。
@@ -1535,7 +1535,7 @@ Fairchild 和 Heckaman 提出，或许色彩本质上是一维的感知空间集
 <p><strong>模型选择建议（按复杂度递增排序）：</strong>  </p>
 <ul>
 <li>
-<p>如果可能，调整观察条件，使得简单的三刺激匹配也能满足外观匹配的要求。</p>
+<p>如果可能，调整观测条件，使得简单的三刺激匹配也能满足外观匹配的要求。</p>
 </li>
 <li>
 <p>如果需要改变白点，可以首先尝试使用 CIELAB，它是一个合理的第一阶近似外观模型。</p>
@@ -1547,7 +1547,7 @@ Fairchild 和 Heckaman 提出，或许色彩本质上是一维的感知空间集
 <p>如果需要更灵活的适应模型（例如，从硬拷贝到软拷贝的变化）或存在环境变化，可以使用 RLAB 模型，同时改进其适应转换。</p>
 </li>
 <li>
-<p>如果需要对观察条件和刺激进行严格控制，或者需要预测亮度和色彩感，可以选择 CIECAM02 模型。</p>
+<p>如果需要对观测条件和刺激进行严格控制，或者需要预测亮度和色彩感，可以选择 CIECAM02 模型。</p>
 </li>
 <li>
 <p>如果需要全面处理外观现象（包括非常高或低的亮度，视杆细胞响应等），Hunt 模型是最佳选择。</p>
