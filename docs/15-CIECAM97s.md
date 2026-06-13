@@ -319,7 +319,26 @@ R.W.G. Hunt和M.R. Luo提供了两个修订后的模型供TC1-34在京都会议�
 <div class="math-block">
   <div class="equation">
     $$
-    s = \frac{50 \left( a^2 + b^2 \right)^{1/2} 100 e \left( \frac{10}{13} \right) N_c N_{cb}}{R'_a + G'_a + \left( \frac{21}{20} \right) B'_a}    \tag{15.26}    $$  </div></div><div class="math-block">  <div class="equation">    $$    C = 2.44 s^{0.69} \left( \frac{J}{100} \right)^{0.67n} \left( 1.64 - 0.29n \right)    \tag{15.27}    $$  </div></div><div class="math-block">  <div class="equation">    $$    M = C F_L^{0.15}    \tag{15.28}    $$  </div></div>
+    s = \frac{50 \left( a^2 + b^2 \right)^{1/2} 100 e \left( \frac{10}{13} \right) N_c N_{cb}}{R'_a + G'_a + \left( \frac{21}{20} \right) B'_a} \tag{15.26}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    C = 2.44 s^{0.69} \left( \frac{J}{100} \right)^{0.67n} \left( 1.64 - 0.29n \right) \tag{15.27}
+    $$
+  </div>
+</div>
+
+<div class="math-block">
+  <div class="equation">
+    $$
+    M = C F_L^{0.15} \tag{15.28}
+    $$
+  </div>
+</div>
 
 ---
 
