@@ -634,12 +634,10 @@ CIE TC1-75（由Luo主持）正在审议提出一个同时包含色貌和色差�
 <div class="math-block">
   <div class="equation">
     $$
-    \Delta E' = \sqrt{\left( \Delta J'^{2} + \Delta a'_{M}^{2} + \Delta b'_{M}^{2} \right)} \tag{16.40}
+    \Delta E' = \sqrt{\left( {\Delta J'}^{2} + {\Delta a'_M}^{2} + {\Delta b'_M}^{2} \right)} \tag{16.40}
     $$
   </div>
 </div>
-
-> 译者注：这里平台有点bug，公式渲染不出来，待后续fix，读者暂时可参考原文
 
 
 这是色差公式，表示两个色彩之间的差异（$\Delta E'$），通过计算亮度、彩度分量的变化量（$\Delta J'$, $\Delta a'_M$, $\Delta b'_M$）的平方和的平方根来获得。
