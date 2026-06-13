@@ -67,12 +67,8 @@
 
 ---
 
-## 关于译者
-
-**岳书威（Dr. Shawn）**，香港理工大学图像科学博士，目前任教于深圳职业技术大学。研究方向为色彩科学与下一代 ISP——自动白平衡（AWB）、颜色恒常性、色彩校正（CCM）、多光谱传感与深度学习成像。
-
-本译本在与工业界密切相关的章节，以 **译者注** 的形式串联理论与产业实践、补充概念解释，而非逐句直译。
-
-- 个人网站：<https://shuweiyue.com>
-- 微信公众号：vividway（颜色科学 × AI）
-- 纠错 / PR：<https://github.com/shuwei666/Color-appearance-models>
+<p style="text-align:center; color:#888; font-size:0.82em; line-height:1.7; margin-top:2.5em;">
+译者 ｜ 岳书威（Dr. Shawn），香港理工大学图像科学博士，现任教于深圳职业技术大学。<br>
+本译本在与工业界密切相关的章节以「译者注」串联理论与产业实践、补充概念解释，而非逐句直译。<br>
+个人网站 <a href="https://shuweiyue.com">shuweiyue.com</a> ｜ 公众号 vividway ｜ 纠错 <a href="https://github.com/shuwei666/Color-appearance-models">PR</a>
+</p>
