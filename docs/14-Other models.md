@@ -520,11 +520,11 @@ LLAB模型包括明度、彩度、色彩饱和度、饱和度、色相角和色�
   </div>
 </div>
 
-- **色彩饱和度，C1***：  
+- **色彩饱和度，$C_1^*$**：  
 <div class="math-block">
   <div class="equation">
     $$
-    C1* = 25 \ln(1 + 0.05C) \tag{14.40}
+    C_1^* = 25 \ln(1 + 0.05C) \tag{14.40}
     $$
   </div>
 </div>
@@ -533,7 +533,7 @@ LLAB模型包括明度、彩度、色彩饱和度、饱和度、色相角和色�
 <div class="math-block">
   <div class="equation">
     $$
-    C1 = C1* S_M S_C F_C \tag{14.41}
+    C_1 = C_1^* S_M S_C F_C \tag{14.41}
     $$
   </div>
 </div>
@@ -542,7 +542,7 @@ LLAB模型包括明度、彩度、色彩饱和度、饱和度、色相角和色�
 <div class="math-block">
   <div class="equation">
     $$
-    S_L = \frac{C1*}{L*} \tag{14.44}
+    S_L = \frac{C_1^*}{L^*} \tag{14.44}
     $$
   </div>
 </div>
