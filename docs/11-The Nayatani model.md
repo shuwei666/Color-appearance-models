@@ -594,9 +594,6 @@ Nayatani 色貌模型需要一组关键参数作为输入，用于描述刺激�
     + 0.0743 \sin(2\theta) 
     - 0.0666 \sin(3\theta) 
     - 0.0186 \sin(4\theta)
-    $$
-
-    $$ 
     - 0.0055 \cos(\theta) 
     - 0.0521 \cos(2\theta) 
     - 0.0573 \cos(3\theta) 
