@@ -84,7 +84,7 @@ CIECAM02 的一个重要变化是使用了线性冯·克里斯（von Kries）类
 <div class="math-block">
   <div class="equation">
     $$
-    D = F \left[ 1 - \frac{1}{3.6} \right] e^{-(L_A + 42) / 92}
+    D = F \left[ 1 - \frac{1}{3.6} e^{-(L_A + 42) / 92} \right]
     \tag{16.3}
     $$
   </div>
