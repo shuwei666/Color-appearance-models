@@ -12,7 +12,11 @@ from pathlib import Path
 from PIL import Image, ImageChops, ImageStat
 from pypdf import PdfReader
 
-MIN_CONTENT_DENSITY = 0.2
+# Calibrated at 110 dpi: the superseded blank page measured 0.0147 in the
+# body crop, while the sparsest legitimate final page measured 0.4780.
+MIN_BODY_DENSITY = 0.1
+MIN_BODY_TEXT_CHARACTERS = 10
+MIN_BODY_VISUAL_CONTENT_DENSITY = 1.0
 
 
 def file_sha256(path: Path) -> str:
@@ -58,19 +62,43 @@ def main() -> int:
             diff = ImageChops.difference(rgb, background).convert("L")
             bbox = diff.point(lambda value: 255 if value > 10 else 0).getbbox()
             mean = ImageStat.Stat(diff).mean[0]
+            body = rgb.crop(
+                (
+                    round(rgb.width * 80 / 935),
+                    round(rgb.height * 70 / 1210),
+                    round(rgb.width * 855 / 935),
+                    round(rgb.height * 1150 / 1210),
+                )
+            )
+            body_diff = ImageChops.difference(
+                body, Image.new("RGB", body.size, "white")
+            ).convert("L")
+            body_mean = ImageStat.Stat(body_diff).mean[0]
             expected_width = round(8.5 * args.dpi)
             expected_height = round(11 * args.dpi)
             if abs(rgb.width - expected_width) > 2 or abs(rgb.height - expected_height) > 2:
                 errors.append(f"page {page_number}: unexpected render size {rgb.size}")
             text = page.extract_text() or ""
+            text_lines = [line.strip() for line in text.splitlines() if line.strip()]
+            body_text = "\n".join(text_lines[:-3]) if len(text_lines) >= 3 else ""
             if page_number > 1 and len(text.strip()) < 20:
                 errors.append(f"page {page_number}: too little extractable text")
             if bbox is None:
                 errors.append(f"page {page_number}: visually blank")
-            if page_number > 4 and mean < MIN_CONTENT_DENSITY:
+            if page_number > 4 and body_mean < MIN_BODY_DENSITY:
                 errors.append(
-                    f"page {page_number}: visually near-blank "
-                    f"({mean:.4f} < {MIN_CONTENT_DENSITY})"
+                    f"page {page_number}: body region is visually near-blank "
+                    f"({body_mean:.4f} < {MIN_BODY_DENSITY})"
+                )
+            if (
+                page_number > 4
+                and len(body_text) < MIN_BODY_TEXT_CHARACTERS
+                and body_mean < MIN_BODY_VISUAL_CONTENT_DENSITY
+            ):
+                errors.append(
+                    f"page {page_number}: no source-derived body text or visual content "
+                    f"(text {len(body_text)} < {MIN_BODY_TEXT_CHARACTERS}; "
+                    f"density {body_mean:.4f} < {MIN_BODY_VISUAL_CONTENT_DENSITY})"
                 )
             records.append(
                 {
@@ -80,7 +108,9 @@ def main() -> int:
                     "pixels": [rgb.width, rgb.height],
                     "ink_bbox": list(bbox) if bbox else None,
                     "mean_difference_from_white": round(mean, 4),
+                    "body_mean_difference_from_white": round(body_mean, 4),
                     "extractable_text_characters": len(text.strip()),
+                    "body_text_characters": len(body_text),
                 }
             )
     summary = {
