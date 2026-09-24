@@ -8,6 +8,19 @@ mjx-container[display="true"] {
     overflow-y: hidden;
 }
 
+/* Inline MathJax can also be wider than the remaining line width (for
+   example, a long vector after a short list label). Keep that formula as a
+   shrinkable inline block so it wraps to the next line and scrolls locally
+   instead of widening the whole page. */
+.md-typeset .arithmatex {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    vertical-align: middle;
+    -webkit-overflow-scrolling: touch;
+}
+
 /* Keep intrinsically wide MathJax output inside the article on narrow screens.
    MathJax sets the inner container to its full equation width, so the wrapper
    (rather than the MathJax element itself) must own horizontal scrolling. */
