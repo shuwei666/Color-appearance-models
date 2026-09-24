@@ -51,10 +51,20 @@ def main() -> int:
         errors.append("PDF SHA-256 does not match manifest")
     if args.pdf.stat().st_size != manifest["bytes"]:
         errors.append("PDF byte count does not match manifest")
+    derived_content_pages = sum(
+        int(chapter["pages"]) for chapter in manifest.get("chapters", [])
+    )
+    derived_pages = int(manifest["front_matter_pages"]) + derived_content_pages
+    if manifest.get("content_pages") != derived_content_pages:
+        errors.append("Manifest content page count is not derived from chapters")
+    if manifest.get("pages") != derived_pages:
+        errors.append("Manifest total page count is not derived from its contents")
     if len(reader.pages) != manifest["pages"]:
         errors.append("PDF page count does not match manifest")
     if len(manifest.get("chapters", [])) != 22:
         errors.append("Manifest must contain 22 chapters")
+    if not manifest.get("book_version") or not manifest.get("release_tag"):
+        errors.append("Manifest must identify book_version and release_tag")
 
     for index, page in enumerate(reader.pages, 1):
         width = float(page.mediabox.width)

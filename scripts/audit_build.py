@@ -10,6 +10,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
+AUDIT_SCHEMA_VERSION = "2.0"
+
 
 class RefParser(HTMLParser):
     def __init__(self) -> None:
@@ -114,11 +116,26 @@ def main() -> int:
             errors.append(f"missing required page: {relative}")
 
     pdfs = sorted((root / "pdf").glob("*.pdf")) if (root / "pdf").is_dir() else []
-    if len(pdfs) != 23:
-        errors.append(f"expected 23 PDFs (22 chapters plus the full book), found {len(pdfs)}")
     full_book = root / "pdf" / "色貌模型-中文整书版.pdf"
     if not full_book.is_file():
         errors.append("missing whole-book PDF: pdf/色貌模型-中文整书版.pdf")
+    manifest_path = root / "pdf" / "色貌模型-中文整书版.manifest.json"
+    if not manifest_path.is_file():
+        errors.append("missing whole-book manifest")
+    else:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        expected_pdf_names = {
+            chapter["filename"] for chapter in manifest.get("chapters", [])
+        }
+        expected_pdf_names.add(full_book.name)
+        actual_pdf_names = {path.name for path in pdfs}
+        if actual_pdf_names != expected_pdf_names:
+            missing = sorted(expected_pdf_names - actual_pdf_names)
+            extra = sorted(actual_pdf_names - expected_pdf_names)
+            errors.append(
+                "PDF set differs from manifest: "
+                f"missing={missing}, extra={extra}"
+            )
 
     checked_refs = 0
     for page in sorted(root.rglob("*.html")):
@@ -143,6 +160,7 @@ def main() -> int:
                     )
 
     summary = {
+        "audit_schema_version": AUDIT_SCHEMA_VERSION,
         "site": str(root),
         "required_pages": len(REQUIRED_PAGES),
         "html_files": len(list(root.rglob("*.html"))),

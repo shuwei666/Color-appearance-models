@@ -58,6 +58,8 @@ CHAPTERS = [
 
 PAGE_WIDTH, PAGE_HEIGHT = letter
 FRONT_MATTER_PAGES = 4
+BOOK_VERSION = "2026.09.24"
+RELEASE_TAG = f"book-pdf-v{BOOK_VERSION}"
 
 
 def parse_args() -> argparse.Namespace:
@@ -91,6 +93,10 @@ def parse_args() -> argparse.Namespace:
         default=Path("/System/Library/Fonts/STHeiti Medium.ttc"),
     )
     parser.add_argument("--source-commit", help="Git commit recorded in the PDF.")
+    parser.add_argument("--version", default=BOOK_VERSION, help="Book release version.")
+    parser.add_argument(
+        "--release-tag", default=RELEASE_TAG, help="Git tag for this release."
+    )
     return parser.parse_args()
 
 
@@ -136,7 +142,9 @@ def draw_paragraph(
     return y_top - height
 
 
-def draw_cover(c: canvas.Canvas, commit: str, build_date: str) -> None:
+def draw_cover(
+    c: canvas.Canvas, commit: str, build_date: str, version: str
+) -> None:
     navy = HexColor("#102A43")
     c.setFillColor(navy)
     c.rect(0, 0, PAGE_WIDTH, PAGE_HEIGHT, stroke=0, fill=1)
@@ -177,12 +185,14 @@ def draw_cover(c: canvas.Canvas, commit: str, build_date: str) -> None:
     c.setFont("CAM-Light", 9)
     c.setFillColor(HexColor("#A9C4D8"))
     c.drawString(70, 119, "shuweiyue.com/book/")
-    c.drawRightString(PAGE_WIDTH - 70, 119, f"整书版 · {build_date[:7]}")
+    c.drawRightString(PAGE_WIDTH - 70, 119, f"整书版 · v{version}")
     c.setFont("Helvetica", 6.5)
     c.drawRightString(PAGE_WIDTH - 70, 96, commit[:12])
 
 
-def draw_about(c: canvas.Canvas, commit: str, build_date: str) -> None:
+def draw_about(
+    c: canvas.Canvas, commit: str, build_date: str, version: str
+) -> None:
     ink = HexColor("#19364D")
     muted = HexColor("#5E7384")
     teal = HexColor("#14919B")
@@ -226,6 +236,7 @@ def draw_about(c: canvas.Canvas, commit: str, build_date: str) -> None:
         f"<b>译者</b>　岳书威（Dr. Shawn）<br/>"
         "香港理工大学图像科学博士，现任教于深圳职业技术大学。<br/><br/>"
         f"<b>构建日期</b>　{build_date}<br/>"
+        f"<b>版本</b>　v{version}<br/>"
         f"<b>Git 版本</b>　{commit}<br/>"
         "<b>在线阅读</b>　https://shuweiyue.com/book/"
     )
@@ -287,14 +298,15 @@ def build_front_matter(
     path: Path,
     commit: str,
     build_date: str,
+    version: str,
     chapter_info: list[tuple[Chapter, int, int]],
 ) -> None:
     c = canvas.Canvas(str(path), pagesize=letter, pageCompression=1)
     c.setTitle("色貌模型 - 中文翻译与整理")
     c.setAuthor("岳书威（Dr. Shawn）")
-    draw_cover(c, commit, build_date)
+    draw_cover(c, commit, build_date, version)
     c.showPage()
-    draw_about(c, commit, build_date)
+    draw_about(c, commit, build_date, version)
     c.showPage()
     draw_contents_page(c, chapter_info[:11], "iii", 1)
     c.showPage()
@@ -370,7 +382,7 @@ def main() -> int:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     front_path = args.work_dir / "front-matter.pdf"
     overlay_path = args.work_dir / "content-overlay.pdf"
-    build_front_matter(front_path, commit, build_date, chapter_info)
+    build_front_matter(front_path, commit, build_date, args.version, chapter_info)
     build_overlay(overlay_path, chapter_info)
 
     front = PdfReader(front_path)
@@ -397,6 +409,7 @@ def main() -> int:
             "/Subject": "Color Appearance Models 中文学习版",
             "/Keywords": f"color appearance models; 色貌模型; {commit}",
             "/Creator": "MkDocs, Chrome, ReportLab, and pypdf",
+            "/Version": args.version,
         }
     )
     writer.page_mode = "/UseOutlines"
@@ -430,6 +443,8 @@ def main() -> int:
         )
 
     manifest = {
+        "book_version": args.version,
+        "release_tag": args.release_tag,
         "output": str(args.output.resolve()),
         "sha256": sha256(args.output),
         "bytes": args.output.stat().st_size,
@@ -438,6 +453,11 @@ def main() -> int:
         "content_pages": content_pages,
         "source_commit": commit,
         "built_at": build_date,
+        "deployment": {
+            "site_path": "/var/www/html/book/",
+            "download_path": "/book/pdf/色貌模型-中文整书版.pdf",
+            "rollback": "Restore the scoped pre-deploy /var/www/html/book/ backup recorded in the verification record.",
+        },
         "chapters": [
             {
                 "number": chapter.number,
