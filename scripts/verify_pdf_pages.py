@@ -12,6 +12,8 @@ from pathlib import Path
 from PIL import Image, ImageChops, ImageStat
 from pypdf import PdfReader
 
+MIN_CONTENT_DENSITY = 0.2
+
 
 def file_sha256(path: Path) -> str:
     digest = hashlib.sha256()
@@ -65,6 +67,11 @@ def main() -> int:
                 errors.append(f"page {page_number}: too little extractable text")
             if bbox is None:
                 errors.append(f"page {page_number}: visually blank")
+            if page_number > 4 and mean < MIN_CONTENT_DENSITY:
+                errors.append(
+                    f"page {page_number}: visually near-blank "
+                    f"({mean:.4f} < {MIN_CONTENT_DENSITY})"
+                )
             records.append(
                 {
                     "page": page_number,
