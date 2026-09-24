@@ -19,6 +19,13 @@ trap cleanup EXIT
 
 "$python_bin" -m mkdocs build --strict -d site
 
-git rev-parse HEAD > site/.deployed-commit
+commit="${DEPLOY_COMMIT:-}"
+if [[ -z "$commit" ]]; then
+    if ! commit="$(git rev-parse HEAD 2>/dev/null)"; then
+        printf 'DEPLOY_COMMIT is required when building outside a Git checkout.\n' >&2
+        exit 1
+    fi
+fi
+printf '%s\n' "$commit" > site/.deployed-commit
 
-printf 'Built %s at commit %s\n' "$repo_root/site" "$(git rev-parse HEAD)"
+printf 'Built %s at commit %s\n' "$repo_root/site" "$commit"

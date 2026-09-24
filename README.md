@@ -62,5 +62,6 @@ PYTHON_BIN=.venv/bin/python bash scripts/build_site.sh
 ```
 
 `scripts/build_site.sh` 会生成网页、复制 22 份章节 PDF，并把当前 Git 提交写入 `site/.deployed-commit`，用于核对 GitHub 与线上版本。
+服务器源副本不含 `.git` 时，构建前显式传入 `DEPLOY_COMMIT=<完整提交 SHA>`。
 
 ---
