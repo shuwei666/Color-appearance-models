@@ -64,4 +64,21 @@ PYTHON_BIN=.venv/bin/python bash scripts/build_site.sh
 `scripts/build_site.sh` 会生成网页、复制 22 份章节 PDF，并把当前 Git 提交写入 `site/.deployed-commit`，用于核对 GitHub 与线上版本。
 服务器源副本不含 `.git` 时，构建前显式传入 `DEPLOY_COMMIT=<完整提交 SHA>`。
 
+## 生成整书 PDF
+
+整书 PDF 使用当前 Markdown 构建结果重新打印 22 章，而不是直接拼接仓库中的旧章节 PDF：
+
+```bash
+PYTHON_BIN=.venv/bin/python bash scripts/build_site.sh
+python3 scripts/render_chapter_pdfs.py
+uv venv .venv-pdf
+uv pip install --python .venv-pdf/bin/python -r requirements-pdf.txt
+.venv-pdf/bin/python scripts/build_book_pdf.py
+.venv-pdf/bin/python scripts/audit_book_pdf.py output/pdf/色貌模型-中文整书版.pdf
+PYTHON_BIN=.venv/bin/python bash scripts/build_site.sh
+.venv/bin/python scripts/audit_build.py site
+```
+
+最终文件写入 `output/pdf/色貌模型-中文整书版.pdf`，同时生成记录 Git 提交、章节页数和 SHA-256 的 manifest。整书包含封面、版本说明、目录、连续页码和 PDF 书签。最后一次网站构建会把整书 PDF 和 manifest 一并放入 `site/pdf/`。
+
 ---

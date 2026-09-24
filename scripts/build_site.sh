@@ -19,6 +19,17 @@ trap cleanup EXIT
 
 "$python_bin" -m mkdocs build --strict -d site
 
+book_pdf="${BOOK_PDF:-$repo_root/output/pdf/色貌模型-中文整书版.pdf}"
+if [[ -f "$book_pdf" ]]; then
+    cp "$book_pdf" "$repo_root/site/pdf/色貌模型-中文整书版.pdf"
+    book_manifest="${book_pdf%.pdf}.manifest.json"
+    if [[ -f "$book_manifest" ]]; then
+        cp "$book_manifest" "$repo_root/site/pdf/色貌模型-中文整书版.manifest.json"
+    fi
+else
+    printf 'Whole-book PDF not found; build it before the final site audit: %s\n' "$book_pdf" >&2
+fi
+
 commit="${DEPLOY_COMMIT:-}"
 if [[ -z "$commit" ]]; then
     if ! commit="$(git rev-parse HEAD 2>/dev/null)"; then

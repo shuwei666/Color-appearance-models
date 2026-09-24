@@ -1,6 +1,10 @@
 site/
 .venv/
+.venv-pdf/
 .DS_Store
 .playwright-cli/
 output/playwright/
+output/pdf/
 outputs/verification/
+tmp/
+__pycache__/
