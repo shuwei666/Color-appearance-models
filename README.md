@@ -1,4 +1,6 @@
-# 关于色貌模型的中文翻译
+# 《Color Appearance Models》中文翻译
+
+在线阅读：[https://shuweiyue.com/book/](https://shuweiyue.com/book/)
 
 
 ## 目录
@@ -16,17 +18,17 @@
 | 8. 色适应                 | 🟢 已完成   | [8-色适应.md](./docs/8-色适应.md) |
 | 9. 色适应模型             | 🟢 已完成   | [9-色适应模型.md](./docs/9-色适应模型.md) |
 | 10. 色貌模型              | 🟢 已完成   | [10-色貌模型.md](./docs/10-色貌模型.md) |
-| 11. Nayatani et al 模型   | 🟢 已完成   | [11-Nayatani_et_al_模型.md](./docs/11-Nayatani_et_al_模型.md) |
-| 12. Hunt 模型             | 🟢 已完成   | [12-Hunt_模型.md](./docs/12-Hunt_模型.md) |
-| 13. RLAB 模型             | 🟢 已完成   | [13-RLAB_模型.md](./docs/13-RLAB_模型.md) |
-| 14. 其他色貌模型          | 🟢 已完成   | [14-其他色貌模型.md](./docs/14-其他色貌模型.md) |
-| 15. CIECAM97s 模型        | 🟢 已完成   | [15-CIECAM97s_模型.md](./docs/15-CIECAM97s_模型.md) |
-| 16. CIECAM02 模型         | 🟢 已完成   | [16-CIECAM02_模型.md](./docs/16-CIECAM02_模型.md) |
-| 17. 色貌模型的测量        | 🟢 已完成   | [17-色貌模型的测量.md](./docs/17-色貌模型的测量.md) |
-| 18. 传统色度学的应用      | 🟢 已完成   | [18-传统色度学的应用.md](./docs/18-传统色度学的应用.md) |
-| 19. 设备无关的彩色成像    | 🟢 已完成   | [19-设备无关的彩色成像.md](./docs/19-设备无关的彩色成像.md) |
-| 20. 图像色貌模型与未来    | 🟢 已完成   | [20-图像色貌模型与未来.md](./docs/20-图像色貌模型与未来.md) |
-| 21. HDR 色彩空间          | 🟢 已完成   | [21-HDR_色彩空间.md](./docs/21-HDR_色彩空间.md) |
+| 11. Nayatani et al 模型   | 🟢 已完成   | [11-The Nayatani model.md](./docs/11-The%20Nayatani%20model.md) |
+| 12. Hunt 模型             | 🟢 已完成   | [12-The Hunt model.md](./docs/12-The%20Hunt%20model.md) |
+| 13. RLAB 模型             | 🟢 已完成   | [13-The RLAB model.md](./docs/13-The%20RLAB%20model.md) |
+| 14. 其他色貌模型          | 🟢 已完成   | [14-Other models.md](./docs/14-Other%20models.md) |
+| 15. CIECAM97s 模型        | 🟢 已完成   | [15-CIECAM97s.md](./docs/15-CIECAM97s.md) |
+| 16. CIECAM02 模型         | 🟢 已完成   | [16-CIECAM02.md](./docs/16-CIECAM02.md) |
+| 17. 色貌模型的测量        | 🟢 已完成   | [17-CAMs的测量.md](./docs/17-CAMs的测量.md) |
+| 18. 传统色度学的应用      | 🟢 已完成   | [18-传统色度学应用.md](./docs/18-传统色度学应用.md) |
+| 19. 设备无关的彩色成像    | 🟢 已完成   | [19-设备无关彩色成像.md](./docs/19-设备无关彩色成像.md) |
+| 20. 图像色貌模型与未来    | 🟢 已完成   | [20-图像色貌模型和未来.md](./docs/20-图像色貌模型和未来.md) |
+| 21. HDR 色彩空间          | 🟢 已完成   | [21-HDR 色彩空间.md](./docs/21-HDR%20色彩空间.md) |
 
 ---
 
@@ -49,5 +51,16 @@
 
 
 错误之处在所难免，本书还在持续翻译中，请读者不吝赐教！
+
+## 本地构建
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+PYTHON_BIN=.venv/bin/python bash scripts/build_site.sh
+.venv/bin/python scripts/audit_build.py site
+```
+
+`scripts/build_site.sh` 会生成网页、复制 22 份章节 PDF，并把当前 Git 提交写入 `site/.deployed-commit`，用于核对 GitHub 与线上版本。
 
 ---

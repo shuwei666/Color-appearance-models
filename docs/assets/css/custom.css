@@ -8,10 +8,27 @@ mjx-container[display="true"] {
     overflow-y: hidden;
 }
 
+/* Keep intrinsically wide MathJax output inside the article on narrow screens.
+   MathJax sets the inner container to its full equation width, so the wrapper
+   (rather than the MathJax element itself) must own horizontal scrolling. */
+.md-typeset div.arithmatex,
+.math-block .equation {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
 .math-block {
     display: flex;
     justify-content: center; /* center the equation */
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     margin-bottom: 1rem;     /* breathing room between equations */
 }
 
@@ -23,4 +40,25 @@ mjx-container[display="true"] {
 
 .math-block .number {
     padding-left: 10px;
+}
+
+/* Material's table wrapper is inline-block by default. Wide tables can then
+   determine the page width on phones. Make the wrapper the scroll boundary. */
+.md-typeset .md-typeset__table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.md-typeset .md-typeset__table table {
+    display: table;
+    max-width: none;
+}
+
+/* Raw HTML figures in the translation should never exceed the text column. */
+.md-typeset img {
+    max-width: 100%;
+    height: auto;
 }

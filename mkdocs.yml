@@ -1,5 +1,5 @@
 site_name: 色貌模型
-# site_url: https://shuwei.com
+site_url: https://shuweiyue.com/book/
 nav:
   - Home: index.md
   - 0. 前言: 0-前言.md
@@ -25,11 +25,12 @@ nav:
   - 20. 图像色貌模型和未来: 20-图像色貌模型和未来.md
   - 21. HDR 色彩空间: 21-HDR 色彩空间.md
   - 参考文献: Reference.md
+  - 各章 PDF 下载: pdf-download.md
 
 
 plugins:
   - search
-  - img2figv2
+  - img2fig
 
 
 theme:

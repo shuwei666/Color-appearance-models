@@ -1,0 +1,3 @@
+mkdocs==1.6.1
+mkdocs-material==9.7.6
+mkdocs-img2fig-plugin==0.9.3

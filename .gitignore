@@ -1,3 +1,6 @@
 site/
-site
-
+.venv/
+.DS_Store
+.playwright-cli/
+output/playwright/
+outputs/verification/
