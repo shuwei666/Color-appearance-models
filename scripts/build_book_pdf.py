@@ -222,6 +222,23 @@ def draw_about(
     for paragraph in paragraphs:
         y = draw_paragraph(c, paragraph, 68, y, PAGE_WIDTH - 136, body) - 13
 
+    c.setFillColor(ink)
+    c.setFont("CAM-Medium", 12)
+    c.drawString(68, y - 2, "版本沿革")
+    history = (
+        "<b>2024 年 12 月</b>　形成首版中文译稿，完成主要章节的在线发布。<br/>"
+        "<b>2026 年 6 月</b>　集中校正图片索引、术语对应关系与公式显示，并补齐章节 PDF。<br/>"
+        "<b>2026 年 9 月</b>　系统修复公式、Markdown 列表和整书 PDF 的排版问题，建立可复现的版本、校验与发布流程。"
+    )
+    history_style = ParagraphStyle(
+        "about-history",
+        parent=body,
+        fontSize=9.2,
+        leading=16,
+        spaceAfter=0,
+    )
+    draw_paragraph(c, history, 68, y - 16, PAGE_WIDTH - 136, history_style)
+
     c.setFillColor(HexColor("#EAF4F5"))
     c.roundRect(68, 218, PAGE_WIDTH - 136, 132, 8, stroke=0, fill=1)
     small = ParagraphStyle(
